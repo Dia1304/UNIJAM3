@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WeaponData", menuName = "Scriptable Objects/WeaponData")]
+[CreateAssetMenu(fileName = "meleeWeaponData", menuName = "Scriptable Objects/MeleeWeaponData")]
 public class MeleeWeaponData : WeaponData
 {
     public int area;

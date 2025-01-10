@@ -165,7 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armList: []
   obj_arm: {fileID: 1968540677200876340, guid: d6f572cffd086264e812d4909ecc868c, type: 3}
-  controller: {fileID: 8051814239859946709}
 --- !u!1001 &675217166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -539,7 +538,11 @@ PrefabInstance:
     - target: {fileID: 8497353971420285394, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
       propertyPath: itemData
       value: 
-      objectReference: {fileID: 11400000, guid: 17ec90ffea850d440b8e8428c47baef1, type: 2}
+      objectReference: {fileID: 11400000, guid: 2c6f43d1b90b97445abe97ec2226508b, type: 2}
+    - target: {fileID: 8497353971420285394, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c6f43d1b90b97445abe97ec2226508b, type: 2}
     - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.105716005

@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class RangedWeaponData : MonoBehaviour
+[CreateAssetMenu(fileName = "rangedWeaponData", menuName = "Scriptable Objects/RangedWeaponData")]
+public class RangedWeaponData : WeaponData
 {
-    public GameObject projectile;
+    public GameObject obj_projectile;
 }

@@ -7,6 +7,7 @@ public class ArmHolder : MonoBehaviour
 
     [SerializeField] private GameObject obj_arm;
 
+    Vector3 direction;
 
     private void Awake()
     {
@@ -18,12 +19,12 @@ public class ArmHolder : MonoBehaviour
         {
             CreateArm();
         }
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+
+        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
     }
 
-    public void Test()
-    {
-
-    }
     public void CreateArm()
     {
         GameObject newArm = Instantiate(obj_arm, transform);

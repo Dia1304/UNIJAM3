@@ -41,6 +41,7 @@ public class Enemy : PoolAble
     public void Damage(int damage)
     {
         hp -= damage;
+        Debug.Log("Damaged");
         if(hp <= 0)
         {
             Destroy();
