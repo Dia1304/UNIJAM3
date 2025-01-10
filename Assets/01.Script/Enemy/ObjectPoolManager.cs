@@ -87,6 +87,7 @@ public class ObjectPoolManager : MonoBehaviour
     private void OnTakeFromPool(GameObject poolGo)
     {
         poolGo.SetActive(true);
+        poolGo.GetComponent<Enemy>().InitStat();
     }
 
     // ¹ÝÈ¯
