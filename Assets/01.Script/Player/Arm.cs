@@ -12,7 +12,7 @@ public class Arm : MonoBehaviour
     {
         if(currentItem != null)
         {
-            Debug.Log("Use current item");
+            //Debug.Log("Use current item");
             currentItem.GetComponent<Item>().Use();
         }
     }
