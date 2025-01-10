@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OnMouseEvent : MonoBehaviour
 {
     [SerializeField]
-    GameObject explainDisplay;
+    Image explainDisplay;
     public void OnDisplay(int id)
     {
-        explainDisplay.SetActive(true);
+        explainDisplay.enabled = true;
     }
     public void OffDisplay(int id)
     {
-        explainDisplay.SetActive(false);
+        explainDisplay.enabled = false;
     }
 }

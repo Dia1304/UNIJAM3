@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public List<int> armItemList = new List<int>();
+    [SerializeField]
+    public List<int> armItemList = new List<int>(); // item1 = item data, item2 = attack key
+    public List<int> armAttackKeyList = new List<int>(); // item1 = item data, item2 = attack key
     public List<Item> ItemList = new List<Item>(); // index 0 = NULL
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
