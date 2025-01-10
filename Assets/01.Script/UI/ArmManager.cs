@@ -8,10 +8,11 @@ public class ArmManager : MonoBehaviour
     private GameObject armPreFab;
 
     [SerializeField]
-    List<ArmData> armDatas = new List<ArmData>();
+    public List<ArmData> armDatas = new List<ArmData>();
     public PlayerManager playerManager;
     private int[] selectArm = { -1, -1 };
-
+    public int rewardState = 0; // 0 = reward, 1 = map select
+    public int selectInventorySlot = 0;
     private void Awake()
     {
         playerManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerManager>();
@@ -43,6 +44,10 @@ public class ArmManager : MonoBehaviour
         playerManager.GetData(armDatas);
     }
 
+    public void SelectInventory(int id)
+    {
+        selectInventorySlot = id;
+    }
     public void selectNum(int id)
     {
         for (int i = 0; i < 2; i++)
