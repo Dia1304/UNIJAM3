@@ -9,6 +9,7 @@ public class MoveItemData : MonoBehaviour
     [SerializeField]
     private ArmData armData;
 
+    public bool isSelect = false;
 
     private void Awake()
     {
@@ -22,6 +23,26 @@ public class MoveItemData : MonoBehaviour
     {
         explainDisplay.enabled = false;
     }
+    public void SelectItem()
+    {
+        if (!isSelect)
+        {
+            //item Image 하이라이트
+            isSelect = true;
+            armData.SelectItem();
+        }
+        else
+        {
+            // 하이라이트 풀기
+            isSelect = false;
+            armData.SelectItem();
+        }
+    }
 
+    public void UndoHighlight()
+    {
+        // 하이라이트 풀기
+        isSelect = false;
+    }
 
 }

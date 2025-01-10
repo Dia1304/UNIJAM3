@@ -134,12 +134,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackButton: 0
   haveItemId: 0
+  armNum: 0
+  armManager: {fileID: 0}
   attackButtonToggle:
   - {fileID: 7171049462223142914}
   - {fileID: 5555689100822744634}
   - {fileID: 3273751060273425860}
   - {fileID: 8213605572519043532}
   - {fileID: 6452862240106220975}
+  moveItemData: {fileID: 2945597349170318747}
 --- !u!1 &1360655403668066088
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +355,7 @@ MonoBehaviour:
   itemImage: {fileID: 6067714036503879440}
   explainDisplay: {fileID: 0}
   armData: {fileID: 5033808130762557120}
+  isSelect: 0
 --- !u!1 &1830293322010190000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1666,22 @@ MonoBehaviour:
         - m_Target: {fileID: 2945597349170318747}
           m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OffDisplay
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
+          m_MethodName: SelectItem
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
