@@ -1,22 +1,27 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu(fileName = "ItemData", menuName = "Scriptable Objects/ItemData")]
+public class ItemData : ScriptableObject
 {
-    [SerializeField] private ItemData itemData;
+    public int itemId;
+    public int size = 1;
+    public Class classData;
+    public Type type;
+    public Element Property;
 
     public int getClassData()
     {
-        return (int)itemData.classData;
+        return (int)classData;
     }
 
     public int getTypeData()
     {
-        return (int)itemData.type;
+        return (int)type;
     }
 
     public int getElementData()
     {
-        return (int)itemData.Property;
+        return (int)Property;
     }
 
     public virtual void Use()
@@ -51,5 +56,5 @@ public class Item : MonoBehaviour
         Fire = 1,
         Poision = 2
     }
+   
 }
-

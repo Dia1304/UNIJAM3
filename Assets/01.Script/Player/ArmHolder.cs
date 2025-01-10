@@ -26,12 +26,7 @@ public class ArmHolder : MonoBehaviour
                 float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
                 armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
             }
-            controller.OnAttack += Use;
+            controller.OnAttack += newArm.GetComponent<Arm>().Use;
         }
-    }
-
-    private void Use()
-    {
-        Debug.Log("TEST");
     }
 }

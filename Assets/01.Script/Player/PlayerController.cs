@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed)
         {
-            Debug.Log("Attack");
             OnAttack?.Invoke();
         }
     }
