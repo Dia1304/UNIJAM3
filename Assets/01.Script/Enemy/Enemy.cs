@@ -21,7 +21,16 @@ public class Enemy : PoolAble
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, speed);
+        Vector3 vTargetPos = player.transform.position;
+        Vector3 vPos = transform.position;
+        Vector3 vDist = vTargetPos - vPos;
+        Vector3 vDir = vDist.normalized;
+        float fDist = vDist.magnitude;  
+        if (fDist > speed * Time.deltaTime) {
+            transform.position += vDir * speed * Time.deltaTime;
+        }
+
+        
     }
 
     public void Damage(int damage)
