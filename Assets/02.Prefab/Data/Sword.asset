@@ -19,5 +19,5 @@ MonoBehaviour:
   type: 0
   element: 8
   damage: 1
-  range: 1
+  range: 2
   area: 0

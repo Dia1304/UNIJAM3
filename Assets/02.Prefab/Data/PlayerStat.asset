@@ -13,42 +13,41 @@ MonoBehaviour:
   m_Name: PlayerStat
   m_EditorClassIdentifier: 
   maxHealth: 100
-  attackDamage: 5
-  moveSpeed: 5
+  moveSpeed: Infinity
   attackSpeed: 10
-  bluntDamageMultiplier: 0
-  bladeDamageMultiplier: 1
+  bluntDamageMultiplier: -848
+  bladeDamageMultiplier: 0
   gunDamageMultiplier: 0
-  magicDamageMultiplier: 0
+  magicDamageMultiplier: -636
   fightDamageMultiplier: 0
   toolDamageMultiplier: 0
   buildingDamageMultiplier: 0
   machineDamageMultiplier: 0
   foodDamageMultiplier: 0
-  bluntCoolTimeMultiplier: 0
-  bladeCoolTimeMultiplier: 0
-  gunCoolTimeMultiplier: 0
+  bluntCoolTimeMultiplier: -254.40106
+  bladeCoolTimeMultiplier: -211.5
+  gunCoolTimeMultiplier: -720.803
   magicCoolTimeMultiplier: 0
   fightCoolTimeMultiplier: 0
   toolCoolTimeMultiplier: 0
   buildingCoolTimeMultiplier: 0
   machineCoolTimeMultiplier: 0
-  foodCoolTimeMultiplier: 0
+  foodCoolTimeMultiplier: -212
   bluntRangeMultiplier: 0
   bladeRangeMultiplier: 0
-  gunRangeMultiplier: 0
+  gunRangeMultiplier: -636
   magicRangeMultiplier: 0
-  fightRangeMultiplier: 0
-  toolRangeMultiplier: 0
+  fightRangeMultiplier: -1272
+  toolRangeMultiplier: -848
   buildingRangeMultiplier: 0
   machineRangeMultiplier: 0
   foodRangeMultiplier: 0
-  positionMultiplier: 0
-  waterMultiplier: 0
-  grassMultiplier: 0
-  electricMultiplier: 0
-  metalMultiplier: 0
-  fireMultiplier: 0
-  madMultiplier: 0
-  lightMultiplier: 0
-  physicalMultiplier: 1
+  positionMultiplier: -127.20053
+  waterMultiplier: -127.20053
+  grassMultiplier: -127.20053
+  electricMultiplier: -127.20053
+  metalMultiplier: -127.20053
+  fireMultiplier: -127.20053
+  madMultiplier: -127.20053
+  lightMultiplier: -127.20053
+  physicalMultiplier: -634.5

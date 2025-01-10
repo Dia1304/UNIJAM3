@@ -17,8 +17,11 @@ public class Arm : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.O))
         {
-            Debug.Log(currentItem);
             AddSynergy(currentItem);
+        }
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            UnequipItem(currentItem);
         }
     }
 

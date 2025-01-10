@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &102768028
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7640675951098369721, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_Name
-      value: Sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
 --- !u!1 &523434047
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +405,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1969518508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7640675951098369721, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09703876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08295082
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
 --- !u!114 &940010357382013237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd418704799ae6242ae5c813353ea3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statData: {fileID: 11400000, guid: d68be62a1e628bd449dfb6f43c31d3a6, type: 2}
   Stat: {fileID: 11400000, guid: d68be62a1e628bd449dfb6f43c31d3a6, type: 2}
   SynergyManager: {fileID: 8051814239859946710}
 --- !u!114 &8051814239859946710
@@ -740,118 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9c41f6328cee04587319bdea1a30c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  class_blunt:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_blade:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_gun:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_magic:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_fight:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_tool:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_building:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_machine:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  class_food:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_gothic:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_modern:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_SF:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_machine:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_holy:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_fantasy:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_military:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_culture:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  type_alcohol:
-    count: 0
-    firstBuffCount: 999999
-    secondBuffCount: 1
-  type_buddism:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_poision:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_water:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_grass:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_electric:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_metal:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_fire:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_mad:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_light:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
-  element_physical:
-    count: 0
-    firstBuffCount: 3
-    secondBuffCount: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -859,4 +748,4 @@ SceneRoots:
   - {fileID: 1590287835}
   - {fileID: 5947078799221375848}
   - {fileID: 1286637823}
-  - {fileID: 102768028}
+  - {fileID: 1969518508}

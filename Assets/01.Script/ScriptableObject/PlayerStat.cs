@@ -5,9 +5,8 @@ public class PlayerStat : ScriptableObject
 {
     [Header("Base Stat")]
     public int maxHealth;
-    public int attackDamage;
-    public int moveSpeed;
-    public int attackSpeed;
+    public float moveSpeed;
+    public float attackSpeed;
 
     [Header("Clsss Damage Multiplier")]
     public float bluntDamageMultiplier;
