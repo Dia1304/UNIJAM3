@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bf1bae1df809954aa64d4870178f225, type: 3}
-  m_Name: sword
+  m_Name: Sword
   m_EditorClassIdentifier: 
   itemId: 0
   size: 1
-  coolTime: 0.2
-  classData: 0
+  coolTime: 1
+  classData: 1
   type: 0
-  Property: 0
-  damage: 5
+  element: 8
+  damage: 1
+  range: 1
   area: 0

@@ -101,4 +101,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: cc5168b99fd2a744ebf6783ae0b76e11, type: 2}
-  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
+  coolTime: 0
+  weaponData: {fileID: 11400000, guid: cc5168b99fd2a744ebf6783ae0b76e11, type: 2}

@@ -16,3 +16,39 @@ MonoBehaviour:
   attackDamage: 5
   moveSpeed: 5
   attackSpeed: 10
+  bluntDamageMultiplier: 0
+  bladeDamageMultiplier: 1
+  gunDamageMultiplier: 0
+  magicDamageMultiplier: 0
+  fightDamageMultiplier: 0
+  toolDamageMultiplier: 0
+  buildingDamageMultiplier: 0
+  machineDamageMultiplier: 0
+  foodDamageMultiplier: 0
+  bluntCoolTimeMultiplier: 0
+  bladeCoolTimeMultiplier: 0
+  gunCoolTimeMultiplier: 0
+  magicCoolTimeMultiplier: 0
+  fightCoolTimeMultiplier: 0
+  toolCoolTimeMultiplier: 0
+  buildingCoolTimeMultiplier: 0
+  machineCoolTimeMultiplier: 0
+  foodCoolTimeMultiplier: 0
+  bluntRangeMultiplier: 0
+  bladeRangeMultiplier: 0
+  gunRangeMultiplier: 0
+  magicRangeMultiplier: 0
+  fightRangeMultiplier: 0
+  toolRangeMultiplier: 0
+  buildingRangeMultiplier: 0
+  machineRangeMultiplier: 0
+  foodRangeMultiplier: 0
+  positionMultiplier: 0
+  waterMultiplier: 0
+  grassMultiplier: 0
+  electricMultiplier: 0
+  metalMultiplier: 0
+  fireMultiplier: 0
+  madMultiplier: 0
+  lightMultiplier: 0
+  physicalMultiplier: 1
