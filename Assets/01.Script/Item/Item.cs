@@ -4,6 +4,9 @@ public class Item : MonoBehaviour
 {
     public ItemData itemData;
 
+    protected float timer;
+    protected bool canUse;
+
     public int getClassData()
     {
         return (int)itemData.classData;
@@ -19,9 +22,36 @@ public class Item : MonoBehaviour
         return (int)itemData.Property;
     }
 
-    public virtual void Use()
+    private void Awake()
     {
+        canUse = true;
+        timer = itemData.coolTime;
+    }
 
+    private void Update()
+    {
+        if(timer >= 0 && canUse == false)
+        {
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            canUse = true;
+        }
+    }
+
+    public virtual bool Use()
+    {
+        if(canUse == false)
+        {
+            return false;
+        }
+        else
+        {
+            canUse = false;
+            timer = itemData.coolTime;
+            return true;
+        }
     }
 
     public enum Class

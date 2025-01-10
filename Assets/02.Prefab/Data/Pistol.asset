@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 0
   size: 1
+  coolTime: 3
   classData: 0
   type: 0
   Property: 0

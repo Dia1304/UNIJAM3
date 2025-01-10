@@ -5,6 +5,7 @@ public class ItemData : ScriptableObject
 {
     public int itemId;
     public int size = 1;
+    public float coolTime;
     public Class classData;
     public Type type;
     public Element Property;
@@ -22,11 +23,6 @@ public class ItemData : ScriptableObject
     public int getElementData()
     {
         return (int)Property;
-    }
-
-    public virtual void Use()
-    {
-
     }
 
     public enum Class

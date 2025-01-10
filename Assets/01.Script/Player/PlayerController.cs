@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     private Vector2 m_direction;
 
     public Action OnAttack;
@@ -14,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_direction = Vector2.zero;
+        instance = this;
     }
 
     public void Movement(InputAction.CallbackContext context)

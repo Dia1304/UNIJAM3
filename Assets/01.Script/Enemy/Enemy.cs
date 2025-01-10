@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 using UnityEngine.UIElements;
 
 public class Enemy : PoolAble
-{ 
+{
     [SerializeField]
     private int hp = 1;
     [SerializeField]
@@ -25,12 +25,17 @@ public class Enemy : PoolAble
         Vector3 vPos = transform.position;
         Vector3 vDist = vTargetPos - vPos;
         Vector3 vDir = vDist.normalized;
-        float fDist = vDist.magnitude;  
+        float fDist = vDist.magnitude;
         if (fDist > speed * Time.deltaTime) {
             transform.position += vDir * speed * Time.deltaTime;
         }
 
-        
+
+    }
+
+    public void InitStat()
+    {
+        hp = 3;
     }
 
     public void Damage(int damage)

@@ -7,11 +7,9 @@ public class ArmHolder : MonoBehaviour
 
     [SerializeField] private GameObject obj_arm;
 
-    [SerializeField] private PlayerController controller;
 
     private void Awake()
     {
-
     }
 
     private void Update()
@@ -36,6 +34,6 @@ public class ArmHolder : MonoBehaviour
             float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
             armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
         }
-        controller.OnAttack += newArm.GetComponent<Arm>().Use;
+        PlayerController.instance.OnAttack += newArm.GetComponent<Arm>().Use;
     }
 }

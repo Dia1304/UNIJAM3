@@ -2,9 +2,13 @@ using UnityEngine;
 
 public abstract class Weapon : Item
 {
-    public override void Use()
+    public override bool Use()
     {
-        Attack();
+        if(base.Use())
+        {
+            Attack();
+        }
+        return true;
     }
     public virtual void Attack()
     {

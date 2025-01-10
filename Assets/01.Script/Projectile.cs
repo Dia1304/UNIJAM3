@@ -5,8 +5,11 @@ public class Projectile : MonoBehaviour
     Vector3 direction;
     [SerializeField] private float speed;
     void Start()
-    {
-       direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized; 
+    {        
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+
+        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
     }
 
     void Update()
