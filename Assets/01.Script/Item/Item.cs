@@ -5,6 +5,7 @@ public class Item : MonoBehaviour
     public int itemId;
     public int damage;
     public int size = 1;
+    [SerializeField]
     private Weapon weapon;
     private Type type;
     private Property Property;
