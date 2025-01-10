@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     private Vector2 m_direction;
+
+    public Action OnAttack;
 
     //Reference
     public PlayerStat Stat;
@@ -17,6 +20,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 dir = context.ReadValue<Vector2>();
         m_direction = dir;
+    }
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Debug.Log("Attack");
+            OnAttack?.Invoke();
+        }
     }
 
     public Vector2 GetDirection() => m_direction;

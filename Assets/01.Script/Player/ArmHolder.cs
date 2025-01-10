@@ -5,7 +5,9 @@ public class ArmHolder : MonoBehaviour
 {
     private List<GameObject> armList;
 
-    [SerializeField] private GameObject arm;
+    [SerializeField] private GameObject obj_arm;
+
+    [SerializeField] private PlayerController controller;
 
     private void Awake()
     {
@@ -16,7 +18,7 @@ public class ArmHolder : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject newArm = Instantiate(arm, transform);
+            GameObject newArm = Instantiate(obj_arm, transform);
             armList.Add(newArm);
 
             for(int i = 0; i < armList.Count; i++)
@@ -24,6 +26,12 @@ public class ArmHolder : MonoBehaviour
                 float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
                 armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
             }
+            controller.OnAttack += Use;
         }
+    }
+
+    private void Use()
+    {
+        Debug.Log("TEST");
     }
 }
