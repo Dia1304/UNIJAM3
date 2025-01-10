@@ -3,6 +3,8 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public int itemId;
+    public int damage;
+    public int size = 1;
     private Weapon weapon;
     private Type type;
     private Property Property;
