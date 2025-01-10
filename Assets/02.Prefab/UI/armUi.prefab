@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 53543109556845515}
-  - component: {fileID: 8885233765800842557}
   - component: {fileID: 5033808130762557120}
   m_Layer: 5
   m_Name: armUi
@@ -121,19 +120,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 158.81, y: 132.21}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8885233765800842557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007668490676551611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e861690dcea7204ea852872a5f1850a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explainDisplay: {fileID: 0}
 --- !u!114 &5033808130762557120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,14 +233,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OnDisplay
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -263,10 +249,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OffDisplay
-          m_Mode: 3
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -286,6 +272,7 @@ GameObject:
   - component: {fileID: 6006377109058488773}
   - component: {fileID: 2053473116431398461}
   - component: {fileID: 7523914311690373850}
+  - component: {fileID: 2945597349170318747}
   m_Layer: 5
   m_Name: back ground
   m_TagString: Untagged
@@ -350,6 +337,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2945597349170318747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430863251368274352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca8d7e4bf425ae4e8f621724af159bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 6067714036503879440}
+  explainDisplay: {fileID: 0}
+  armData: {fileID: 5033808130762557120}
 --- !u!1 &1830293322010190000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,14 +1270,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OnDisplay
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1284,10 +1286,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OffDisplay
-          m_Mode: 3
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1641,8 +1643,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OnDisplay
           m_Mode: 3
           m_Arguments:
@@ -1657,10 +1659,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OffDisplay
-          m_Mode: 3
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1837,14 +1839,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OnDisplay
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1853,10 +1855,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8885233765800842557}
-          m_TargetAssemblyTypeName: OnMouseEvent, Assembly-CSharp
+        - m_Target: {fileID: 2945597349170318747}
+          m_TargetAssemblyTypeName: MoveItemData, Assembly-CSharp
           m_MethodName: OffDisplay
-          m_Mode: 3
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

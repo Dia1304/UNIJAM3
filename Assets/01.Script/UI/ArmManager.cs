@@ -1,4 +1,4 @@
-using NUnit.Framework;
+ï»¿using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 public class ArmManager : MonoBehaviour
@@ -17,7 +17,7 @@ public class ArmManager : MonoBehaviour
         for(int i = 0; i < playerManager.armItemList.Count; i++)
         {
             GameObject instantiatedObject = Instantiate(armPreFab, transform.position, Quaternion.identity);
-            instantiatedObject.transform.SetParent(transform); // ºÎ¸ğ¸¦ ÇöÀç ¿ÀºêÁ§Æ®·Î ¼³Á¤
+            instantiatedObject.transform.SetParent(transform); // ë¶€ëª¨ë¥¼ í˜„ì¬ ì˜¤ë¸Œì íŠ¸ë¡œ ì„¤ì •
             instantiatedObject.GetComponent<RectTransform>().localScale = Vector3.one;
             armDatas.Add(instantiatedObject.GetComponent<ArmData>());
             armDatas[armDatas.Count - 1].haveItemId = playerManager.armItemList[armDatas.Count - 1];
@@ -31,5 +31,10 @@ public class ArmManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void GiveData() // í˜¸ì¶œì‹œ ê°€ì§€ê³  ìˆëŠ” ë°ì´í„°ë¥¼ playerManagerì—ê²Œ ë„˜ê²¨ì¤Œ
+    {
+        playerManager.GetData(armDatas);
     }
 }

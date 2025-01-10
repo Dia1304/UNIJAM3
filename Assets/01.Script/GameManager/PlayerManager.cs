@@ -19,4 +19,15 @@ public class PlayerManager : MonoBehaviour
     {
         
     }
+
+    public void GetData(List<ArmData> armDatas) // armData 리스트를 받아와 기존에 있던 data를 덮어쓰는 함수
+    {
+        armItemList = new List<int>();
+        armAttackKeyList = new List<int>();
+        for(int i = 0; i < armDatas.Count; i++)
+        {
+            armItemList.Add(armDatas[i].haveItemId);
+            armAttackKeyList.Add(armDatas[i].attackButton);
+        }
+    }
 }
