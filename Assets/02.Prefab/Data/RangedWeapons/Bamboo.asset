@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73795e0250d594541b1918ed4f435a82, type: 3}
+  m_Name: Bamboo
+  m_EditorClassIdentifier: 
+  itemId: 20
+  itemName: "\uC8FD\uCC3D"
+  itemDesc: "\uB0B4\uAC00 \uADF8\uB4E4\uC744 \uD3C9\uB4F1\uD558\uAC8C \uD558\uB9AC\uB77C"
+  classData: 1
+  type: 7
+  element: 2
+  coolTime: 0
+  sound: {fileID: 8300000, guid: 3daf8bd944eef0c48bf5348852b146f2, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 3
+  area: 0
+  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}

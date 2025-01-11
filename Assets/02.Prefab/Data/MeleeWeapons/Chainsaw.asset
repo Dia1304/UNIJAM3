@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf1bae1df809954aa64d4870178f225, type: 3}
+  m_Name: Chainsaw
+  m_EditorClassIdentifier: 
+  itemId: 9
+  itemName: "\uC804\uAE30\uD1B1"
+  itemDesc: "\uD6CC\uB96D\uD55C \uB300\uD654 \uC218\uB2E8"
+  classData: 1
+  type: 1
+  element: 3
+  coolTime: 4
+  sound: {fileID: 8300000, guid: bddfbe0308e508d4aa3572b564c437ce, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 0
+  area: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73795e0250d594541b1918ed4f435a82, type: 3}
+  m_Name: Soup
+  m_EditorClassIdentifier: 
+  itemId: 21
+  itemName: "\uC300\uAD6D\uC218 \uB69D\uBC30\uAE30"
+  itemDesc: "\uAD6D\uBB3C\uB3C4 \uC5BC\uD070\uD558\uB124"
+  classData: 8
+  type: 7
+  element: 1
+  coolTime: 0
+  sound: {fileID: 8300000, guid: 94d801833253ec948b05961be1da7957, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 3
+  area: 0
+  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf1bae1df809954aa64d4870178f225, type: 3}
+  m_Name: Lightsaber
+  m_EditorClassIdentifier: 
+  itemId: 3
+  itemName: "\uAD11\uC120\uAC80"
+  itemDesc: "\uADF8\uB300\uC5D0\uAC8C \uD3EC\uC2A4\uAC00 \uD568\uAED8\uD558\uAE38"
+  classData: 1
+  type: 2
+  element: 7
+  coolTime: 4
+  sound: {fileID: 8300000, guid: 008555742b4aa0f42a2579020186d689, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 0
+  area: 0

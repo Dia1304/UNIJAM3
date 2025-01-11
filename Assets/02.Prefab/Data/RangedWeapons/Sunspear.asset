@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73795e0250d594541b1918ed4f435a82, type: 3}
+  m_Name: Sunspear
+  m_EditorClassIdentifier: 
+  itemId: 49
+  itemName: "\uD0DC\uC591\uC758 \uCC3D"
+  itemDesc: "\uBD88\uC758 \uC2DC\uB300\uC758 \uC2DC\uC791\uC758 \uC774\uC57C\uAE30"
+  classData: 3
+  type: 5
+  element: 3
+  coolTime: 0
+  sound: {fileID: 8300000, guid: 5266decf7cbcb4f49b3a6addbb243c0e, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 3
+  area: 0
+  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf1bae1df809954aa64d4870178f225, type: 3}
+  m_Name: Starfist
+  m_EditorClassIdentifier: 
+  itemId: 42
+  itemName: "\uBD81\uB450\uCE60\uC131\uC758 \uC8FC\uBA39"
+  itemDesc: "\uB108\uB294 \uC774\uBBF8 \uC8FD\uC5B4\uC788\uB2E4"
+  classData: 4
+  type: 7
+  element: 8
+  coolTime: 4
+  sound: {fileID: 8300000, guid: f7d136131343f4e4f9b235c1a997d5de, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 0
+  area: 0

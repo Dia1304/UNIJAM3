@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73795e0250d594541b1918ed4f435a82, type: 3}
+  m_Name: Flamethrower
+  m_EditorClassIdentifier: 
+  itemId: 17
+  itemName: "\uD654\uC5FC\uBC29\uC0AC\uAE30"
+  itemDesc: "even\uD558\uAC8C \uC775\uC9C0 \uC54A\uC558\uC5B4\uC694"
+  classData: 2
+  type: 6
+  element: 5
+  coolTime: 0
+  sound: {fileID: 8300000, guid: e5ac1c4da17c80a4eb46b15fcdb61fa9, type: 3}
+  itemImage: {fileID: 0}
+  damage: 2
+  range: 3
+  area: 0
+  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
