@@ -14,7 +14,12 @@ public class Enemy : PoolAble
     [SerializeField] private float attackCoolTime;
     float timer;
     bool canAttack;
+    bool inRange;
+    [SerializeField] private float attackRange;
     private GameObject player;
+
+    [SerializeField] private bool isRange;
+    [SerializeField] private GameObject fireball;
 
     private void Awake()
     {
@@ -29,9 +34,24 @@ public class Enemy : PoolAble
         Vector3 vDist = vTargetPos - vPos;
         Vector3 vDir = vDist.normalized;
         float fDist = vDist.magnitude;
-        if (fDist > speed * Time.deltaTime)
+        
+        if(vTargetPos.x < vPos.x)
+        {
+            transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else
+        {
+            transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+        if(fDist <= attackRange)
+        {
+            inRange = true;
+        }
+        else
         {
             transform.position += vDir * speed * Time.deltaTime;
+            inRange = false;
         }
 
         if(timer > 0f)
@@ -43,11 +63,21 @@ public class Enemy : PoolAble
         {
             canAttack = true;
         }
+
+        if(isRange)
+        {
+            if(canAttack && inRange)
+            {
+                float angle = Mathf.Atan2(vDist.y, vDist.x) * Mathf.Rad2Deg;
+                Instantiate(fireball, transform.position, Quaternion.Euler(0, 0, angle-90));
+                timer = attackCoolTime;
+            }
+        }
     }
 
     public void InitStat()
     {
-        hp = 3;
+        //hp = 3;
     }
 
     public void Damage(float damage)
@@ -66,7 +96,7 @@ public class Enemy : PoolAble
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject == player)
         {
             Debug.Log("Detect Player");
             if(canAttack == true)
