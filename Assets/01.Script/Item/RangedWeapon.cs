@@ -5,6 +5,7 @@ public class RangedWeapon : Weapon
 {
     public RangedWeaponData weaponData;
     public RangedWeaponData data;
+    public bool inInventory = false;
     private void Start()
     {
         weaponData = Instantiate(data);
@@ -12,7 +13,10 @@ public class RangedWeapon : Weapon
     }
     private void Update()
     {
-        CoolTime();
+        if (inInventory)
+        {
+            CoolTime();
+        }
     }
     public void Init(RangedWeaponData inData)
     {

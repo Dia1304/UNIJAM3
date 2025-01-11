@@ -11,6 +11,7 @@ public class MeleeWeapon : Weapon
     public MeleeWeaponData data;
 
     private bool isMoving;
+    public bool inInventory = false;
 
     private void Start()
     {
@@ -26,19 +27,22 @@ public class MeleeWeapon : Weapon
     }
     private void Update()
     {
-        coolTime = GetMultipliedCoolTime(itemData.coolTime);
-        CoolTime();
-
-        startPos = transform.parent.position;
-
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
-
-        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
-
-        if(weaponData.area <= 0)
+        if (inInventory)
         {
-            Debug.DrawRay(PlayerController.instance.transform.position, direction * GetMultipliedRange(weaponData.range), Color.red);
+            coolTime = GetMultipliedCoolTime(itemData.coolTime);
+            CoolTime();
+
+            startPos = transform.parent.position;
+
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+
+            direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
+
+            if (weaponData.area <= 0)
+            {
+                Debug.DrawRay(PlayerController.instance.transform.position, direction * GetMultipliedRange(weaponData.range), Color.red);
+            }
         }
     }
     public override void Attack()
