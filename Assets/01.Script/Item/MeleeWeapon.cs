@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MeleeWeapon : Weapon
 {
@@ -35,16 +36,21 @@ public class MeleeWeapon : Weapon
 
             startPos = transform.parent.position;
 
-            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPosition.z = PlayerController.instance.transform.position.z;
-
-            direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
 
             if (weaponData.area <= 0)
             {
                 Debug.DrawRay(PlayerController.instance.transform.position, direction * GetMultipliedRange(weaponData.range), Color.red);
             }
         }
+
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+
+        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0, 0, angle-90);
     }
     public override void Attack()
     {
