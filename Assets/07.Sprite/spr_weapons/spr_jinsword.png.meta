@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_jinsword_0: -1455423012469246958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

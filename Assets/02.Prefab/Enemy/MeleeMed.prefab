@@ -54,6 +54,10 @@ MonoBehaviour:
   attackRange: 0.5
   isRange: 0
   fireball: {fileID: 0}
+  sprite: {fileID: 4928134657695093646}
+  AudioHit: {fileID: 0}
+  AudioDeath: {fileID: 0}
+  AudioShoot: {fileID: 0}
 --- !u!61 &-2563887921399509331
 BoxCollider2D:
   m_ObjectHideFlags: 0
