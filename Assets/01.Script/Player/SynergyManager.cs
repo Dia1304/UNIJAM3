@@ -154,7 +154,7 @@ public class SynergyManager : MonoBehaviour
             case 6: //class_building
                 if(isFirst)
                 {
-                    //구조물 내구도 200%
+                    PlayerController.instance.Stat.structureDurabilityMultiplier += 1.0f;
                 }
                 else
                 {
@@ -174,7 +174,7 @@ public class SynergyManager : MonoBehaviour
             case 8: //class_food
                 if(isFirst)
                 {
-                    //모든 쿨타임 10% 감소
+                    PlayerController.instance.Stat.attackSpeed += 0.1f;
                 }
                 else
                 {
@@ -506,22 +506,22 @@ public class SynergyManager : MonoBehaviour
             case 0: //class_blunt
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.bluntCoolTimeMultiplier += 0.4f;
-                    PlayerController.instance.Stat.bluntDamageMultiplier -= 1.0f;
+                    //둔기 공격이 적을 밀칩니다
                 }
                 else
                 {
-                    //둔기 공격이 적을 밀칩니다
+                    PlayerController.instance.Stat.bluntCoolTimeMultiplier += 0.4f;
+                    PlayerController.instance.Stat.bluntDamageMultiplier -= 1.0f;
                 }
                 break;
             case 1: //class_blade
                 if(isFirst)
                 {
-                    //날붙이 공격에 당한 적은 날붙이 공격에 추가 피해를 받습니다
+                    PlayerController.instance.Stat.bladeCoolTimeMultiplier -= 0.5f;
                 }
                 else
                 {
-                    PlayerController.instance.Stat.bladeCoolTimeMultiplier -= 0.5f;
+                    //날붙이 공격에 당한 적은 날붙이 공격에 추가 피해를 받습니다
                 }
                 break;
             case 2: //class_gun
@@ -552,7 +552,7 @@ public class SynergyManager : MonoBehaviour
                 }
                 else
                 {
-                    PlayerController.instance.Stat.fightRangeMultiplier -= 2.00f;
+                    PlayerController.instance.Stat.fightRangeMultiplier -= 1.00f;
                 }
                 break;
             case 5: //class_tool
@@ -569,7 +569,7 @@ public class SynergyManager : MonoBehaviour
             case 6: //class_building
                 if(isFirst)
                 {
-                    //구조물 내구도 200%
+                    PlayerController.instance.Stat.structureDurabilityMultiplier -= 1.0f;
                 }
                 else
                 {
@@ -579,7 +579,7 @@ public class SynergyManager : MonoBehaviour
             case 7: //class_machine
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.moveSpeed *= 1.25f;
+                    PlayerController.instance.Stat.moveSpeed /= 1.25f;
                 }
                 else
                 {

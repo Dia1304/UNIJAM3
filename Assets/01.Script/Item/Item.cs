@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
     {
         if(timer >= 0 && canUse == false)
         {
-            timer -= Time.deltaTime;
+            timer -= Time.unscaledDeltaTime;
         }
         else
         {
@@ -69,6 +69,7 @@ public class Item : MonoBehaviour
                 Debug.Log("À¸¾î¾î");
                 break;
         }
+        result *= 1f / PlayerController.instance.Stat.attackSpeed;
         return result;
     }
     public float GetDamageMultiplier()

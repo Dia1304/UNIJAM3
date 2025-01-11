@@ -30,6 +30,14 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("GameOver");
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Time.timeScale = 0.5f;
+        }
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 
     public void Movement(InputAction.CallbackContext context)
