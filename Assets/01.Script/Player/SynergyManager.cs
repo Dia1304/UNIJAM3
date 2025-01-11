@@ -7,6 +7,7 @@ public class SynergyManager : MonoBehaviour
 {
     public Synergy[] synergyArray;
     public int[] synergyCnt = new int[28];
+    public Sprite[] synergySprite = new Sprite[28];
     public bool inBattle = false;
     public PlayerManager playerManager;
     private void Awake()
