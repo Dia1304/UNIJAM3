@@ -24,8 +24,8 @@ public class EnemySpawner : MonoBehaviour
     {
         
         playerManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerManager>();
-        realmeleeCount = (int)Mathf.Ceil(meleeCount * (playerManager.stage * 0.2f) * (1 + playerManager.difficulty * 0.5f));
-        realrangeCount = (int)Mathf.Ceil(rangeCount * (playerManager.stage * 0.2f) * (1 + playerManager.difficulty * 0.5f));
+        realmeleeCount = (int)Mathf.Ceil(meleeCount * (1 + (playerManager.stage+1) * 0.2f) * (1 + playerManager.difficulty * 0.5f));
+        realrangeCount = (int)Mathf.Ceil(rangeCount * (1 + (playerManager.stage+1) * 0.2f) * (1 + playerManager.difficulty * 0.5f));
     }
     void Start()
     {
@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         enemies.RemoveAll(item => item == null || item.Equals(null) || ReferenceEquals(item, null));
-        textLeft.text = (remainMeleeCount + remainRangeCount) + "남음";
+        textLeft.text = enemies.Count + "남음";
         if (remainRangeCount == 0 && remainMeleeCount == 0 && enemies.Count == 0)
         {
             playerManager.armstage++;

@@ -57,7 +57,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(armstage == 3)
+        if(armstage == 2)
         {
             AddArm(0, 0, -1);
             armstage = 0;

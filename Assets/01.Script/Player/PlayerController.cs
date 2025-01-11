@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         m_direction = Vector2.zero;
         instance = this;
+        Stat.currentHealth = Stat.maxHealth;
 
         //Stat = Instantiate(statData);
         SynergyManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SynergyManager>();
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        ChangeHealthBarAmount(Stat.maxHealth / Stat.currentHealth);
+        ChangeHealthBarAmount(Stat.currentHealth / Stat.maxHealth);
         if (Stat.currentHealth <= 0)
         {
             Debug.Log("GameOver");
