@@ -6,6 +6,7 @@ using UnityEngine;
 public class SynergyManager : MonoBehaviour
 {
     public Synergy[] synergyArray;
+    public bool inBattle = false;
 
     private void Start()
     {
@@ -86,6 +87,10 @@ public class SynergyManager : MonoBehaviour
     }
     private void EnableBuff(int index, bool isFirst)
     {
+        if(!inBattle)
+        {
+            return;
+        }
         switch(index)
         {
             case 0: //class_blunt
@@ -501,7 +506,11 @@ public class SynergyManager : MonoBehaviour
     }
     private void DisableBuff(int index, bool isFirst)
     {
-        switch(index)
+        if (!inBattle)
+        {
+            return;
+        }
+        switch (index)
         {
             case 0: //class_blunt
                 if(isFirst)
@@ -807,6 +816,197 @@ public class SynergyManager : MonoBehaviour
             }
         }
         Debug.LogError("Cannot find synergy by name; " + name);
+    }
+
+
+    public void AddSynergy(GameObject item)
+    {
+        switch (item.GetComponent<Item>().itemData.classData)
+        {
+            case ItemData.Class.Blunt:
+                AddSynergyCount("class_blunt", 1);
+                break;
+            case ItemData.Class.Blade:
+                AddSynergyCount("class_blade", 1);
+                break;
+            case ItemData.Class.Gun:
+                AddSynergyCount("class_gun", 1);
+                break;
+            case ItemData.Class.Magic:
+                AddSynergyCount("class_magic", 1);
+                break;
+            case ItemData.Class.Fight:
+                AddSynergyCount("class_fight", 1);
+                break;
+            case ItemData.Class.Tool:
+                AddSynergyCount("class_tool", 1);
+                break;
+            case ItemData.Class.Buliding:
+                AddSynergyCount("class_building", 1);
+                break;
+            case ItemData.Class.Machine:
+                AddSynergyCount("class_machine", 1);
+                break;
+            case ItemData.Class.Food:
+                AddSynergyCount("class_food", 1);
+                break;
+        }
+        switch (item.GetComponent<Item>().itemData.type)
+        {
+            case ItemData.Type.Gothic:
+                AddSynergyCount("type_gothic", 1);
+                break;
+            case ItemData.Type.Modern:
+                AddSynergyCount("type_modern", 1);
+                break;
+            case ItemData.Type.SF:
+                AddSynergyCount("type_SF", 1);
+                break;
+            case ItemData.Type.Machine:
+                AddSynergyCount("type_machine", 1);
+                break;
+            case ItemData.Type.Holy:
+                AddSynergyCount("type_holy", 1);
+                break;
+            case ItemData.Type.Military:
+                AddSynergyCount("type_military", 1);
+                break;
+            case ItemData.Type.Culture:
+                AddSynergyCount("type_culture", 1);
+                break;
+            case ItemData.Type.Alcohol:
+                AddSynergyCount("type_alcohol", 1);
+                break;
+            case ItemData.Type.Buddhism:
+                AddSynergyCount("type_buddism", 1);
+                break;
+        }
+        switch (item.GetComponent<Item>().itemData.element)
+        {
+            case ItemData.Element.Poision:
+                AddSynergyCount("element_poision", 1);
+                break;
+            case ItemData.Element.Water:
+                AddSynergyCount("element_water", 1);
+                break;
+            case ItemData.Element.Grass:
+                AddSynergyCount("element_grass", 1);
+                break;
+            case ItemData.Element.Electric:
+                AddSynergyCount("element_electric", 1);
+                break;
+            case ItemData.Element.Metal:
+                AddSynergyCount("element_metal", 1);
+                break;
+            case ItemData.Element.Fire:
+                AddSynergyCount("element_fire", 1);
+                break;
+            case ItemData.Element.Mad:
+                AddSynergyCount("element_mad", 1);
+                break;
+            case ItemData.Element.Light:
+                AddSynergyCount("element_light", 1);
+                break;
+            case ItemData.Element.Physical:
+                AddSynergyCount("element_physical", 1);
+                break;
+        }
+
+
+    }
+    public void SubtractSynergy(GameObject item)
+    {
+        switch (item.GetComponent<Item>().itemData.classData)
+        {
+            case ItemData.Class.Blunt:
+                AddSynergyCount("class_blunt", -1);
+                break;
+            case ItemData.Class.Blade:
+                AddSynergyCount("class_blade", -1);
+                break;
+            case ItemData.Class.Gun:
+                AddSynergyCount("class_gun", -1);
+                break;
+            case ItemData.Class.Magic:
+                AddSynergyCount("class_magic", -1);
+                break;
+            case ItemData.Class.Fight:
+                AddSynergyCount("class_fight", -1);
+                break;
+            case ItemData.Class.Tool:
+                AddSynergyCount("class_tool", -1);
+                break;
+            case ItemData.Class.Buliding:
+                AddSynergyCount("class_building", -1);
+                break;
+            case ItemData.Class.Machine:
+                AddSynergyCount("class_machine", -1);
+                break;
+            case ItemData.Class.Food:
+                AddSynergyCount("class_food", -1);
+                break;
+        }
+        switch (item.GetComponent<Item>().itemData.type)
+        {
+            case ItemData.Type.Gothic:
+                AddSynergyCount("type_gothic", -1);
+                break;
+            case ItemData.Type.Modern:
+                AddSynergyCount("type_modern", -1);
+                break;
+            case ItemData.Type.SF:
+                AddSynergyCount("type_SF", -1);
+                break;
+            case ItemData.Type.Machine:
+                AddSynergyCount("type_machine", -1);
+                break;
+            case ItemData.Type.Holy:
+                AddSynergyCount("type_holy", -1);
+                break;
+            case ItemData.Type.Military:
+                AddSynergyCount("type_military", -1);
+                break;
+            case ItemData.Type.Culture:
+                AddSynergyCount("type_culture", -1);
+                break;
+            case ItemData.Type.Alcohol:
+                AddSynergyCount("type_alcohol", -1);
+                break;
+            case ItemData.Type.Buddhism:
+                AddSynergyCount("type_buddism", -1);
+                break;
+        }
+        switch (item.GetComponent<Item>().itemData.element)
+        {
+            case ItemData.Element.Poision:
+                AddSynergyCount("element_poision", -1);
+                break;
+            case ItemData.Element.Water:
+                AddSynergyCount("element_water", -1);
+                break;
+            case ItemData.Element.Grass:
+                AddSynergyCount("element_grass", -1);
+                break;
+            case ItemData.Element.Electric:
+                AddSynergyCount("element_electric", -1);
+                break;
+            case ItemData.Element.Metal:
+                AddSynergyCount("element_metal", -1);
+                break;
+            case ItemData.Element.Fire:
+                AddSynergyCount("element_fire", -1);
+                break;
+            case ItemData.Element.Mad:
+                AddSynergyCount("element_mad", -1);
+                break;
+            case ItemData.Element.Light:
+                AddSynergyCount("element_light", -1);
+                break;
+            case ItemData.Element.Physical:
+                AddSynergyCount("element_physical", -1);
+                break;
+        }
+
     }
 }
 
