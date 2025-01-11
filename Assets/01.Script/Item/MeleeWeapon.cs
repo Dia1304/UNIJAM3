@@ -12,7 +12,7 @@ public class MeleeWeapon : Weapon
     public MeleeWeaponData data;
 
     private bool isMoving;
-    public bool inInventory = false;
+
 
     private void Start()
     {
