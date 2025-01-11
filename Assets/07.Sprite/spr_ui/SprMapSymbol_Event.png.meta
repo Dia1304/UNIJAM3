@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f1b3052ff7782a748be7f22d0cf22f3d
+guid: 7c254fc5c9f60bb4bb1532dc1a826a56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4580920303020768341
-    second: tiletest3_0
+      213: -519279324331561760
+    second: SprMapSymbol_Event_0
+  - first:
+      213: -3057791225458623466
+    second: SprMapSymbol_Event_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiletest3_0
+      name: SprMapSymbol_Event_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 0
-        width: 205
-        height: 110
+        x: 19
+        y: 21
+        width: 28
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55c7dedaeb2b29f30800000000000000
-      internalID: 4580920303020768341
+      spriteID: 0ec230ea4362bc8f0800000000000000
+      internalID: -519279324331561760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SprMapSymbol_Event_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 10
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c7b31d41b8095d0800000000000000
+      internalID: -3057791225458623466
       vertices: []
       indices: 
       edges: []
@@ -147,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      tiletest3_0: 4580920303020768341
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
