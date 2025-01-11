@@ -55,8 +55,8 @@ public class ItemReward : MonoBehaviour
         bool fail = false;
         while (i < 3)
         {
-            fail = false;
-            randNum = Random.Range(1, playerManager.itemIdList.Count);
+            fail = true;
+            /*randNum = Random.Range(1, playerManager.itemIdList.Count);
             randId = playerManager.itemIdList[randNum];
             for (int j=0;j < armManager.armDatas.Count + i;j++)
             {
@@ -74,12 +74,17 @@ public class ItemReward : MonoBehaviour
                     fail = true;
                     break;
                 }
+
             }
             if (!fail)
             {
                 rewardItemId[i] = randId;
                 i++;
-            }
+            }*/
+            randNum = Random.Range(1, playerManager.weaponPrefab.Count);
+
+            rewardItemId[i] = playerManager.weaponPrefab[randNum].GetComponent<Weapon>().itemData.itemId;
+            i++;
         }
     }
     public void OnDisplay(int id) // 0 = selectReward, 1 ~ 3 = rewardItems, 4 = selectInvnetory

@@ -49,6 +49,7 @@ MonoBehaviour:
   armAttackKeyList: 00000000
   armATypeList: ffffffff
   weaponPrefab:
+  - {fileID: 9010986477449342498, guid: 4235f650055e0254ab0c99d8bececae0, type: 3}
   - {fileID: 7076029345764935098, guid: 08b5ad696fc10de47a9c0852fe89523b, type: 3}
   - {fileID: 5655554564620342315, guid: 2398b1d9b59e7114eb7b902c41c47e3f, type: 3}
   - {fileID: 523378481724030234, guid: 90213d7683e28be4ea18719b77125a13, type: 3}
@@ -62,7 +63,6 @@ MonoBehaviour:
   - {fileID: 3696820743212465852, guid: cd3d8fc62b16b434db33e725180ac7f9, type: 3}
   - {fileID: 9010986477449342498, guid: b3ca940826fe8e84ba3892479eb176d8, type: 3}
   - {fileID: 2025389064267078715, guid: 98ff6762f269721449db8a31b29f425e, type: 3}
-  - {fileID: 9010986477449342498, guid: 4235f650055e0254ab0c99d8bececae0, type: 3}
   - {fileID: 3369735524176894235, guid: 6ec9ec4134466fd468e3908df7081c54, type: 3}
   - {fileID: 5403998270642347645, guid: 4be88f0f84ef9614eb8c6335cf1e2f67, type: 3}
   - {fileID: 358585223518314519, guid: 89a8c24ac0bf47540ad89bad1fbc2400, type: 3}
@@ -117,7 +117,9 @@ MonoBehaviour:
   rangedItemPrefab: {fileID: 2952270295615124535, guid: a179cb9e7d9112140a637ffced2899fa, type: 3}
   meleeItemPrefab: {fileID: 2952270295615124535, guid: 44c5c79a0066dcd459266e52f6861f55, type: 3}
   synergyManager: {fileID: 0}
+  armstage: 0
   stage: 0
+  difficulty: 1
 --- !u!114 &8945240215557288339
 MonoBehaviour:
   m_ObjectHideFlags: 0
