@@ -15,12 +15,13 @@ MonoBehaviour:
   itemId: 48
   itemName: "\uC2E0\uACBD\uB3C5 \uD638\uC2A4"
   itemDesc: "\uCF00\uC774\uD06C\uB294 \uAC70\uC9D3\uB9D0\uC774\uC57C"
+  Mechanism: 
   classData: 7
   type: 2
   element: 0
   coolTime: 3
   sound: {fileID: 8300000, guid: 0861e6bcce9ad144bb0e64cd69ff9e3d, type: 3}
-  attackSound: {fileID: 8300000, guid: 0861e6bcce9ad144bb0e64cd69ff9e3d, type: 3}
+  attackSound: {fileID: 8300000, guid: c4a02e89bb7b88847a3479efa280db46, type: 3}
   itemImage: {fileID: 0}
   damage: 2
   range: 3
