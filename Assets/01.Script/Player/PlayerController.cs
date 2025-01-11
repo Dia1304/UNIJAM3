@@ -24,6 +24,14 @@ public class PlayerController : MonoBehaviour
         SynergyManager = GetComponent<SynergyManager>();
     }
 
+    private void Update()
+    {
+        if(Stat.currentHealth <= 0)
+        {
+            Debug.Log("GameOver");
+        }
+    }
+
     public void Movement(InputAction.CallbackContext context)
     {
         Vector2 dir = context.ReadValue<Vector2>();

@@ -8,21 +8,6 @@ public class Item : MonoBehaviour
     protected bool canUse;
     public float coolTime;
 
-    public int getClassData()
-    {
-        return (int)itemData.classData;
-    }
-
-    public int getTypeData()
-    {
-        return (int)itemData.type;
-    }
-
-    public int getElementData()
-    {
-        return (int)itemData.element;
-    }
-
     private void Awake()
     {
         canUse = true;
@@ -156,7 +141,45 @@ public class Item : MonoBehaviour
                 break;
         }
 
-        Debug.Log(result);
+        return result;
+    }
+    public float GetMultipliedArea(float originArea)
+    {
+        float result = originArea;
+
+        switch(itemData.classData)
+        {
+            case ItemData.Class.Blunt:
+                result += PlayerController.instance.Stat.bluntAreaMultiplier;
+                break;
+            case ItemData.Class.Blade:
+                result += PlayerController.instance.Stat.bladeAreaMultiplier;
+                break;
+            case ItemData.Class.Gun:
+                result += PlayerController.instance.Stat.gunAreaMultiplier;
+                break;
+            case ItemData.Class.Magic:
+                result += PlayerController.instance.Stat.magicAreaMultiplier;
+                break;
+            case ItemData.Class.Fight:
+                result += PlayerController.instance.Stat.fightAreaMultiplier;
+                break;
+            case ItemData.Class.Tool:
+                result += PlayerController.instance.Stat.toolAreaMultiplier;
+                break;
+            case ItemData.Class.Buliding:
+                result += PlayerController.instance.Stat.buildingAreaMultiplier;
+                break;
+            case ItemData.Class.Machine:
+                result += PlayerController.instance.Stat.machineAreaMultiplier;
+                break;
+            case ItemData.Class.Food:
+                result += PlayerController.instance.Stat.foodAreaMultiplier;
+                break;
+            default:
+                Debug.Log("À¸¾î¾î");
+                break;
+        }
 
         return result;
     }

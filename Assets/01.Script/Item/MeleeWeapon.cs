@@ -59,7 +59,7 @@ public class MeleeWeapon : Weapon
         }
         else
         {
-            Collider2D[] areaHit = Physics2D.OverlapCircleAll(transform.position, weaponData.area, LayerMask.GetMask("Enemy"));
+            Collider2D[] areaHit = Physics2D.OverlapCircleAll(transform.position, GetMultipliedArea(weaponData.area), LayerMask.GetMask("Enemy"));
             List<Collider2D> hasHit = new List<Collider2D>();   
             if(areaHit != null)
             {

@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerStat : ScriptableObject
 {
     [Header("Base Stat")]
-    public int maxHealth;
+    public float maxHealth;
+    public float currentHealth;
     public float moveSpeed;
     public float attackSpeed;
 
@@ -41,6 +42,17 @@ public class PlayerStat : ScriptableObject
     public float machineRangeMultiplier;
     public float foodRangeMultiplier;
 
+    [Header("Class Area Multiplier")]
+    public float bluntAreaMultiplier;
+    public float bladeAreaMultiplier;
+    public float gunAreaMultiplier;
+    public float magicAreaMultiplier;
+    public float fightAreaMultiplier;
+    public float toolAreaMultiplier;
+    public float buildingAreaMultiplier;
+    public float machineAreaMultiplier;
+    public float foodAreaMultiplier;
+
     [Header("Element Multiplier")]
     public float positionMultiplier;
     public float waterMultiplier;
@@ -51,4 +63,18 @@ public class PlayerStat : ScriptableObject
     public float madMultiplier;
     public float lightMultiplier;
     public float physicalMultiplier;
+
+    [Header("Extra Multiplier")]
+    public float structureDurabilityMultiplier;
+
+    [Header("Type Synergy")]
+    public bool modernSynergy;
+    public bool SFSynergy;
+    public bool machineSynergy;
+    public bool holySynergy;
+    public bool fantasySynergy;
+    public bool militarySynergy;
+    public bool cultureSynergy;
+    public bool alcoholSynergy;
+    public bool buddismSynergy;
 }

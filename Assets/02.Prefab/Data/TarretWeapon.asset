@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73795e0250d594541b1918ed4f435a82, type: 3}
-  m_Name: Pistol
+  m_Name: TarretWeapon
   m_EditorClassIdentifier: 
   itemId: 0
-  itemName: Pistol
-  itemDesc: "\uD14C\uC2A4\uD2B8\uC6A9 \uC6D0\uAC70\uB9AC \uBB34\uAE30"
-  classData: 2
+  itemName: TarretWeapon
+  itemDesc: "\uD130\uB81B \uBB34\uAE30"
+  classData: 6
   type: 6
   element: 8
-  coolTime: 2
+  coolTime: 0.1
   sound: {fileID: 0}
   itemImage: {fileID: 0}
-  damage: 5
-  range: 3
-  area: 1
-  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
+  damage: 1
+  range: 5
+  area: 0
+  obj_projectile: {fileID: 1823353113294518347, guid: 53cce018ba77e014c99c2bddd6dc9195, type: 3}

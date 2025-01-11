@@ -1,20 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile1 : MonoBehaviour
 {
     Vector3 direction;
     [SerializeField] private float speed;
     public float area;
     public float damage;
-
-    public bool penetraction;
     void Start()
     {        
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+        mouseWorldPosition.z = transform.position.z;
 
-        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
+        direction = (mouseWorldPosition - transform.position).normalized;
     }
 
     void Update()
@@ -39,10 +37,7 @@ public class Projectile : MonoBehaviour
                     }
                 }
             }
-            if(!penetraction)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 }

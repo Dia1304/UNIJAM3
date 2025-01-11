@@ -56,8 +56,7 @@ public class Enemy : PoolAble
     {
         if(collision.gameObject == player)
         {
-            //todo
-            //player 데미지 주기
+            player.GetComponent<PlayerController>().Stat.currentHealth -= damage;
         }
     }
 }
