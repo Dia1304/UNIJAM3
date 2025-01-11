@@ -361,6 +361,11 @@ MonoBehaviour:
   armData: {fileID: 5033808130762557120}
   isSelect: 0
   highlight: {fileID: 4858754278477414466}
+  itemSprite: {fileID: 4775949220247135770}
+  synergySprites:
+  - {fileID: 3735453361695037139}
+  - {fileID: 1427498975260888472}
+  - {fileID: 4685394570063524649}
   itemData: {fileID: 0}
 --- !u!1 &1830293322010190000
 GameObject:
@@ -1757,7 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5345318, g: 0.86545545, b: 0.899371, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
