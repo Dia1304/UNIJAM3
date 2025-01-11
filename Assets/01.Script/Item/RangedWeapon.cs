@@ -5,7 +5,6 @@ public class RangedWeapon : Weapon
 {
     public RangedWeaponData weaponData;
     public RangedWeaponData data;
-    public bool inInventory = false;
     Vector3 direction;
 
     private void Start()
