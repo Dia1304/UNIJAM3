@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.UIElements;
+using System.Collections;
 
 public class Enemy : PoolAble
 {
@@ -20,6 +21,11 @@ public class Enemy : PoolAble
 
     [SerializeField] private bool isRange;
     [SerializeField] private GameObject fireball;
+
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private AudioSource AudioHit;
+    [SerializeField] private AudioSource AudioDeath;
+    [SerializeField] private AudioSource AudioShoot;
 
     private void Awake()
     {
@@ -70,6 +76,7 @@ public class Enemy : PoolAble
             {
                 float angle = Mathf.Atan2(vDist.y, vDist.x) * Mathf.Rad2Deg;
                 Instantiate(fireball, transform.position, Quaternion.Euler(0, 0, angle-90));
+                AudioShoot.Play();
                 timer = attackCoolTime;
             }
         }
@@ -80,12 +87,22 @@ public class Enemy : PoolAble
         //hp = 3;
     }
 
+    private IEnumerator FlashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
+    }
+
     public void Damage(float damage)
     {
         hp -= damage;
         Debug.Log("Damaged");
+        StartCoroutine(FlashRed());
+        AudioHit.Play();
         if(hp <= 0)
         {
+            AudioDeath.Play();
             Destroy(gameObject);
             //Destroy();
         }
