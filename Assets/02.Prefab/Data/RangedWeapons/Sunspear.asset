@@ -24,7 +24,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 5266decf7cbcb4f49b3a6addbb243c0e, type: 3}
   attackSound: {fileID: 8300000, guid: 5266decf7cbcb4f49b3a6addbb243c0e, type: 3}
   itemImage: {fileID: 0}
-  damage: 2
+  damage: 20
   range: 3
-  area: 0
+  area: 0.1
   obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
