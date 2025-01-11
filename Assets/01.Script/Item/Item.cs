@@ -18,7 +18,7 @@ public class Item : MonoBehaviour
     {
         if(itemData.itemImage != null)
         {
-           transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
+           GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
         }
     }
 
