@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/00.Scene/SelectMenu.unity
     guid: ae23c3de0cd342e49a6ce31949912b7a
   - enabled: 1
+    path: Assets/00.Scene/UiTemp.unity
+    guid: 8f502ecb09d9f7f4a8944320f7f170e7
+  - enabled: 1
+    path: Assets/00.Scene/Test_PlayerControl.unity
+    guid: 5e966d08316b51b4caaf431de5abf375
+  - enabled: 1
     path: Assets/00.Scene/DeathMenu.unity
     guid: 0f912600a1859ff4a82b0ad4839d53e6
   m_configObjects:

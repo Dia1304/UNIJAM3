@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
+    // 싱글톤 인스턴스를 보관할 정적 변수
+    public static PlayerManager Instance { get; private set; }
     [SerializeField]
     public List<int> armItemList = new List<int>();  // 장착중인 아이템 리스트
     public List<int> armAttackKeyList = new List<int>();  // 장착중인 아이템의 공격키 리스트
@@ -24,6 +26,18 @@ public class PlayerManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
+        // 기존 인스턴스가 있으면 새로 생성된 오브젝트를 파괴
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // 인스턴스 설정
+        Instance = this;
+
+        // 이 오브젝트가 다른 씬에서도 유지되도록 설정 (필요할 경우)
+        DontDestroyOnLoad(gameObject);
         for (int i = 0; i < meleeItemList.Count; i++)
         {
             itemIdList.Add(meleeItemList[i].itemId);
