@@ -27,16 +27,33 @@ public class ArmManager : MonoBehaviour
             armDatas.Add(instantiatedObject.GetComponent<ArmData>());
             armDatas[armDatas.Count - 1].haveItemId = playerManager.armItemList[armDatas.Count - 1];
             armDatas[armDatas.Count - 1].attackButton = playerManager.armAttackKeyList[armDatas.Count - 1];
+            armDatas[armDatas.Count - 1].armType = playerManager.armATypeList[armDatas.Count - 1];
             armDatas[armDatas.Count - 1].SetButton();
             armDatas[armDatas.Count - 1].armNum = i;
         }
     }
     
+    void generateArm(int id, int keyId, int type)
+    {
+        GameObject instantiatedObject = Instantiate(armPreFab, transform.position, Quaternion.identity);
+        instantiatedObject.transform.SetParent(transform); // 부모를 현재 오브젝트로 설정
+        instantiatedObject.GetComponent<RectTransform>().localScale = Vector3.one;
+        armDatas.Add(instantiatedObject.GetComponent<ArmData>());
+        armDatas[armDatas.Count - 1].haveItemId = id;
+        armDatas[armDatas.Count - 1].attackButton = keyId;
+        armDatas[armDatas.Count - 1].armType = type;
+        armDatas[armDatas.Count - 1].SetButton();
+        armDatas[armDatas.Count - 1].armNum = armDatas.Count - 1;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(armDatas.Count < playerManager.armItemList.Count) 
+        {
+            int cnt = playerManager.armItemList.Count - 1;
+            generateArm(playerManager.armItemList[cnt], playerManager.armAttackKeyList[cnt], playerManager.armATypeList[cnt]);
+        }
     }
 
     void GiveData() // 호출시 가지고 있는 데이터를 playerManager에게 넘겨줌

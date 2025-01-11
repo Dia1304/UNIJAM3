@@ -24,7 +24,7 @@ public class Arm : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.O))
         {
-            synergyManager.AddSynergy(currentItem);
+            synergyManager.AddSynergy(currentItem.GetComponent<ItemData>());
         }
         if(Input.GetKeyDown(KeyCode.I))
         {
@@ -86,11 +86,11 @@ public class Arm : MonoBehaviour
         item.transform.SetParent(transform,false);
         item.GetComponent<Weapon>().inInventory = true;
 
-        synergyManager.AddSynergy(currentItem);
+        
     }
     public void UnequipItem(GameObject item)
     {
-        synergyManager.SubtractSynergy(item);
+        synergyManager.SubtractSynergy(item.GetComponent<ItemData>());
     }
 
     public void Use()

@@ -21,12 +21,38 @@ public class CMoveText : MonoBehaviour
 
     private void Start()
     {
-        if (text.text.Length < 6) { 
+        _rtaBg = transform.GetComponent<RectTransform>();
 
+        //ins_traTitle 가변 사이즈일 수 있기 때문에.
+        LayoutRebuilder.ForceRebuildLayoutImmediate(ins_traTitle);
+        float _fTexthalf = ins_traTitle.rect.width / 2 + (_rtaBg.rect.width / 2);
+        _fEndPosX = ins_traTitle.anchoredPosition.x;
+
+        if (ins_bRight)
+        {
+            _vDirection = Vector2.right;
+            _fEndPosX += _fTexthalf;
+        }
+        else
+        {
+            _vDirection = Vector2.left;
+            _fEndPosX -= _fTexthalf;
         }
 
-            
+        if (text.text.Length <= 6)
+        {
+            ins_traTitle.anchoredPosition = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            _vStartPos = new Vector2(-_fEndPosX, ins_traTitle.anchoredPosition.y);
+            ins_traTitle.anchoredPosition = _vStartPos;
+            StartCoroutine(CorMoveText());
+        }
+    }
 
+    public void init()
+    {
         _rtaBg = transform.GetComponent<RectTransform>();
 
         //ins_traTitle 가변 사이즈일 수 있기 때문에.
