@@ -116,10 +116,10 @@ TextureImporter:
       name: tiletest_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 6
         y: 0
-        width: 107
-        height: 55
+        width: 205
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      tiletest_0: -1676672749941236859
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
