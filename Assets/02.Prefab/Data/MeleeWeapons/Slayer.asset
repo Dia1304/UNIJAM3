@@ -24,4 +24,4 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   damage: 2
   range: 0
-  area: 0
+  area: 1
