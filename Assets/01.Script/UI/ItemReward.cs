@@ -41,6 +41,11 @@ public class ItemReward : MonoBehaviour
     private void Start()
     {
         rewardItemGenerate();
+        for(int i = 0; i < 3; i++)
+        {
+            if (playerManager.findItem(rewardItemId[i]).itemImage != null)
+                rewardItems[i].GetComponent<Image>().sprite = playerManager.findItem(rewardItemId[i]).itemImage;
+        }
     }
 
     private void rewardItemGenerate()
@@ -109,6 +114,9 @@ public class ItemReward : MonoBehaviour
     public void SelectRewardItem(int num)
     {
         selectRewardNum = rewardItemId[num];
+        if (playerManager.findItem(selectRewardNum).itemImage != null)
+            selectedReward.GetComponent<Image>().sprite = playerManager.findItem(selectRewardNum).itemImage;
+
     }
 
     public void ChangeItem()
@@ -132,7 +140,8 @@ public class ItemReward : MonoBehaviour
         {
             okButton.enabled = true;
         }
-
+        if (playerManager.findItem(selecteArmData.haveItemId).itemImage != null)
+            selectedInventory.GetComponent<Image>().sprite = playerManager.findItem(selectRewardNum).itemImage;
 
     }
 
