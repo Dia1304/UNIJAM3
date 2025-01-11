@@ -8,9 +8,13 @@ public class SynergyManager : MonoBehaviour
     public Synergy[] synergyArray;
     public bool inBattle = false;
 
-    private void Start()
+    private void Awake()
     {
         InitializeSynergyList();
+    }
+    private void Start()
+    {
+
     }
 
     private void Update()
@@ -807,7 +811,7 @@ public class SynergyManager : MonoBehaviour
     }
     public void AddSynergyCount(string name, int value)
     {
-        for(int i = 0; i < synergyArray.Length;i++)
+        for(int i = 0; i < synergyArray.Length ;i++)
         {
             if (synergyArray[i].name == name)
             {
