@@ -730,7 +730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd418704799ae6242ae5c813353ea3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statData: {fileID: 11400000, guid: d68be62a1e628bd449dfb6f43c31d3a6, type: 2}
   Stat: {fileID: 11400000, guid: d68be62a1e628bd449dfb6f43c31d3a6, type: 2}
   SynergyManager: {fileID: 8051814239859946710}
 --- !u!114 &8051814239859946710
