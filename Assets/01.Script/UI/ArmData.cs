@@ -6,10 +6,12 @@ public class ArmData : MonoBehaviour
 {
     public int attackButton = 0; // 0 = leftbutton, 1 = rightbutton, 2 = middlebutton, 3 = space, 4 = shift
     public int haveItemId = 0; // 0 = Null
+    public int armType = 0; // 0 = Null
     public int armNum;
     public ArmManager armManager;
     public Toggle[] attackButtonToggle = new Toggle[5];
     public MoveItemData moveItemData;
+    public CMoveText moveText;
 
 
     private void Awake()
@@ -25,6 +27,7 @@ public class ArmData : MonoBehaviour
     {
         attackButtonToggle[attackButton].isOn = true;
         moveItemData.init();
+        moveText.init();
     }
 
     public void SelectItem()
