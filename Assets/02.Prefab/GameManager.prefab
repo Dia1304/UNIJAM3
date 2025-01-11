@@ -45,23 +45,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e35684c30a49c4d854d8bc48845664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armItemList: 0000000000000000
-  armAttackKeyList: 0000000000000000
-  armATypeList: ffffffffffffffff
+  armItemList: 00000000
+  armAttackKeyList: 00000000
+  armATypeList: ffffffff
   weaponPrefab:
   - {fileID: 7076029345764935098, guid: 08b5ad696fc10de47a9c0852fe89523b, type: 3}
   - {fileID: 5655554564620342315, guid: 2398b1d9b59e7114eb7b902c41c47e3f, type: 3}
   - {fileID: 523378481724030234, guid: 90213d7683e28be4ea18719b77125a13, type: 3}
   - {fileID: 508846294300984702, guid: 50f9c1f40be25d34a96cf34c34747c14, type: 3}
   - {fileID: 3476811610579265373, guid: 223a3d08399ae3343868fa73432e0c6e, type: 3}
-  - {fileID: 3696820743212465852, guid: cd3d8fc62b16b434db33e725180ac7f9, type: 3}
   - {fileID: 6880645329789138017, guid: 7cbd00d82874d69448a6fa1197cb8d60, type: 3}
   - {fileID: 1965942638946225911, guid: 502a8fd790cadb84e8e4631a8881a241, type: 3}
-  - {fileID: 9010986477449342498, guid: b3ca940826fe8e84ba3892479eb176d8, type: 3}
   - {fileID: 8450426534084821965, guid: dc237288555af0549947fd093af7fc4b, type: 3}
   - {fileID: 6040112056146134093, guid: fe79ecae91828b04fa1be28db9e934bc, type: 3}
   - {fileID: 523666298500684407, guid: 7f738944169c27d459c7d6567ac2f0db, type: 3}
+  - {fileID: 3696820743212465852, guid: cd3d8fc62b16b434db33e725180ac7f9, type: 3}
+  - {fileID: 9010986477449342498, guid: b3ca940826fe8e84ba3892479eb176d8, type: 3}
+  - {fileID: 2025389064267078715, guid: 98ff6762f269721449db8a31b29f425e, type: 3}
   - {fileID: 9010986477449342498, guid: 4235f650055e0254ab0c99d8bececae0, type: 3}
+  - {fileID: 3369735524176894235, guid: 6ec9ec4134466fd468e3908df7081c54, type: 3}
+  - {fileID: 5403998270642347645, guid: 4be88f0f84ef9614eb8c6335cf1e2f67, type: 3}
+  - {fileID: 358585223518314519, guid: 89a8c24ac0bf47540ad89bad1fbc2400, type: 3}
+  - {fileID: 6434157520921379024, guid: 17e1722c1898552428e6d01dbb98e943, type: 3}
+  - {fileID: 6493457826227623701, guid: 72f354fa3e134ef4797c3c41ecb3298b, type: 3}
+  - {fileID: 508846294300984702, guid: 50f9c1f40be25d34a96cf34c34747c14, type: 3}
+  - {fileID: 1563434142792894778, guid: 311e7fbf57576914e81b059e1a2515c4, type: 3}
+  - {fileID: 6546226994364662907, guid: 9312262de47665042afceb057b1b931f, type: 3}
   meleeItemList:
   - {fileID: 11400000, guid: 337049fdb3ec5834091e8622b6b7cba6, type: 2}
   - {fileID: 11400000, guid: 2b1efe4addf4f0c468591ab9997829bd, type: 2}

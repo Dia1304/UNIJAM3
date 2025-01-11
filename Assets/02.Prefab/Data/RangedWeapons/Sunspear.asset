@@ -27,4 +27,4 @@ MonoBehaviour:
   damage: 86.1
   range: 11
   area: 0
-  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
+  obj_projectile: {fileID: 2420692848328654780, guid: cbee536ecbc68c142a6e5480d7c51ebd, type: 3}
