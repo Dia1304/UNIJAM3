@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Enemy : PoolAble
 {
     [SerializeField]
-    private int hp = 1;
+    private float hp = 1;
     [SerializeField]
     private float speed = 0.1f;
     [SerializeField]
@@ -38,13 +38,14 @@ public class Enemy : PoolAble
         hp = 3;
     }
 
-    public void Damage(int damage)
+    public void Damage(float damage)
     {
         hp -= damage;
         Debug.Log("Damaged");
         if(hp <= 0)
         {
-            Destroy();
+            Destroy(gameObject);
+            //Destroy();
         }
     }
     public void Destroy()

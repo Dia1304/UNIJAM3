@@ -11,12 +11,17 @@ public class PlayerController : MonoBehaviour
     public Action OnAttack;
 
     //Reference
+    public PlayerStat statData;
     public PlayerStat Stat;
+    public SynergyManager SynergyManager;
 
     private void Awake()
     {
         m_direction = Vector2.zero;
         instance = this;
+
+        Stat = Instantiate(statData);
+        SynergyManager = GetComponent<SynergyManager>();
     }
 
     public void Movement(InputAction.CallbackContext context)

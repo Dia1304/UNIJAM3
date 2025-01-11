@@ -8,21 +8,17 @@ public class MeleeWeapon : Weapon
     Vector3 startPos;
     RaycastHit2D hit;
     public MeleeWeaponData weaponData;
+    public MeleeWeaponData data;
 
     private void Start()
     {
+        weaponData = Instantiate(data);
         itemData = weaponData;
     }
     private void Update()
-    {  
-        if(timer >= 0 && canUse == false)
-        {
-            timer -= Time.deltaTime;
-        }
-        else
-        {
-            canUse = true;
-        }
+    {
+        coolTime = GetMultipliedCoolTime(itemData.coolTime);
+        CoolTime();
 
         startPos = transform.parent.position;
 
@@ -33,12 +29,12 @@ public class MeleeWeapon : Weapon
 
         if(weaponData.area <= 0)
         {
-            Debug.DrawRay(PlayerController.instance.transform.position, direction * 3, Color.red);
+            Debug.DrawRay(PlayerController.instance.transform.position, direction * GetMultipliedRange(weaponData.range), Color.red);
         }
     }
     public override void Attack()
     {
-        hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, 3, LayerMask.GetMask("Enemy"));
+        hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, GetMultipliedRange(weaponData.range), LayerMask.GetMask("Enemy"));
 
         if(hit.collider != null)
         {
@@ -46,19 +42,19 @@ public class MeleeWeapon : Weapon
         }
         else
         {
-            StartCoroutine(SwingWeapon(PlayerController.instance.transform.position + direction * 3));
+            StartCoroutine(SwingWeapon(PlayerController.instance.transform.position + direction * GetMultipliedRange(weaponData.range)));
         }
     }
 
     private IEnumerator SwingWeapon(Vector3 target)
     {
-        yield return StartCoroutine(MoveToPosition(target, 100f));
+        yield return StartCoroutine(MoveToPosition(target, 20f / weaponData.coolTime));
 
         if(weaponData.area <= 0)
         {
             if(hit.collider != null)
             {
-                hit.collider.gameObject.GetComponent<Enemy>().Damage(weaponData.damage);
+                hit.collider.gameObject.GetComponent<Enemy>().Damage(weaponData.damage * GetDamageMultiplier());
             }
         }
         else
@@ -71,7 +67,7 @@ public class MeleeWeapon : Weapon
                 {
                     if (!hasHit.Contains(areaHit[i]))
                     {
-                        areaHit[i].GetComponent<Enemy>().Damage(weaponData.damage);
+                        areaHit[i].GetComponent<Enemy>().Damage(weaponData.damage * GetDamageMultiplier());
                         hasHit.Add(areaHit[i]);
                     }
                 }
@@ -79,25 +75,37 @@ public class MeleeWeapon : Weapon
         }
         Debug.Log("Slash");
 
-        yield return StartCoroutine(MoveToPosition(startPos, 50f));
+        yield return StartCoroutine(MoveBack(10f / weaponData.coolTime));
         transform.position = startPos;
     }
 
     private IEnumerator MoveToPosition(Vector3 target, float moveSpeed)
     {
-        while (Vector3.Distance(transform.position,target) >= 0.1f)
+        while (Vector3.Distance(transform.position, target) >= 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+    private IEnumerator MoveBack(float moveSpeed)
+    {
+        while (Vector3.Distance(transform.position, startPos) >= 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, startPos, moveSpeed * Time.deltaTime);
             yield return null;
         }
     }
 
     private void OnDrawGizmos()
     {
-        if(weaponData.area > 0)
+        try
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, weaponData.area);
+            if(weaponData.area > 0)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(transform.position, weaponData.area);
+            }
         }
+        catch { }
     }
 }

@@ -15,7 +15,6 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
-        Destroy(gameObject, 5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
