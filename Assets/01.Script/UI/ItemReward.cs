@@ -141,7 +141,7 @@ public class ItemReward : MonoBehaviour
             okButton.enabled = true;
         }
         if (playerManager.findItem(selecteArmData.haveItemId).itemImage != null)
-            selectedInventory.GetComponent<Image>().sprite = playerManager.findItem(selectRewardNum).itemImage;
+            selectedInventory.GetComponent<Image>().sprite = playerManager.findItem(selecteArmData.haveItemId).itemImage;
 
     }
 
