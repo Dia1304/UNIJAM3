@@ -20,6 +20,7 @@ MonoBehaviour:
   element: 2
   coolTime: 4
   sound: {fileID: 8300000, guid: dd0763bcaf8f5ad48ae767cc5446e035, type: 3}
+  attackSound: {fileID: 8300000, guid: dd0763bcaf8f5ad48ae767cc5446e035, type: 3}
   itemImage: {fileID: 0}
   damage: 2
   range: 0

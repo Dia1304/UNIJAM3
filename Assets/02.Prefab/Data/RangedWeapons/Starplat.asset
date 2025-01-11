@@ -18,8 +18,9 @@ MonoBehaviour:
   classData: 4
   type: 5
   element: 8
-  coolTime: 0
+  coolTime: 3
   sound: {fileID: 8300000, guid: a1735dc0b955bea4ea942a531ed4348e, type: 3}
+  attackSound: {fileID: 8300000, guid: a1735dc0b955bea4ea942a531ed4348e, type: 3}
   itemImage: {fileID: 0}
   damage: 2
   range: 3
