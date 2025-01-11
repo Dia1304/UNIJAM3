@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7324652759887468578}
   - component: {fileID: 7263659697189641253}
   m_Layer: 0
-  m_Name: BuffSphere
+  m_Name: Incense
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,3 +103,4 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: ad6d814a7a1939c48804fe992a9e669e, type: 2}
   coolTime: 0
   equiped: 0
+  passive: 1

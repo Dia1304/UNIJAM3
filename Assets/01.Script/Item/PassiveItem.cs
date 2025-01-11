@@ -4,6 +4,14 @@ public class PassiveItem : Item
 {
     public bool equiped;
 
+    public enum Passive
+    {
+        Null,
+        Incense,
+    }
+
+    public Passive passive;
+
     private void Update()
     {
         if(!equiped && transform.parent.TryGetComponent(out Arm arm))
@@ -13,13 +21,28 @@ public class PassiveItem : Item
         }
     }
 
-    private void Buff()
+    public void Buff()
     {
         Debug.Log("BUFF");
+        if(passive == Passive.Incense)
+        {
+            PlayerController.instance.Stat.moveSpeed *= 1.2f;
+            PlayerController.instance.Stat.attackSpeed *= 1.2f;
+        }
+    }
+    public void Debuff()
+    {
+        Debug.Log("DEBUFF");
+        if(passive == Passive.Incense) 
+        {
+            PlayerController.instance.Stat.moveSpeed /= 1.2f;
+            PlayerController.instance.Stat.attackSpeed /= 1.2f;
+        }
     }
 
     private void OnDestroy()
     {
+        Debuff();
         equiped = false;
     }
 }
