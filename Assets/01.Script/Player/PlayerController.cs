@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     //public PlayerStat statData;
     public PlayerStat Stat;
     public SynergyManager SynergyManager;
+    [SerializeField] private SpriteRenderer sprite;
 
     private void Awake()
     {
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
         if(Stat.currentHealth <= 0)
         {
             Debug.Log("GameOver");
+            Stat.currentHealth = Stat.maxHealth;
+            SceneManager.LoadScene(5);
         }
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -42,6 +47,18 @@ public class PlayerController : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+    }
+
+    public void Damage()
+    {
+        StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator FlashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
     }
 
     public void Movement(InputAction.CallbackContext context)

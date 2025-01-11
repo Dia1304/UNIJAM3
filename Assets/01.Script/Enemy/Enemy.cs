@@ -118,6 +118,7 @@ public class Enemy : PoolAble
             if(canAttack == true)
             {
                 player.GetComponent<PlayerController>().Stat.currentHealth -= damage;
+                collision.GetComponent<PlayerController>().Damage();
                 timer = attackCoolTime;
             }
         }
