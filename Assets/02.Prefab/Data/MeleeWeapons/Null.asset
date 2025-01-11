@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 0
   itemName: "\uBE48\uC190"
-  itemDesc: "\uC124\uBA85 \uC5C6\uC74C"
-  Mechanism: 
+  itemDesc: "\uC544\uBB34\uAC83\uB3C4 \uC5C6\uC796\uC544!"
+  Mechanism: "\uACF5\uACA9\uD558\uC9C0 \uBABB\uD55C\uB2E4"
   classData: -1
   type: -1
   element: -1
@@ -26,3 +26,4 @@ MonoBehaviour:
   damage: 0
   range: 0
   area: 0
+  swingAngle: 0

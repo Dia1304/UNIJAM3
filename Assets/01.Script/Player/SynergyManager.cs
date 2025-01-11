@@ -65,7 +65,7 @@ public class SynergyManager : MonoBehaviour
         synergyArray[21] = new Synergy("element_grass", 0, 3, 5);
         synergyArray[22] = new Synergy("element_electric", 0, 3, 5);
         synergyArray[23] = new Synergy("element_metal", 0, 3, 5);
-        synergyArray[24] = new Synergy("element_fire`", 0, 3, 5);
+        synergyArray[24] = new Synergy("element_fire", 0, 3, 5);
         synergyArray[25] = new Synergy("element_mad", 0, 3, 5);
         synergyArray[26] = new Synergy("element_light", 0, 3, 5);
         synergyArray[27] = new Synergy("element_physical", 0, 3, 5);
@@ -780,6 +780,9 @@ public class SynergyManager : MonoBehaviour
                 break;
             case ItemData.Type.Holy:
                 AddSynergyCount("type_holy", 1);
+                break;
+            case ItemData.Type.Fantasy:
+                AddSynergyCount("type_fantasy", 1);
                 break;
             case ItemData.Type.Military:
                 AddSynergyCount("type_military", 1);
