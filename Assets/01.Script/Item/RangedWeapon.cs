@@ -46,7 +46,7 @@ public class RangedWeapon : Weapon
         _object.GetComponent<Projectile>().area = GetMultipliedArea(weaponData.area);
         _object.GetComponent<Projectile>().damage = weaponData.damage * GetDamageMultiplier() * PlayerController.instance.Stat.rangedWeaponDamageMultiplier;
         
-        GetComponent<AudioSource>().PlayOneShot(itemData.attackSound, 1);
+        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
 
         if(PlayerController.instance.Stat.militarySynergy && weaponData.type == ItemData.Type.Military)
         {

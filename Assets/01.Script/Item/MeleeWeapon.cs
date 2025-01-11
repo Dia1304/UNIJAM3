@@ -60,8 +60,7 @@ public class MeleeWeapon : Weapon
     {
         hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, GetMultipliedRange(weaponData.range), LayerMask.GetMask("Enemy"));
 
-        GetComponent<AudioSource>().pitch = weaponData.coolTime;
-        GetComponent<AudioSource>().PlayOneShot(itemData.attackSound, 1);
+        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
 
         if(!isMoving)
         {
@@ -79,7 +78,7 @@ public class MeleeWeapon : Weapon
     private IEnumerator SwingWeapon(Vector3 target)
     {
         isMoving = true;
-        yield return StartCoroutine(MoveToPosition(target, 20f / Mathf.Min(2,weaponData.coolTime)));
+        yield return StartCoroutine(MoveToPosition(target, 20f));
 
         float damage = weaponData.damage;
         if(weaponData.type == ItemData.Type.Alcohol)
@@ -111,7 +110,7 @@ public class MeleeWeapon : Weapon
         }
         Debug.Log("Slash");
 
-        yield return StartCoroutine(MoveBack(10f / Mathf.Min(2,weaponData.coolTime)));
+        yield return StartCoroutine(MoveBack(10f));
         transform.position = startPos;
         isMoving = false;
     }
