@@ -12,6 +12,10 @@ public class RangedWeapon : Weapon
         weaponData = Instantiate(data);
         itemData = weaponData;
         GetComponent<AudioSource>().clip = itemData.sound;
+        if(itemData.itemImage != null)
+        {
+           GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
+        }
     }
     private void Update()
     {

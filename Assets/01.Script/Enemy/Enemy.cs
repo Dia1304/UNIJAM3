@@ -11,6 +11,9 @@ public class Enemy : PoolAble
     private float speed = 0.1f;
     [SerializeField]
     private int damage = 1;
+    [SerializeField] private float attackCoolTime;
+    float timer;
+    bool canAttack;
     private GameObject player;
 
     private void Awake()
@@ -26,11 +29,20 @@ public class Enemy : PoolAble
         Vector3 vDist = vTargetPos - vPos;
         Vector3 vDir = vDist.normalized;
         float fDist = vDist.magnitude;
-        if (fDist > speed * Time.deltaTime) {
+        if (fDist > speed * Time.deltaTime)
+        {
             transform.position += vDir * speed * Time.deltaTime;
         }
 
-
+        if(timer > 0f)
+        {
+            timer -= Time.deltaTime;
+            canAttack = false;
+        }
+        else
+        {
+            canAttack = true;
+        }
     }
 
     public void InitStat()
@@ -52,11 +64,16 @@ public class Enemy : PoolAble
     {
         ReleaseObject();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject == player)
+        if(collision.gameObject.tag == "Player")
         {
-            player.GetComponent<PlayerController>().Stat.currentHealth -= damage;
+            Debug.Log("Detect Player");
+            if(canAttack == true)
+            {
+                player.GetComponent<PlayerController>().Stat.currentHealth -= damage;
+                timer = attackCoolTime;
+            }
         }
     }
 }
