@@ -70,13 +70,33 @@ public class MoveItemData : MonoBehaviour
         if (armData.haveItemId == 0)
             return;
         explainDisplay.enabled = true;
-        if(id == 0)
+        if (id == 0)
         {
             itemData = playerManager.findItem(armData.haveItemId);
             string explain = itemData.itemDesc + "\n" + itemData.Mechanism;
             explainText.text = explain;
-        }// 시너지 설명 추가 
-        
+        }
+        else if (id == 1)
+        {
+            itemData = playerManager.findItem(armData.haveItemId);
+            string explain = synergyManager.synergydiscription[(int)itemData.classData];
+            explain = explain.Replace("\\n", "\n");
+            explainText.text = explain;
+        }
+        else if (id == 2)
+        {
+            itemData = playerManager.findItem(armData.haveItemId);
+            string explain = synergyManager.synergydiscription[(int)itemData.type + 9];
+            explain = explain.Replace("\\n", "\n");
+            explainText.text = explain;
+        }
+        else if (id == 3)
+        {
+            itemData = playerManager.findItem(armData.haveItemId);
+            string explain = synergyManager.synergydiscription[(int)itemData.element + 19];
+            explain = explain.Replace("\\n", "\n");
+            explainText.text = explain;
+        }
     }
     public void OffDisplay()
     {
