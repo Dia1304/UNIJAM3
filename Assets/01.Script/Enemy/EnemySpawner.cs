@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,11 +11,15 @@ public class EnemySpawner : MonoBehaviour
     private int remainMeleeCount;
     [SerializeField] private int rangeCount;
     private int remainRangeCount;
+    public PlayerManager playerManager;
 
     private List<GameObject> enemies = new List<GameObject>();
 
     private float timer;
-
+    private void Awake()
+    {
+        playerManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerManager>();
+    }
     void Start()
     {
         remainMeleeCount = meleeCount;
@@ -28,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (remainRangeCount == 0 && remainMeleeCount == 0 && enemies.Count == 0)
         {
+            playerManager.stage++;
             SceneManager.LoadScene(3);
             Debug.Log("Clear");
         }

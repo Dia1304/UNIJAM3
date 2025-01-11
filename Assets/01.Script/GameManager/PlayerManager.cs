@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject rangedItemPrefab;
     public GameObject meleeItemPrefab;
     public SynergyManager synergyManager;
+    public int stage = 0;
 
     private bool isMelee = true;
     private int itemIndex = 0;
@@ -53,7 +54,11 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(stage == 3)
+        {
+            AddArm(0, 0, -1);
+            stage = 0;
+        }
     }
 
     public void AddArm(int id, int keyId, int typeId)

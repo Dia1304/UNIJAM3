@@ -24,7 +24,7 @@ public class SynergyDisplay : MonoBehaviour
     {
         for(int i = 0; i < synergyManager.synergyCnt.Length; i++)
         {
-            if (synergyManager.synergyCnt[i] != 0)
+            if (synergyManager.synergyCnt[i] > 0)
             {
                 if (synergyList[i] == null)
                 {

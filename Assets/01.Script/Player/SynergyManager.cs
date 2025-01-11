@@ -828,6 +828,7 @@ public class SynergyManager : MonoBehaviour
     }
     public void SubtractSynergy(ItemData item)
     {
+        Debug.Log(item);
         switch (item.classData)
         {
             case ItemData.Class.Blunt:
