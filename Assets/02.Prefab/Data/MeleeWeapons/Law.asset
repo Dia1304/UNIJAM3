@@ -15,6 +15,7 @@ MonoBehaviour:
   itemId: 4
   itemName: "\uBC95\uC804"
   itemDesc: "\uC774 \uBD88\uACBD\uD55C \uC790\uAC00!"
+  Mechanism: "\uC804\uBC29 \uAC00\uAE4C\uC6B4 \uC801 \uACF5\uACA9"
   classData: 0
   type: 4
   element: 8

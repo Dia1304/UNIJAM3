@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bf1bae1df809954aa64d4870178f225, type: 3}
-  m_Name: Lightsaber
+  m_Name: Null
   m_EditorClassIdentifier: 
-  itemId: 3
-  itemName: "\uAD11\uC120\uAC80"
-  itemDesc: "\uADF8\uB300\uC5D0\uAC8C \uD3EC\uC2A4\uAC00 \uD568\uAED8\uD558\uAE38"
-  Mechanism: "\uC804\uBC29 120\uB3C4 \uBD80\uCC44\uAF34 \uBAA8\uC591 \uBC94\uC704
-    \uACF5\uACA9"
-  classData: 1
-  type: 2
-  element: 7
-  coolTime: 4
-  sound: {fileID: 8300000, guid: 008555742b4aa0f42a2579020186d689, type: 3}
+  itemId: 0
+  itemName: "\uBE44\uC5B4\uC788\uC74C"
+  itemDesc: "\uC124\uBA85 \uC5C6\uC74C"
+  classData: -1
+  type: -1
+  element: -1
+  coolTime: 99
+  sound: {fileID: 0}
   itemImage: {fileID: 0}
-  damage: 2
+  damage: 0
   range: 0
   area: 0
