@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackButton: 0
   haveItemId: 0
+  armType: 0
   armNum: 0
   armManager: {fileID: 0}
   attackButtonToggle:
@@ -143,6 +144,7 @@ MonoBehaviour:
   - {fileID: 8213605572519043532}
   - {fileID: 6452862240106220975}
   moveItemData: {fileID: 2945597349170318747}
+  moveText: {fileID: 2739227282225507188}
 --- !u!1 &1360655403668066088
 GameObject:
   m_ObjectHideFlags: 0

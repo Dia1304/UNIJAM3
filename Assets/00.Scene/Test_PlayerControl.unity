@@ -901,6 +901,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: armATypeList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: weaponPrefab.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -923,6 +927,10 @@ PrefabInstance:
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'armItemList.Array.data[4]'
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'armATypeList.Array.data[0]'
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'weaponPrefab.Array.data[0]'
