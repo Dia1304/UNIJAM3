@@ -61,7 +61,7 @@ public class MeleeWeapon : Weapon
         hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, GetMultipliedRange(weaponData.range), LayerMask.GetMask("Enemy"));
 
         GetComponent<AudioSource>().pitch = weaponData.coolTime;
-        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
+        GetComponent<AudioSource>().PlayOneShot(itemData.attackSound, 1);
 
         if(!isMoving)
         {
