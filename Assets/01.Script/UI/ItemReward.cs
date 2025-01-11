@@ -4,12 +4,15 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework.Interfaces;
+using Unity.VisualScripting;
+using UnityEngine.PlayerLoop;
 
 public class ItemReward : MonoBehaviour
 {
     [SerializeField]
     Image explainDisplay;
     public PlayerManager playerManager;
+    public SynergyManager synergyManager;
 
     public List<GameObject> rewardItems = new List<GameObject>(); // 3°³
     public int[] rewardItemId = new int[3];
@@ -21,13 +24,16 @@ public class ItemReward : MonoBehaviour
     public ArmManager armManager;
     public ItemData itemData;
     public ArmData selecteArmData;
+    public Button okButton;
     [SerializeField]
     Text explainText;
 
     private void Awake()
     {
         playerManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerManager>();
+        synergyManager = playerManager.synergyManager;
         GameObject temp = GameObject.FindGameObjectWithTag("ItemDisplay");
+
         explainDisplay = temp.GetComponent<UnityEngine.UI.Image>();
         explainText = temp.GetComponentInChildren<Text>();
     }
@@ -84,8 +90,6 @@ public class ItemReward : MonoBehaviour
         }
         else if(id == 4)
         {
-            if (selecteArmData.haveItemId == 0)
-                return;
             itemData = playerManager.findItem(selecteArmData.haveItemId);
             string explain = itemData.itemDesc + "\n" + itemData.Mechanism;
             explainText.text = explain;
@@ -109,6 +113,8 @@ public class ItemReward : MonoBehaviour
 
     public void ChangeItem()
     {
+        synergyManager.AddSynergy(playerManager.findItem(selectRewardNum));
+        synergyManager.SubtractSynergy(playerManager.findItem(selecteArmData.haveItemId));
         selecteArmData.haveItemId = selectRewardNum;
         selecteArmData.SetButton();
     }
@@ -116,6 +122,18 @@ public class ItemReward : MonoBehaviour
     private void Update()
     {
         selecteArmData = armManager.armDatas[armManager.selectInventorySlot];
+        if(synergyManager.synergyCnt[9 + (int)playerManager.findItem(selecteArmData.haveItemId).type] - 1 == 2 
+            && playerManager.findItem(selecteArmData.haveItemId).type
+            != playerManager.findItem(selectRewardNum).type)
+        {
+            okButton.enabled = false;
+        }
+        else
+        {
+            okButton.enabled = true;
+        }
+
+
     }
 
 }

@@ -19,7 +19,7 @@ public class ArmHolder : MonoBehaviour
     {
         for(int i = 0; i < playerManager.armItemList.Count; i++) 
         {
-            CreateArm(playerManager.armItemList[i], playerManager.armAttackKeyList[i]);
+            CreateArm(playerManager.armItemList[i], playerManager.armAttackKeyList[i], playerManager.armATypeList[i]) ;
         }
     }
 
@@ -35,20 +35,38 @@ public class ArmHolder : MonoBehaviour
         direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
     }
 
-    public void CreateArm(int id = 0, int keyId = 0)
+    public void CreateArm(int id = 0, int keyId = 0, int type = -1)
     {
-        GameObject newArm = Instantiate(obj_arm, transform);
-        armList.Add(newArm);
-        GameObject weapon = playerManager.WeaponGeneration(id);
-        newArm.GetComponent<Arm>().EquipItem(weapon);
-
-        for(int i = 0; i < armList.Count; i++)
+        if (type == -1)
         {
-            float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
-            armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * 5f;
+            GameObject newArm = Instantiate(obj_arm, transform);
+            armList.Add(newArm);
+            GameObject weapon = playerManager.WeaponGeneration(id);
+            newArm.GetComponent<Arm>().EquipItem(weapon);
+
+            for (int i = 0; i < armList.Count; i++)
+            {
+                float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
+                armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * 5f;
+            }
+            PlayerController.instance.OnAttack1 += newArm.GetComponent<Arm>().Use;
+            PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
+            newArm.GetComponent<Arm>().ChangeAttackKey((Arm.AttackKey)keyId);
         }
-        PlayerController.instance.OnAttack1 += newArm.GetComponent<Arm>().Use;
-        PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
-        newArm.GetComponent<Arm>().ChangeAttackKey((Arm.AttackKey)keyId);
+        else
+        {
+            GameObject newArm = Instantiate(obj_arm, transform);
+            newArm.GetComponent<Arm>().enabled = false;
+            newArm.GetComponent<SpecialArm>().enabled = true;
+            newArm.GetComponent<SpecialArm>().type = (ItemData.Type)type;
+            armList.Add(newArm);
+            for (int i = 0; i < armList.Count; i++)
+            {
+                float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
+                armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+            }
+            PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
+            newArm.GetComponent<SpecialArm>().ChangeAttackKey((Arm.AttackKey)keyId);
+        }
     }
 }
