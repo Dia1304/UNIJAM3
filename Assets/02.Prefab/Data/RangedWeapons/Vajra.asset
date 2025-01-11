@@ -15,6 +15,8 @@ MonoBehaviour:
   itemId: 29
   itemName: "\uC778\uB4DC\uB77C\uC758 \uBD84\uB178"
   itemDesc: "\uC601\uC7A5\uB958 \uC0AC\uC774\uC988\uB85C \uD2B9\uBCC4 \uC81C\uC791"
+  Mechanism: "\uB9C8\uC6B0\uC2A4 \uBC29\uD5A5\uC5D0 \uB099\uB8B0\uAC00 \uB5A8\uC5B4\uC838
+    \uBC94\uC704 \uACF5\uACA9"
   classData: 3
   type: 9
   element: 3

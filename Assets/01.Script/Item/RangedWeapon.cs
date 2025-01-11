@@ -14,7 +14,12 @@ public class RangedWeapon : Weapon
     {
         CoolTime();
     }
-
+    public void Init(RangedWeaponData inData)
+    {
+        weaponData = inData;
+        data = inData;
+        itemData = inData;
+    }
     public override void Attack()
     {
         Debug.Log("Fire");

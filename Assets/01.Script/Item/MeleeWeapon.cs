@@ -17,6 +17,13 @@ public class MeleeWeapon : Weapon
         weaponData = Instantiate(data);
         itemData = weaponData;
     }
+
+    public void Init(MeleeWeaponData inData)
+    {
+        weaponData = inData;
+        data = inData;
+        itemData = inData;
+    }
     private void Update()
     {
         coolTime = GetMultipliedCoolTime(itemData.coolTime);

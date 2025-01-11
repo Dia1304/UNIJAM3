@@ -6,6 +6,7 @@ public class ItemData : ScriptableObject
     public int itemId;
     public string itemName;
     public string itemDesc;
+    public string Mechanism;
     public Class classData;
     public Type type;
     public Element element;
