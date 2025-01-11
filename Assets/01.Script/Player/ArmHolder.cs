@@ -4,6 +4,7 @@ using UnityEngine;
 public class ArmHolder : MonoBehaviour
 {
     public List<GameObject> armList = new List<GameObject>();
+    private List<LineRenderer> lineRenderers = new List<LineRenderer>();
 
     public GameObject obj_arm;
 

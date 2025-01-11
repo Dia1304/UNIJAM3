@@ -15,9 +15,11 @@ MonoBehaviour:
   itemId: 0
   itemName: 
   itemDesc: 
-  classData: 8
-  type: 7
-  element: 2
+  Mechanism: 
+  classData: 7
+  type: 9
+  element: 5
   coolTime: 0
   sound: {fileID: 0}
+  attackSound: {fileID: 0}
   itemImage: {fileID: 0}

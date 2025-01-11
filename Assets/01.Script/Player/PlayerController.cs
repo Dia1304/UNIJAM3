@@ -34,11 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("GameOver");
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Time.timeScale = 0.5f;
         }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
+        if(Input.GetKeyUp(KeyCode.LeftControl))
         {
             Time.timeScale = 1.0f;
         }

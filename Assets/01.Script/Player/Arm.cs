@@ -25,6 +25,16 @@ public class Arm : MonoBehaviour
         {
             UnequipItem(currentItem);
         }
+
+        if(transform.childCount == 1)
+        {
+            GetComponent<LineRenderer>().SetPosition(0, transform.GetChild(0).position);
+        }
+        else
+        {
+            GetComponent<LineRenderer>().SetPosition(0, transform.position);
+        }
+        GetComponent<LineRenderer>().SetPosition(1, transform.parent.position);
     }
 
     public void ChangeAttackKey(AttackKey attackKey)

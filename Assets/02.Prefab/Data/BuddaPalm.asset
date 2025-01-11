@@ -16,14 +16,14 @@ MonoBehaviour:
   itemName: BuddaPalm
   itemDesc: "\uC5EC\uB798\uC2E0\uC7A5"
   Mechanism: 
-  classData: -1
-  type: -1
-  element: -1
+  classData: 4
+  type: 9
+  element: 8
   coolTime: 2
   sound: {fileID: 0}
   attackSound: {fileID: 0}
   itemImage: {fileID: 0}
   damage: 5
   range: 3
-  area: 0
-  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
+  area: 1
+  obj_projectile: {fileID: 7698300108585466533, guid: 106eb54364ba17649bcf3c67d23a076b, type: 3}

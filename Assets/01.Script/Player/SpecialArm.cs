@@ -35,6 +35,16 @@ public class SpecialArm : MonoBehaviour
             UnequipItem(currentItem);
         }
 
+        if(transform.childCount == 1)
+        {
+            GetComponent<LineRenderer>().SetPosition(0, transform.GetChild(0).position);
+        }
+        else
+        {
+            GetComponent<LineRenderer>().SetPosition(0, transform.position);
+        }
+        GetComponent<LineRenderer>().SetPosition(1, transform.parent.position);
+
         if(currentItem != null && currentItem.GetComponent<Item>().itemData.type == type)
         {
             if(type == ItemData.Type.Gothic)
