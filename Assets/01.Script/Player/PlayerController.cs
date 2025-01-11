@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
     public SynergyManager SynergyManager;
     [SerializeField] private SpriteRenderer sprite;
 
+    [SerializeField] private Image barImage;
+
+    private void ChangeHealthBarAmount(float amount) //* HP ������ ���� 
+    {
+        barImage.fillAmount = amount;
+    }
     private void Awake()
     {
         m_direction = Vector2.zero;
@@ -33,7 +39,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(Stat.currentHealth <= 0)
+        ChangeHealthBarAmount(Stat.maxHealth / Stat.currentHealth);
+        if (Stat.currentHealth <= 0)
         {
             Debug.Log("GameOver");
             Stat.currentHealth = Stat.maxHealth;

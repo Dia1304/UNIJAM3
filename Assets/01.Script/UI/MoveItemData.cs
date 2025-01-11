@@ -44,6 +44,8 @@ public class MoveItemData : MonoBehaviour
         weaponName.text = itemData.itemName;
         if (itemData.itemImage != null)
             itemSprite.sprite = itemData.itemImage;
+        else
+            itemSprite.sprite = null;
         SynergySpriteInsert();
     }
 
@@ -53,17 +55,29 @@ public class MoveItemData : MonoBehaviour
         {
             if (synergyManager.synergySprite[(int)itemData.classData] != null)
                 synergySprites[0].sprite = synergyManager.synergySprite[(int)itemData.classData];
+            else
+                synergySprites[0].sprite = null;
         }
+        else
+            synergySprites[0].sprite = null;
         if ((int)itemData.type != -1)
         {
             if (synergyManager.synergySprite[(int)itemData.type +9] != null)
                 synergySprites[1].sprite = synergyManager.synergySprite[(int)itemData.type+9];
+            else
+                synergySprites[1].sprite = null;
         }
+        else
+            synergySprites[1].sprite = null;
         if ((int)itemData.element != -1)
         {
             if (synergyManager.synergySprite[(int)itemData.element + 19] != null)
                 synergySprites[2].sprite = synergyManager.synergySprite[(int)itemData.element + 19];
+            else
+                synergySprites[2].sprite = null;
         }
+        else
+            synergySprites[2].sprite = null;
     }
     public void OnDisplay(int id) // 0 = itemdisplay, 1 = class, 2= type, 3 = element
     {
