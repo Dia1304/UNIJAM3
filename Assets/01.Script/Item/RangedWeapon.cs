@@ -12,6 +12,7 @@ public class RangedWeapon : Weapon
     {
         weaponData = Instantiate(data);
         itemData = weaponData;
+        GetComponent<AudioSource>().clip = itemData.sound;
     }
     private void Update()
     {
@@ -42,6 +43,8 @@ public class RangedWeapon : Weapon
         _object.GetComponent<Projectile>().area = GetMultipliedArea(weaponData.area);
         _object.GetComponent<Projectile>().damage = weaponData.damage * GetDamageMultiplier() * PlayerController.instance.Stat.rangedWeaponDamageMultiplier;
         
+        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
+
         if(PlayerController.instance.Stat.militarySynergy && weaponData.type == ItemData.Type.Military)
         {
             if(_object.GetComponent<Projectile>().penetration == false)

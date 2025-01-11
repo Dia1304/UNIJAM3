@@ -34,7 +34,7 @@ public class ArmHolder : MonoBehaviour
         for(int i = 0; i < armList.Count; i++)
         {
             float angle = (360f / armList.Count) * i * Mathf.Deg2Rad;
-            armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+            armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * 5f;
         }
         PlayerController.instance.OnAttack1 += newArm.GetComponent<Arm>().Use;
         PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
