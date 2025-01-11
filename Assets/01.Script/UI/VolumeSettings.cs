@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VolumeSettings : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class VolumeSettings : MonoBehaviour
             SetMusicVolume();
             SetSFXVolume();
         }
+    }
+
+    public void ExitSettings()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void SetMusicVolume()
