@@ -14,7 +14,7 @@ public class RangedWeapon : Weapon
         GetComponent<AudioSource>().clip = itemData.sound;
         if(itemData.itemImage != null)
         {
-           GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
+           transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
         }
     }
     private void Update()

@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.name.Contains("enemy"))
+        if(collision.tag == "Enemy")
         {
             Collider2D[] areaHit = Physics2D.OverlapCircleAll(transform.position, area, LayerMask.GetMask("Enemy"));
             List<Collider2D> hasHit = new List<Collider2D>();   
@@ -44,10 +44,10 @@ public class Projectile : MonoBehaviour
                     }
                 }
             }
-        }
-        if(!penetration)
-        {
-            Destroy(gameObject);
+            if(!penetration)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
