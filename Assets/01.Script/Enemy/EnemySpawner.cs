@@ -13,9 +13,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P)) 
         {
-            var enemyGo = ObjectPoolManager.instance.GetGo("enemy");
+            int index = Random.Range(0, 2);
+            var enemyGo = ObjectPoolManager.instance.GetGo(index.ToString());
 
-            enemyGo.transform.position = new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), 0);
+            enemyGo.transform.position = PlayerController.instance.transform.position + new Vector3(Random.Range(-20,20), Random.Range(-10, 10), 0);
         }
     }
 }
