@@ -841,7 +841,7 @@ MonoBehaviour:
   armPreFab: {fileID: 1007668490676551611, guid: d9dd4fa2c0a3ad14e81c46bfb792da1a, type: 3}
   armDatas: []
   playerManager: {fileID: 0}
-  rewardState: 1
+  rewardState: 0
   selectInventorySlot: 0
 --- !u!1 &460648172
 GameObject:
@@ -947,7 +947,7 @@ Transform:
   m_GameObject: {fileID: 647144814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 780, y: 0, z: 0}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1098,7 +1098,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1208,14 +1208,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explainDisplay: {fileID: 0}
+  playerManager: {fileID: 0}
   rewardItems:
   - {fileID: 1597925204}
   - {fileID: 1751480005}
   - {fileID: 1204640871}
+  rewardItemId: 000000000000000000000000
   selectedReward: {fileID: 1990939208}
   selectedInventory: {fileID: 679028663}
   selectedArmNum: 0
   armManager: {fileID: 454766475}
+  itemData: {fileID: 0}
+  selecteArmData: {fileID: 0}
+  explainText: {fileID: 0}
 --- !u!1 &837422628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +1781,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 716406434}
+          m_TargetAssemblyTypeName: ItemReward, Assembly-CSharp
+          m_MethodName: SelectRewardItem
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1204640874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,6 +2304,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 716406434}
+          m_TargetAssemblyTypeName: ItemReward, Assembly-CSharp
+          m_MethodName: SelectRewardItem
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1597925207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,6 +2642,22 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 716406434}
+          m_TargetAssemblyTypeName: ItemReward, Assembly-CSharp
+          m_MethodName: SelectRewardItem
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0

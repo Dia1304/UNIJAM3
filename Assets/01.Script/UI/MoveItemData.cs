@@ -38,13 +38,15 @@ public class MoveItemData : MonoBehaviour
     }
     public void OnDisplay(int id) // 0 = itemdisplay, 1 = class, 2= type, 3 = element
     {
+        if (armData.haveItemId == 0)
+            return;
         explainDisplay.enabled = true;
         if(id == 0)
         {
             itemData = playerManager.findItem(armData.haveItemId);
             string explain = itemData.itemDesc + "\n" + itemData.Mechanism;
             explainText.text = explain;
-        }
+        }// 시너지 설명 추가 
         
     }
     public void OffDisplay()
@@ -68,6 +70,10 @@ public class MoveItemData : MonoBehaviour
                 armData.SelectItem();
             }
             explainDisplay.enabled = false;
+        }
+        else
+        {
+            armData.armManager.SelectInventory(armData.armNum);
         }
     }
 
