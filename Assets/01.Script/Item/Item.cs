@@ -29,6 +29,13 @@ public class Item : MonoBehaviour
         coolTime = itemData.coolTime;
         timer = coolTime;
     }
+    private void Start()
+    {
+        if(itemData.itemImage != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
+        }
+    }
 
     public void CoolTime()
     {
