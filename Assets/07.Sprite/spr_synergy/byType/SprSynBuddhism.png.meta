@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SprSynBuddhism_0: -2319850546857356103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

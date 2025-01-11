@@ -26,4 +26,4 @@ MonoBehaviour:
   damage: 11.1
   range: 3.4
   area: 0
-  swingAngle: 0
+  swingAngle: 120

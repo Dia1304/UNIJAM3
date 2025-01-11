@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour
     public float damage;
 
     public bool penetration;
+    public float rotationSpeed;
+    public bool rotating;
     void Start()
     {  
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -25,6 +27,10 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+        if(rotating)
+        {
+            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

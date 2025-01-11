@@ -135,9 +135,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: adbb2934d5e24ab4b94ab7fbe2939e3a, type: 2}
   coolTime: 0
+  inInventory: 1
   weaponData: {fileID: 0}
   data: {fileID: 11400000, guid: adbb2934d5e24ab4b94ab7fbe2939e3a, type: 2}
-  inInventory: 1
+  swingSpeed: 1000
 --- !u!82 &8427082089897373546
 AudioSource:
   m_ObjectHideFlags: 0

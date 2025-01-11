@@ -15,7 +15,7 @@ public class MeleeWeapon : Weapon
 
     private bool isMoving;
 
-    public float swingSpeed = 200;
+    public float swingSpeed = 1000;
 
     private bool isSwinging = false; // 휘두르는 중인지 여부
 

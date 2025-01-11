@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ed0949c926567a04e81edd945a03dd39
+guid: f549d0fef31d8d94e9af7b57922fb057
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4800400916341540531
-    second: spr_lamp_0
+      213: 8554989675590227090
+    second: spr_lamp 1_0
+  - first:
+      213: -6341492931386584957
+    second: spr_lamp 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_lamp_0
+      name: spr_lamp 1_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 107
-        width: 399
-        height: 348
+        x: 116
+        y: 19
+        width: 292
+        height: 454
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d49b00adccc816db0800000000000000
-      internalID: -4800400916341540531
+      spriteID: 29490be98cd69b670800000000000000
+      internalID: 8554989675590227090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_lamp 1_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 368
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3805d0f07cd7ef7a0800000000000000
+      internalID: -6341492931386584957
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_lamp_0: -4800400916341540531
+      spr_lamp 1_0: 8554989675590227090
+      spr_lamp 1_1: -6341492931386584957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
