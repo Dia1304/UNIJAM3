@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public Action OnAttack;
 
     //Reference
-    public PlayerStat statData;
+    //public PlayerStat statData;
     public PlayerStat Stat;
     public SynergyManager SynergyManager;
 
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         m_direction = Vector2.zero;
         instance = this;
 
-        Stat = Instantiate(statData);
+        //Stat = Instantiate(statData);
         SynergyManager = GetComponent<SynergyManager>();
     }
 
