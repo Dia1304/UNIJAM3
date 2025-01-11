@@ -3,11 +3,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Animator anim;
+    private SpriteRenderer sprite;
     private bool isFacingRight;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -35,8 +37,6 @@ public class PlayerMovement : MonoBehaviour
     public void Flip()
     {
         isFacingRight = !isFacingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
+        sprite.flipX = !sprite.flipX;
     }
 }
