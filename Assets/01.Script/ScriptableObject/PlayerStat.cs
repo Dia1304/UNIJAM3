@@ -8,6 +8,7 @@ public class PlayerStat : ScriptableObject
     public float currentHealth;
     public float moveSpeed;
     public float attackSpeed;
+    public float damageMultiplier;
 
     [Header("Clsss Damage Multiplier")]
     public float bluntDamageMultiplier;
@@ -54,7 +55,7 @@ public class PlayerStat : ScriptableObject
     public float foodAreaMultiplier;
 
     [Header("Element Multiplier")]
-    public float positionMultiplier;
+    public float poisionMultiplier;
     public float waterMultiplier;
     public float grassMultiplier;
     public float electricMultiplier;
@@ -66,6 +67,9 @@ public class PlayerStat : ScriptableObject
 
     [Header("Extra Multiplier")]
     public float structureDurabilityMultiplier;
+    public float rangedWeaponDamageMultiplier;
+    public float meleeWeaponDamageMultiplier;
+    public float sojuDamageMultiplier;
 
     [Header("Type Synergy")]
     public bool modernSynergy;

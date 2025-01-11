@@ -10,6 +10,8 @@ public class MeleeWeapon : Weapon
     public MeleeWeaponData weaponData;
     public MeleeWeaponData data;
 
+    private bool isMoving;
+
     private void Start()
     {
         weaponData = Instantiate(data);
@@ -36,25 +38,34 @@ public class MeleeWeapon : Weapon
     {
         hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, GetMultipliedRange(weaponData.range), LayerMask.GetMask("Enemy"));
 
-        if(hit.collider != null)
+        if(!isMoving)
         {
-            StartCoroutine(SwingWeapon(hit.transform.position));
-        }
-        else
-        {
-            StartCoroutine(SwingWeapon(PlayerController.instance.transform.position + direction * GetMultipliedRange(weaponData.range)));
+            if(hit.collider != null)
+            {
+                StartCoroutine(SwingWeapon(hit.transform.position));
+            }
+            else
+            {
+                StartCoroutine(SwingWeapon(PlayerController.instance.transform.position + direction * GetMultipliedRange(weaponData.range)));
+            }
         }
     }
 
     private IEnumerator SwingWeapon(Vector3 target)
     {
+        isMoving = true;
         yield return StartCoroutine(MoveToPosition(target, 20f / weaponData.coolTime));
 
+        float damage = weaponData.damage;
+        if(weaponData.type == ItemData.Type.Alcohol)
+        {
+            damage *= PlayerController.instance.Stat.sojuDamageMultiplier;
+        }
         if(weaponData.area <= 0)
         {
             if(hit.collider != null)
             {
-                hit.collider.gameObject.GetComponent<Enemy>().Damage(weaponData.damage * GetDamageMultiplier());
+                hit.collider.gameObject.GetComponent<Enemy>().Damage(damage * GetDamageMultiplier() * PlayerController.instance.Stat.meleeWeaponDamageMultiplier);
             }
         }
         else
@@ -67,7 +78,7 @@ public class MeleeWeapon : Weapon
                 {
                     if (!hasHit.Contains(areaHit[i]))
                     {
-                        areaHit[i].GetComponent<Enemy>().Damage(weaponData.damage * GetDamageMultiplier());
+                        areaHit[i].GetComponent<Enemy>().Damage(damage * GetDamageMultiplier() * PlayerController.instance.Stat.meleeWeaponDamageMultiplier);
                         hasHit.Add(areaHit[i]);
                     }
                 }
@@ -77,6 +88,7 @@ public class MeleeWeapon : Weapon
 
         yield return StartCoroutine(MoveBack(10f / weaponData.coolTime));
         transform.position = startPos;
+        isMoving = false;
     }
 
     private IEnumerator MoveToPosition(Vector3 target, float moveSpeed)
