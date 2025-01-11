@@ -1977,6 +1977,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: armItemList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: armATypeList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'armATypeList.Array.data[1]'
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: armAttackKeyList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

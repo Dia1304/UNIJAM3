@@ -145,6 +145,8 @@ public class ItemReward : MonoBehaviour
         }
         if (playerManager.findItem(selecteArmData.haveItemId).itemImage != null)
             selectedInventory.GetComponent<Image>().sprite = playerManager.findItem(selecteArmData.haveItemId).itemImage;
+        else
+            selectedInventory.GetComponent<Image>().sprite = null;
 
     }
 

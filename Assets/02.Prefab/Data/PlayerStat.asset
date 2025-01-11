@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerStat
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: -436
+  currentHealth: 100
   moveSpeed: 5
-  attackSpeed: 1
+  attackSpeed: 10
   damageMultiplier: 1
   bluntDamageMultiplier: 0
   bladeDamageMultiplier: 0
