@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerStat : ScriptableObject
 {
     [Header("Base Stat")]
-    public int maxHealth;
+    public float maxHealth;
+    public float currentHealth;
     public float moveSpeed;
     public float attackSpeed;
 
@@ -40,6 +41,17 @@ public class PlayerStat : ScriptableObject
     public float buildingRangeMultiplier;
     public float machineRangeMultiplier;
     public float foodRangeMultiplier;
+
+    [Header("Class Area Multiplier")]
+    public float bluntAreaMultiplier;
+    public float bladeAreaMultiplier;
+    public float gunAreaMultiplier;
+    public float magicAreaMultiplier;
+    public float fightAreaMultiplier;
+    public float toolAreaMultiplier;
+    public float buildingAreaMultiplier;
+    public float machineAreaMultiplier;
+    public float foodAreaMultiplier;
 
     [Header("Element Multiplier")]
     public float positionMultiplier;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerStat
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 100
   moveSpeed: 5
   attackSpeed: 10
   bluntDamageMultiplier: 0
@@ -42,6 +43,15 @@ MonoBehaviour:
   buildingRangeMultiplier: 0
   machineRangeMultiplier: 0
   foodRangeMultiplier: 0
+  bluntAreaMultiplier: 0
+  bladeAreaMultiplier: 0
+  gunAreaMultiplier: 0
+  magicAreaMultiplier: 0
+  fightAreaMultiplier: 0
+  toolAreaMultiplier: 0
+  buildingAreaMultiplier: 0
+  machineAreaMultiplier: 0
+  foodAreaMultiplier: 0
   positionMultiplier: 0
   waterMultiplier: 0
   grassMultiplier: 0
