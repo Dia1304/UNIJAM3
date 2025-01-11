@@ -37,7 +37,7 @@ MonoBehaviour:
   foodCoolTimeMultiplier: 0
   bluntRangeMultiplier: 0
   bladeRangeMultiplier: 0
-  gunRangeMultiplier: 0.5
+  gunRangeMultiplier: 0
   magicRangeMultiplier: 0
   fightRangeMultiplier: 0
   toolRangeMultiplier: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   foodRangeMultiplier: 0
   bluntAreaMultiplier: 0
   bladeAreaMultiplier: 0
-  gunAreaMultiplier: 0.5
+  gunAreaMultiplier: 0
   magicAreaMultiplier: 0
   fightAreaMultiplier: 0
   toolAreaMultiplier: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   fireMultiplier: 0
   madMultiplier: 0
   lightMultiplier: 0
-  physicalMultiplier: 0.5
+  physicalMultiplier: 0
   structureDurabilityMultiplier: 1
   rangedWeaponDamageMultiplier: 1
   meleeWeaponDamageMultiplier: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
   machineSynergy: 0
   holySynergy: 0
   fantasySynergy: 0
-  militarySynergy: 1
+  militarySynergy: 0
   cultureSynergy: 0
   alcoholSynergy: 0
   buddismSynergy: 0

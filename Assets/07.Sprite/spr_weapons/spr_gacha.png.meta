@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_gacha_0: 4119793756568451375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

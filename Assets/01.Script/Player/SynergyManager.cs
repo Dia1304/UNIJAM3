@@ -599,7 +599,7 @@ public class SynergyManager : MonoBehaviour
             case 9: //type_gothic
                 if (isFirst)
                 {
-                    
+                    Debug.Log("Gothic Arm should be removed");
                 }
                 else
                 {
@@ -609,7 +609,7 @@ public class SynergyManager : MonoBehaviour
             case 10: //type_modern
                 if(isFirst)
                 {
-
+                    Debug.Log("Modern Arm should be removed");
                 }
                 else
                 {
@@ -619,7 +619,7 @@ public class SynergyManager : MonoBehaviour
             case 11: //type_SF
                 if(isFirst)
                 {
-
+                    Debug.Log("SF Arm should be removed");
                 }
                 else
                 {
@@ -629,7 +629,7 @@ public class SynergyManager : MonoBehaviour
             case 12: //type_machine
                 if(isFirst)
                 {
-
+                    Debug.Log("Machine Arm should be removed");
                 }
                 else
                 {
@@ -639,7 +639,7 @@ public class SynergyManager : MonoBehaviour
             case 13: //type_holy
                 if(isFirst)
                 {
-
+                    Debug.Log("Holy Arm should be removed");
                 }
                 else
                 {
@@ -649,7 +649,7 @@ public class SynergyManager : MonoBehaviour
             case 14: //type_fantasy
                 if(isFirst)
                 {
-
+                    Debug.Log("Fantasy Arm should be removed");
                 }
                 else
                 {
@@ -659,7 +659,7 @@ public class SynergyManager : MonoBehaviour
             case 15: //type_military
                 if(isFirst)
                 {
-
+                    Debug.Log("Military Arm should be removed");
                 }
                 else
                 {
@@ -669,7 +669,7 @@ public class SynergyManager : MonoBehaviour
             case 16: //type_culture
                 if(isFirst)
                 {
-
+                    Debug.Log("Culture Arm should be removed");
                 }
                 else
                 {
@@ -689,7 +689,7 @@ public class SynergyManager : MonoBehaviour
             case 18: //type_Buddism
                 if(isFirst)
                 {
-
+                    Debug.Log("Budda Arm should be removed");
                 }
                 else
                 {

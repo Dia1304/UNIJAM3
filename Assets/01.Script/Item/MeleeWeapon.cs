@@ -95,7 +95,7 @@ public class MeleeWeapon : Weapon
     {
         while (Vector3.Distance(transform.position, target) >= 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.fixedDeltaTime);
             yield return null;
         }
     }
@@ -103,7 +103,7 @@ public class MeleeWeapon : Weapon
     {
         while (Vector3.Distance(transform.position, startPos) >= 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startPos, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, startPos, moveSpeed * Time.fixedDeltaTime);
             yield return null;
         }
     }
