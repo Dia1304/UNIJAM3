@@ -27,7 +27,7 @@ public class RewardMapChange : MonoBehaviour
         if(startMove)
         {
             move.transform.position =
-            Vector3.MoveTowards(move.transform.position, Vector3.zero, 0.1f);
+            Vector3.MoveTowards(move.transform.position, Vector3.zero, 0.5f);
             if(Vector3.MoveTowards(move.transform.position, Vector3.zero, 1).x <= 0.1f)
             {
                 move.transform.position = Vector3.zero;
