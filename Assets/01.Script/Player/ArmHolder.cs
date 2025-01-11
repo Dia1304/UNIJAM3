@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class ArmHolder : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> armList = new List<GameObject>();
+    public List<GameObject> armList = new List<GameObject>();
 
-    [SerializeField] private GameObject obj_arm;
+    public GameObject obj_arm;
 
     Vector3 direction;
 

@@ -79,25 +79,69 @@ public class SpecialArm : MonoBehaviour
             {
                 if(PlayerController.instance.SynergyManager.synergyArray[11].firstBuffEnabled && !buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
+                    switch(currentItem.GetComponent<Item>().itemData.element)
                     {
-                        //무기 적용효과 2배
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-                        //무기 적용효과 2배
+                        case ItemData.Element.Poision:
+                            PlayerController.instance.Stat.poisionMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Water:
+                            PlayerController.instance.Stat.waterMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Grass:
+                            PlayerController.instance.Stat.grassMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Electric:
+                            PlayerController.instance.Stat.electricMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Metal:
+                            PlayerController.instance.Stat.metalMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Fire:
+                            PlayerController.instance.Stat.fireMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Mad:
+                            PlayerController.instance.Stat.madMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Light:
+                            PlayerController.instance.Stat.lightMultiplier += 1.0f;
+                            break;
+                        case ItemData.Element.Physical:
+                            PlayerController.instance.Stat.physicalMultiplier += 1.0f;
+                            break;
                     }
                     buffEnabled = true;
                 }
                 else if (PlayerController.instance.SynergyManager.synergyArray[11].firstBuffEnabled == false && buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
+                    switch(currentItem.GetComponent<Item>().itemData.element)
                     {
-
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-
+                        case ItemData.Element.Poision:
+                            PlayerController.instance.Stat.poisionMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Water:
+                            PlayerController.instance.Stat.waterMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Grass:
+                            PlayerController.instance.Stat.grassMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Electric:
+                            PlayerController.instance.Stat.electricMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Metal:
+                            PlayerController.instance.Stat.metalMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Fire:
+                            PlayerController.instance.Stat.fireMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Mad:
+                            PlayerController.instance.Stat.madMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Light:
+                            PlayerController.instance.Stat.lightMultiplier -= 1.0f;
+                            break;
+                        case ItemData.Element.Physical:
+                            PlayerController.instance.Stat.physicalMultiplier -= 1.0f;
+                            break;
                     }
 
                     buffEnabled = false;
@@ -113,7 +157,7 @@ public class SpecialArm : MonoBehaviour
                     }
                     else if(currentItem.TryGetComponent(out RangedWeapon ranged))
                     {
-                        melee.weaponData.coolTime *= 0.5f;
+                        ranged.weaponData.coolTime *= 0.5f;
                     }
                     buffEnabled = true;
                 }
@@ -202,35 +246,20 @@ public class SpecialArm : MonoBehaviour
             {
                 if(PlayerController.instance.SynergyManager.synergyArray[17].firstBuffEnabled && !buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-                        //받는 피해 3배
-                        //원거리 피해 15%
-                        //근거리 피해 50%
-                        PlayerController.instance.Stat.fightDamageMultiplier += 1.0f;
-                        //소주병 피해 300%
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-                        //받는 피해 3배
-                        //원거리 피해 15%
-                        //근거리 피해 50%
-                        PlayerController.instance.Stat.fightDamageMultiplier += 1.0f;
-                        //소주병 피해 300%
-                    }
+                    PlayerController.instance.Stat.damageMultiplier = 3.0f;
+                    PlayerController.instance.Stat.rangedWeaponDamageMultiplier += 0.15f;
+                    PlayerController.instance.Stat.meleeWeaponDamageMultiplier += 0.5f;
+                    PlayerController.instance.Stat.fightDamageMultiplier += 1.0f;
+                    PlayerController.instance.Stat.sojuDamageMultiplier += 3.0f;
                     buffEnabled = true;
                 }
                 else if (PlayerController.instance.SynergyManager.synergyArray[17].firstBuffEnabled == false && buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-
-                    }
-
+                    PlayerController.instance.Stat.damageMultiplier = 1.0f;
+                    PlayerController.instance.Stat.rangedWeaponDamageMultiplier -= 0.15f;
+                    PlayerController.instance.Stat.meleeWeaponDamageMultiplier -= 0.5f;
+                    PlayerController.instance.Stat.fightDamageMultiplier -= 1.0f;
+                    PlayerController.instance.Stat.sojuDamageMultiplier -= 3.0f;
                     buffEnabled = false;
                 }
             }

@@ -110,7 +110,7 @@ public class Item : MonoBehaviour
         switch(itemData.element)
         {
             case ItemData.Element.Poision:
-                result *= (1f + PlayerController.instance.Stat.positionMultiplier);
+                result *= (1f + PlayerController.instance.Stat.poisionMultiplier);
                 break;
             case ItemData.Element.Water:
                 result *= (1f + PlayerController.instance.Stat.waterMultiplier);

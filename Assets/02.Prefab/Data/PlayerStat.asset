@@ -16,6 +16,7 @@ MonoBehaviour:
   currentHealth: 100
   moveSpeed: 5
   attackSpeed: 10
+  damageMultiplier: 0
   bluntDamageMultiplier: 0
   bladeDamageMultiplier: 0
   gunDamageMultiplier: 0
@@ -26,7 +27,7 @@ MonoBehaviour:
   machineDamageMultiplier: 0
   foodDamageMultiplier: 0
   bluntCoolTimeMultiplier: 0
-  bladeCoolTimeMultiplier: 0
+  bladeCoolTimeMultiplier: 0.5
   gunCoolTimeMultiplier: 0
   magicCoolTimeMultiplier: 0
   fightCoolTimeMultiplier: 0
@@ -52,7 +53,7 @@ MonoBehaviour:
   buildingAreaMultiplier: 0
   machineAreaMultiplier: 0
   foodAreaMultiplier: 0
-  positionMultiplier: 0
+  poisionMultiplier: 0
   waterMultiplier: 0
   grassMultiplier: 0
   electricMultiplier: 0
@@ -60,5 +61,17 @@ MonoBehaviour:
   fireMultiplier: 0
   madMultiplier: 0
   lightMultiplier: 0
-  physicalMultiplier: 0
+  physicalMultiplier: 0.5
   structureDurabilityMultiplier: 1
+  rangedWeaponDamageMultiplier: 1
+  meleeWeaponDamageMultiplier: 1
+  sojuDamageMultiplier: 1
+  modernSynergy: 0
+  SFSynergy: 0
+  machineSynergy: 0
+  holySynergy: 0
+  fantasySynergy: 0
+  militarySynergy: 0
+  cultureSynergy: 0
+  alcoholSynergy: 0
+  buddismSynergy: 0

@@ -20,11 +20,18 @@ public class RangedWeapon : Weapon
         Debug.Log("Fire");
         GameObject _object = Instantiate(((RangedWeaponData)itemData).obj_projectile, transform.position, Quaternion.identity);
         _object.GetComponent<Projectile>().area = GetMultipliedArea(weaponData.area);
-        _object.GetComponent<Projectile>().damage = weaponData.damage * GetDamageMultiplier();
+        _object.GetComponent<Projectile>().damage = weaponData.damage * GetDamageMultiplier() * PlayerController.instance.Stat.rangedWeaponDamageMultiplier;
         
         if(PlayerController.instance.Stat.militarySynergy && weaponData.type == ItemData.Type.Military)
         {
-            _object.GetComponent<Projectile>().penetraction = true;
+            if(_object.GetComponent<Projectile>().penetraction == false)
+            {
+                _object.GetComponent<Projectile>().penetraction = true;
+            }
+            else
+            {
+                _object.GetComponent<Projectile>().damage *= 1.5f;
+            }
         }
 
         Destroy(_object, GetMultipliedRange(weaponData.range));

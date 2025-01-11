@@ -184,7 +184,19 @@ public class SynergyManager : MonoBehaviour
             case 9: //type_gothic
                 if (isFirst)
                 {
-                    
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Gothic;
+                    newArm.name = "GothicArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -194,7 +206,19 @@ public class SynergyManager : MonoBehaviour
             case 10: //type_modern
                 if(isFirst)
                 {
-
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Modern;
+                    newArm.name = "ModernArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -204,7 +228,19 @@ public class SynergyManager : MonoBehaviour
             case 11: //type_SF
                 if(isFirst)
                 {
-
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.SF;
+                    newArm.name = "SFArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -214,7 +250,19 @@ public class SynergyManager : MonoBehaviour
             case 12: //type_machine
                 if(isFirst)
                 {
-
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Machine;
+                    newArm.name = "MachineArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -224,6 +272,19 @@ public class SynergyManager : MonoBehaviour
             case 13: //type_holy
                 if(isFirst)
                 {
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Holy;
+                    newArm.name = "HolyArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
 
                 }
                 else
@@ -234,6 +295,19 @@ public class SynergyManager : MonoBehaviour
             case 14: //type_fantasy
                 if(isFirst)
                 {
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Fantasy;
+                    newArm.name = "FantasyArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
 
                 }
                 else
@@ -244,7 +318,19 @@ public class SynergyManager : MonoBehaviour
             case 15: //type_military
                 if(isFirst)
                 {
-
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Military;
+                    newArm.name = "MilitaryArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -254,7 +340,26 @@ public class SynergyManager : MonoBehaviour
             case 16: //type_culture
                 if(isFirst)
                 {
-
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Culture;
+                    newArm.name = "CultureArm";
+                    holder.armList.Add(newArm);
+                    GameObject newArm2 = Instantiate(holder.obj_arm, holder.transform);
+                    newArm2.GetComponent<Arm>().enabled = false;
+                    newArm2.GetComponent<SpecialArm>().enabled = true;
+                    newArm2.GetComponent<SpecialArm>().type = ItemData.Type.Culture;
+                    newArm2.name = "CultureArm2";
+                    holder.armList.Add(newArm2);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack += newArm2.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -274,7 +379,20 @@ public class SynergyManager : MonoBehaviour
             case 18: //type_Buddism
                 if(isFirst)
                 {
-
+                    ArmHolder holder = GameObject.Find("ArmHolder").GetComponent<ArmHolder>();
+                    GameObject newArm = Instantiate(holder.obj_arm, holder.transform);
+                    newArm.GetComponent<Arm>().enabled = false;
+                    newArm.GetComponent<SpecialArm>().enabled = true;
+                    newArm.GetComponent<SpecialArm>().type = ItemData.Type.Buddhism;
+                    newArm.name = "BuddaArm";
+                    holder.armList.Add(newArm);
+                    for(int i = 0; i < holder.armList.Count; i++)
+                    {
+                        float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
+                        holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
+                    }
+                    PlayerController.instance.OnAttack += newArm.GetComponent<Arm>().Use;
+                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -284,7 +402,7 @@ public class SynergyManager : MonoBehaviour
             case 19: //element_poision
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.positionMultiplier += 0.3f;
+                    PlayerController.instance.Stat.poisionMultiplier += 0.3f;
                     //독 공격이 적을 중독시켜 지속 피해를 줍니다
                 }
                 else
@@ -581,7 +699,7 @@ public class SynergyManager : MonoBehaviour
             case 19: //element_poision
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.positionMultiplier -= 0.3f;
+                    PlayerController.instance.Stat.poisionMultiplier -= 0.3f;
                     //독 공격이 적을 중독시켜 지속 피해를 줍니다
                 }
                 else
