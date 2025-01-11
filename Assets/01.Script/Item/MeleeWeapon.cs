@@ -17,6 +17,7 @@ public class MeleeWeapon : Weapon
     {
         weaponData = Instantiate(data);
         itemData = weaponData;
+        GetComponent<AudioSource>().clip = itemData.sound;
     }
 
     public void Init(MeleeWeaponData inData)
@@ -48,6 +49,9 @@ public class MeleeWeapon : Weapon
     public override void Attack()
     {
         hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, GetMultipliedRange(weaponData.range), LayerMask.GetMask("Enemy"));
+
+        GetComponent<AudioSource>().pitch = weaponData.coolTime;
+        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
 
         if(!isMoving)
         {

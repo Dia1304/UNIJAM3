@@ -7,7 +7,11 @@ public class PassiveItem : Item
     public enum Passive
     {
         Null,
+        Receipt,
         Incense,
+        Kiteshield,
+        Rattle,
+        Document,
     }
 
     public Passive passive;
