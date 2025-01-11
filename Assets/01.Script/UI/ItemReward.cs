@@ -84,6 +84,8 @@ public class ItemReward : MonoBehaviour
         }
         else if(id == 4)
         {
+            if (selecteArmData.haveItemId == 0)
+                return;
             itemData = playerManager.findItem(selecteArmData.haveItemId);
             string explain = itemData.itemDesc + "\n" + itemData.Mechanism;
             explainText.text = explain;

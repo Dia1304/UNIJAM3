@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e35684c30a49c4d854d8bc48845664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armItemList: 1f000000090000000200000029000000
+  armItemList: 1f000000090000000200000000000000
   armAttackKeyList: 01000000020000000300000000000000
   meleeItemList:
   - {fileID: 11400000, guid: 337049fdb3ec5834091e8622b6b7cba6, type: 2}

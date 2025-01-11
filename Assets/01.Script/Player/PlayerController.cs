@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
 
         //Stat = Instantiate(statData);
-        SynergyManager = GetComponent<SynergyManager>();
+        SynergyManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SynergyManager>();
     }
 
     private void Update()
