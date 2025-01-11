@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5185514, g: 0.8719475, b: 0.98742133, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1878,26 +1878,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
-      propertyPath: armItemList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
-      propertyPath: armATypeList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
-      propertyPath: 'armATypeList.Array.data[0]'
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
-      propertyPath: 'armATypeList.Array.data[1]'
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
-      propertyPath: armAttackKeyList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2185,7 +2165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
