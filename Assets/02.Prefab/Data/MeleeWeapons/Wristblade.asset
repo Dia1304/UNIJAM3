@@ -15,6 +15,7 @@ MonoBehaviour:
   itemId: 53
   itemName: "\uC190\uBAA9\uAC80"
   itemDesc: "\uD3B8\uD788 \uC7A0\uB4E4\uC5B4\uB77C"
+  Mechanism: "\uC804\uBC29\uC704 \uAC00\uAE4C\uC6B4 \uC801 \uACF5\uACA9"
   classData: 4
   type: 0
   element: 0
@@ -25,3 +26,4 @@ MonoBehaviour:
   damage: 2
   range: 0
   area: 0
+  swingAngle: 0

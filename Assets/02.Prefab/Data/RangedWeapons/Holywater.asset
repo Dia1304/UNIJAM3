@@ -15,6 +15,8 @@ MonoBehaviour:
   itemId: 52
   itemName: "\uC131\uC218"
   itemDesc: "\uC5B4\uB518\uAC00\uC758 \uC695\uC870\uC5D0\uC11C \uCC44\uC9D1\uD568"
+  Mechanism: "\uB9C8\uC6B0\uC2A4 \uBC29\uD5A5 \uD3ED\uBC1C\uD558\uB294 \uD22C\uC0AC\uCCB4
+    \uBC1C\uC0AC"
   classData: 5
   type: 4
   element: 1

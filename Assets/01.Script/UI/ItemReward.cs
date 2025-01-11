@@ -113,9 +113,12 @@ public class ItemReward : MonoBehaviour
     }
     public void SelectRewardItem(int num)
     {
+        itemData = playerManager.findItem(rewardItemId[num]);
         selectRewardNum = rewardItemId[num];
         if (playerManager.findItem(selectRewardNum).itemImage != null)
             selectedReward.GetComponent<Image>().sprite = playerManager.findItem(selectRewardNum).itemImage;
+        rewardItems[num].GetComponent<AudioSource>().clip = itemData.sound;
+        rewardItems[num].GetComponent<AudioSource>().Play();
 
     }
 
