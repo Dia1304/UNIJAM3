@@ -91,7 +91,7 @@ public class SynergyManager : MonoBehaviour
             case 0: //class_blunt
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.bluntCoolTimeMultiplier += 0.6f;
+                    PlayerController.instance.Stat.bluntCoolTimeMultiplier -= 0.4f;
                     PlayerController.instance.Stat.bluntDamageMultiplier += 1.0f;
                 }
                 else
@@ -388,7 +388,7 @@ public class SynergyManager : MonoBehaviour
             case 0: //class_blunt
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.bluntCoolTimeMultiplier -= 0.6f;
+                    PlayerController.instance.Stat.bluntCoolTimeMultiplier += 0.4f;
                     PlayerController.instance.Stat.bluntDamageMultiplier -= 1.0f;
                 }
                 else

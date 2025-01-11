@@ -7,6 +7,11 @@ public class SpecialArm : MonoBehaviour
 
     private bool buffEnabled;
 
+    private int attackCount;
+    private bool holySynergy;
+    private bool fantasySynergy;
+    public GameObject lightning;
+
     void Start()
     {
         
@@ -35,11 +40,11 @@ public class SpecialArm : MonoBehaviour
                 {
                     if(currentItem.TryGetComponent(out MeleeWeapon melee))
                     {
-                        melee.weaponData.area += 2.0f;
+                        melee.weaponData.area += 1.0f;
                     }
                     else if(currentItem.TryGetComponent(out RangedWeapon ranged))
                     {
-                        ranged.weaponData.area += 2.0f;
+                        ranged.weaponData.area += 1.0f;
                     }
                     buffEnabled = true;
                 }
@@ -47,11 +52,11 @@ public class SpecialArm : MonoBehaviour
                 {
                     if(currentItem.TryGetComponent(out MeleeWeapon melee))
                     {
-                        melee.weaponData.area -= 2.0f;
+                        melee.weaponData.area -= 1.0f;
                     }
                     else if(currentItem.TryGetComponent(out RangedWeapon ranged))
                     {
-                        ranged.weaponData.area -= 2.0f;
+                        ranged.weaponData.area -= 1.0f;
                     }
 
                     buffEnabled = false;
@@ -61,27 +66,12 @@ public class SpecialArm : MonoBehaviour
             {
                 if(PlayerController.instance.SynergyManager.synergyArray[10].firstBuffEnabled && !buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-                        //시너지 2배
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-                        //시너지 2배
-                    }
+                    PlayerController.instance.SynergyManager.synergyArray[10].count++;
                     buffEnabled = true;
                 }
                 else if (PlayerController.instance.SynergyManager.synergyArray[10].firstBuffEnabled == false && buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-
-                    }
-
+                    PlayerController.instance.SynergyManager.synergyArray[10].count--;
                     buffEnabled = false;
                 }
             }
@@ -145,27 +135,12 @@ public class SpecialArm : MonoBehaviour
             {
                 if(PlayerController.instance.SynergyManager.synergyArray[13].firstBuffEnabled && !buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-                        //세번마다 신성한 번개
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-                        //세번마다 신성한 번개
-                    }
+                    holySynergy = true;
                     buffEnabled = true;
                 }
                 else if (PlayerController.instance.SynergyManager.synergyArray[13].firstBuffEnabled == false && buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-
-                    }
-
+                    holySynergy = false;
                     buffEnabled = false;
                 }
             }
@@ -173,27 +148,12 @@ public class SpecialArm : MonoBehaviour
             {
                 if(PlayerController.instance.SynergyManager.synergyArray[14].firstBuffEnabled && !buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-                        //두 배 공격
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-                        //두 배 공격
-                    }
+                    fantasySynergy = true;
                     buffEnabled = true;
                 }
                 else if (PlayerController.instance.SynergyManager.synergyArray[14].firstBuffEnabled == false && buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-                        
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-
-                    }
-
+                    fantasySynergy = false;
                     buffEnabled = false;
                 }
             }
@@ -201,28 +161,12 @@ public class SpecialArm : MonoBehaviour
             {
                 if(PlayerController.instance.SynergyManager.synergyArray[15].firstBuffEnabled && !buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-                        //관통
-
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-                        //관통
-                    }
+                    PlayerController.instance.Stat.militarySynergy = true;
                     buffEnabled = true;
                 }
                 else if (PlayerController.instance.SynergyManager.synergyArray[15].firstBuffEnabled == false && buffEnabled)
                 {
-                    if(currentItem.TryGetComponent(out MeleeWeapon melee))
-                    {
-
-                    }
-                    else if(currentItem.TryGetComponent(out RangedWeapon ranged))
-                    {
-
-                    }
-
+                    PlayerController.instance.Stat.militarySynergy = false;
                     buffEnabled = false;
                 }
             }
@@ -515,8 +459,30 @@ public class SpecialArm : MonoBehaviour
         if(currentItem != null)
         {
             //Debug.Log("Use current item");
+            if(attackCount < 3)
+            {
+                attackCount++;
+            }
+            else
+            {
+                attackCount = 0;
+                if(holySynergy)
+                {
+                    SummonLightning();
+                }
+            }
             currentItem.GetComponent<Item>().Use();
+            if(fantasySynergy)
+            {
+                currentItem.GetComponent<Item>().Use();
+            }
         }
+    }
+
+    private void SummonLightning()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Instantiate(lightning, mousePos, Quaternion.identity);
     }
 
 }

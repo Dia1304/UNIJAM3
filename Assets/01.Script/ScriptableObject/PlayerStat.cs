@@ -66,4 +66,15 @@ public class PlayerStat : ScriptableObject
 
     [Header("Extra Multiplier")]
     public float structureDurabilityMultiplier;
+
+    [Header("Type Synergy")]
+    public bool modernSynergy;
+    public bool SFSynergy;
+    public bool machineSynergy;
+    public bool holySynergy;
+    public bool fantasySynergy;
+    public bool militarySynergy;
+    public bool cultureSynergy;
+    public bool alcoholSynergy;
+    public bool buddismSynergy;
 }

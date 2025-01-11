@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed;
     public float area;
     public float damage;
+
+    public bool penetraction;
     void Start()
     {        
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -37,7 +39,10 @@ public class Projectile : MonoBehaviour
                     }
                 }
             }
-            Destroy(gameObject);
+            if(!penetraction)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
