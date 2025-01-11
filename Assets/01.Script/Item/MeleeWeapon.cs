@@ -23,7 +23,7 @@ public class MeleeWeapon : Weapon
     {
         weaponData = Instantiate(data);
         itemData = weaponData;
-        GetComponent<AudioSource>().clip = itemData.sound;
+        GetComponent<AudioSource>().clip = itemData.attackSound;
         if(itemData.itemImage != null)
         {
            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
@@ -97,7 +97,7 @@ public class MeleeWeapon : Weapon
     {
         hit = Physics2D.Raycast(PlayerController.instance.transform.position, direction, GetMultipliedRange(weaponData.range), LayerMask.GetMask("Enemy"));
 
-        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
+        GetComponent<AudioSource>().PlayOneShot(itemData.attackSound, 1);
 
         if(!isMoving)
         {

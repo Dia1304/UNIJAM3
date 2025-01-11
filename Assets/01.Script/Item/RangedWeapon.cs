@@ -11,7 +11,7 @@ public class RangedWeapon : Weapon
     {
         weaponData = Instantiate(data);
         itemData = weaponData;
-        GetComponent<AudioSource>().clip = itemData.sound;
+        GetComponent<AudioSource>().clip = itemData.attackSound;
         if(itemData.itemImage != null)
         {
            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
@@ -46,7 +46,7 @@ public class RangedWeapon : Weapon
         _object.GetComponent<Projectile>().area = GetMultipliedArea(weaponData.area);
         _object.GetComponent<Projectile>().damage = weaponData.damage * GetDamageMultiplier() * PlayerController.instance.Stat.rangedWeaponDamageMultiplier;
         
-        GetComponent<AudioSource>().PlayOneShot(itemData.sound, 1);
+        GetComponent<AudioSource>().PlayOneShot(itemData.attackSound, 1);
 
         if(PlayerController.instance.Stat.militarySynergy && weaponData.type == ItemData.Type.Military)
         {
