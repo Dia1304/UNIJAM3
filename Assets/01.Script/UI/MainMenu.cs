@@ -9,6 +9,6 @@ public class MainMenu : MonoBehaviour
     }
     public void EnterSettings()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
