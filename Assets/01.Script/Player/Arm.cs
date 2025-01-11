@@ -14,7 +14,7 @@ public class Arm : MonoBehaviour
     }
     private void Start()
     {
-        ChangeAttackKey(Arm.AttackKey.LMB); 
+         
     }
     private void Update()
     {
@@ -44,6 +44,7 @@ public class Arm : MonoBehaviour
 
     public void ChangeAttackKey(AttackKey attackKey)
     {
+        Debug.Log(attackKey);   
         this.attackKey = attackKey;
         UnsubscribeOnAttack();
 

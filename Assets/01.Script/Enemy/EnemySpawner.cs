@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (remainRangeCount == 0 && remainMeleeCount == 0 && enemies.Count == 0)
         {
+            SceneManager.LoadScene(3);
             Debug.Log("Clear");
         }
 

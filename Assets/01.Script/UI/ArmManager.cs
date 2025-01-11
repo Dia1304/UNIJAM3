@@ -56,7 +56,7 @@ public class ArmManager : MonoBehaviour
         }
     }
 
-    void GiveData() // 호출시 가지고 있는 데이터를 playerManager에게 넘겨줌
+    public void GiveData() // 호출시 가지고 있는 데이터를 playerManager에게 넘겨줌
     {
         playerManager.GetData(armDatas);
     }
