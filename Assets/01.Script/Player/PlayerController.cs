@@ -8,7 +8,11 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 m_direction;
 
-    public Action OnAttack;
+    public Action OnAttack1;
+    public Action OnAttack2;
+    public Action OnAttack3;
+    public Action OnAttack4;
+    public Action OnAttack5;
 
     //Reference
     //public PlayerStat statData;
@@ -45,11 +49,39 @@ public class PlayerController : MonoBehaviour
         Vector2 dir = context.ReadValue<Vector2>();
         m_direction = dir;
     }
-    public void Attack(InputAction.CallbackContext context)
+    public void Attack1(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
-            OnAttack?.Invoke();
+            OnAttack1?.Invoke();
+        }
+    }
+    public void Attack2(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            OnAttack2?.Invoke();
+        }
+    }
+    public void Attack3(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            OnAttack3?.Invoke();
+        }
+    }
+    public void Attack4(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            OnAttack4?.Invoke();
+        }
+    }
+    public void Attack5(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            OnAttack5?.Invoke();
         }
     }
 

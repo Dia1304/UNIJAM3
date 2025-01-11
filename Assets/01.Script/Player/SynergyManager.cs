@@ -196,7 +196,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -218,7 +218,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -240,7 +240,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -262,7 +262,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -284,7 +284,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
 
                 }
                 else
@@ -307,7 +307,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
 
                 }
                 else
@@ -330,7 +330,7 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -358,8 +358,8 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
-                    PlayerController.instance.OnAttack += newArm2.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm2.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {
@@ -391,8 +391,8 @@ public class SynergyManager : MonoBehaviour
                         float angle = (360f / holder.armList.Count) * i * Mathf.Deg2Rad;
                         holder.armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
                     }
-                    PlayerController.instance.OnAttack += newArm.GetComponent<Arm>().Use;
-                    PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<Arm>().Use;
+                    PlayerController.instance.OnAttack1 += newArm.GetComponent<SpecialArm>().Use;
                 }
                 else
                 {

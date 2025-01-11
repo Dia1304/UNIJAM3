@@ -1,13 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Arm : MonoBehaviour
 {
     public GameObject currentItem;
+    public AttackKey attackKey;
 
     private void Start()
     {
-
+        ChangeAttackKey(Arm.AttackKey.LMB);
     }
     private void Update()
     {
@@ -23,6 +25,40 @@ public class Arm : MonoBehaviour
         {
             UnequipItem(currentItem);
         }
+    }
+
+    public void ChangeAttackKey(AttackKey attackKey)
+    {
+        this.attackKey = attackKey;
+        UnsubscribeOnAttack();
+
+        switch(attackKey)
+        {
+            case AttackKey.LMB:
+                PlayerController.instance.OnAttack1 += Use;
+                break;
+            case AttackKey.RMB:
+                PlayerController.instance.OnAttack2 += Use;
+                break;
+            case AttackKey.MMB:
+                PlayerController.instance.OnAttack3 += Use;
+                break;
+            case AttackKey.Space:
+                PlayerController.instance.OnAttack4 += Use;
+                break;
+            case AttackKey.LShift:
+                PlayerController.instance.OnAttack5 += Use;
+                break;
+        }
+    }
+
+    private void UnsubscribeOnAttack()
+    {
+        PlayerController.instance.OnAttack1 -= Use;
+        PlayerController.instance.OnAttack2 -= Use;
+        PlayerController.instance.OnAttack3 -= Use;
+        PlayerController.instance.OnAttack4 -= Use;
+        PlayerController.instance.OnAttack5 -= Use;
     }
 
     public void EquipItem(GameObject item)
@@ -237,5 +273,14 @@ public class Arm : MonoBehaviour
             //Debug.Log("Use current item");
             currentItem.GetComponent<Item>().Use();
         }
+    }
+
+    public enum AttackKey
+    {
+        LMB,
+        RMB,
+        MMB,
+        Space,
+        LShift,
     }
 }

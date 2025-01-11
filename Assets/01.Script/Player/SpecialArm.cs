@@ -12,9 +12,11 @@ public class SpecialArm : MonoBehaviour
     private bool fantasySynergy;
     public GameObject lightning;
 
+    public Arm.AttackKey attackKey;
+
     void Start()
     {
-        
+        ChangeAttackKey(Arm.AttackKey.LMB);
     }
 
     void Update()
@@ -277,6 +279,39 @@ public class SpecialArm : MonoBehaviour
                 }
             }
         }
+    }
+    public void ChangeAttackKey(Arm.AttackKey attackKey)
+    {
+        this.attackKey = attackKey;
+        UnsubscribeOnAttack();
+
+        switch(attackKey)
+        {
+            case Arm.AttackKey.LMB:
+                PlayerController.instance.OnAttack1 += Use;
+                break;
+            case Arm.AttackKey.RMB:
+                PlayerController.instance.OnAttack2 += Use;
+                break;
+            case Arm.AttackKey.MMB:
+                PlayerController.instance.OnAttack3 += Use;
+                break;
+            case Arm.AttackKey.Space:
+                PlayerController.instance.OnAttack4 += Use;
+                break;
+            case Arm.AttackKey.LShift:
+                PlayerController.instance.OnAttack5 += Use;
+                break;
+        }
+    }
+
+    private void UnsubscribeOnAttack()
+    {
+        PlayerController.instance.OnAttack1 -= Use;
+        PlayerController.instance.OnAttack2 -= Use;
+        PlayerController.instance.OnAttack3 -= Use;
+        PlayerController.instance.OnAttack4 -= Use;
+        PlayerController.instance.OnAttack5 -= Use;
     }
     public void EquipItem(GameObject item)
     {
