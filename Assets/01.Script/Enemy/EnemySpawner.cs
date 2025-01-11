@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Build.Content;
@@ -31,13 +31,13 @@ public class EnemySpawner : MonoBehaviour
     {
         remainMeleeCount = realmeleeCount;
         remainRangeCount = realrangeCount;
-        textFloor.text = (playerManager.stage + 1) + "Ãş";
+        textFloor.text = (playerManager.stage + 1) + "ì¸µ";
     }
 
     void Update()
     {
         enemies.RemoveAll(item => item == null || item.Equals(null) || ReferenceEquals(item, null));
-        textLeft.text = enemies.Count + "³²À½";
+        textLeft.text = enemies.Count + "ë‚¨ìŒ";
         if (remainRangeCount == 0 && remainMeleeCount == 0 && enemies.Count == 0)
         {
             playerManager.armstage++;
