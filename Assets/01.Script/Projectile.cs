@@ -8,13 +8,18 @@ public class Projectile : MonoBehaviour
     public float area;
     public float damage;
 
-    public bool penetraction;
+    public bool penetration;
     void Start()
-    {        
+    {  
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+        mouseWorldPosition.z = transform.position.z;
 
-        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
+        direction = (mouseWorldPosition - transform.position).normalized;
+
+       // Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       // mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+
+       // direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
     }
 
     void Update()
@@ -22,7 +27,7 @@ public class Projectile : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.name.Contains("enemy"))
         {
@@ -39,10 +44,10 @@ public class Projectile : MonoBehaviour
                     }
                 }
             }
-            if(!penetraction)
-            {
-                Destroy(gameObject);
-            }
+        }
+        if(!penetration)
+        {
+            Destroy(gameObject);
         }
     }
 }

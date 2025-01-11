@@ -19,10 +19,11 @@ MonoBehaviour:
   classData: 0
   type: 4
   element: 7
-  coolTime: 4
+  coolTime: 4.5
   sound: {fileID: 8300000, guid: 6888e5c80aa531b48ad6aa832f4cdbb2, type: 3}
   attackSound: {fileID: 8300000, guid: 6888e5c80aa531b48ad6aa832f4cdbb2, type: 3}
   itemImage: {fileID: 4097633746251030564, guid: 6a6b3b3bc06901246ae72f37b1955990, type: 3}
-  damage: 2
-  range: 0
-  area: 1
+  damage: 23
+  range: 4
+  area: 2
+  swingAngle: 0

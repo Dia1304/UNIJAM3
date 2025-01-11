@@ -75,7 +75,7 @@ public class MeleeWeapon : Weapon
     private IEnumerator SwingWeapon(Vector3 target)
     {
         isMoving = true;
-        yield return StartCoroutine(MoveToPosition(target, 10f / weaponData.coolTime));
+        yield return StartCoroutine(MoveToPosition(target, 20f / Mathf.Min(2,weaponData.coolTime)));
 
         float damage = weaponData.damage;
         if(weaponData.type == ItemData.Type.Alcohol)
@@ -107,7 +107,7 @@ public class MeleeWeapon : Weapon
         }
         Debug.Log("Slash");
 
-        yield return StartCoroutine(MoveBack(5f / weaponData.coolTime));
+        yield return StartCoroutine(MoveBack(10f / Mathf.Min(2,weaponData.coolTime)));
         transform.position = startPos;
         isMoving = false;
     }

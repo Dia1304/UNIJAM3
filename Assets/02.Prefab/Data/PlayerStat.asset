@@ -27,7 +27,7 @@ MonoBehaviour:
   machineDamageMultiplier: 0
   foodDamageMultiplier: 0
   bluntCoolTimeMultiplier: 0
-  bladeCoolTimeMultiplier: 0
+  bladeCoolTimeMultiplier: 0.5
   gunCoolTimeMultiplier: 0
   magicCoolTimeMultiplier: 0
   fightCoolTimeMultiplier: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   metalMultiplier: 0
   fireMultiplier: 0
   madMultiplier: 0
-  lightMultiplier: 0
+  lightMultiplier: 1.3
   physicalMultiplier: 0
   structureDurabilityMultiplier: 1
   rangedWeaponDamageMultiplier: 1

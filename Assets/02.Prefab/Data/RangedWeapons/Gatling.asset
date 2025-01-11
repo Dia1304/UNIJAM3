@@ -20,11 +20,11 @@ MonoBehaviour:
   classData: 2
   type: 6
   element: 4
-  coolTime: 3
+  coolTime: 0.02
   sound: {fileID: 8300000, guid: 0b1ef2ee010faf749a3e3628c23dcd01, type: 3}
   attackSound: {fileID: 8300000, guid: 0b1ef2ee010faf749a3e3628c23dcd01, type: 3}
   itemImage: {fileID: -4792743782016157385, guid: 9c483c76436220f47a496720a4bae569, type: 3}
-  damage: 2
-  range: 3
-  area: 0
-  obj_projectile: {fileID: 1823353113294518347, guid: 8f16062f26f14aa44a840b0dfa3468fc, type: 3}
+  damage: 2.8
+  range: 10
+  area: 0.2
+  obj_projectile: {fileID: 1840320286167128004, guid: c6666429b7917af418e9043fbbb1a2b8, type: 3}

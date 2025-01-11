@@ -6,6 +6,8 @@ public class RangedWeapon : Weapon
     public RangedWeaponData weaponData;
     public RangedWeaponData data;
     public bool inInventory = false;
+    Vector3 direction;
+
     private void Start()
     {
         weaponData = Instantiate(data);
@@ -17,6 +19,15 @@ public class RangedWeapon : Weapon
         {
             CoolTime();
         }
+
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = PlayerController.instance.transform.position.z;
+
+        direction = (mouseWorldPosition - PlayerController.instance.transform.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0, 0, angle-90);
     }
     public void Init(RangedWeaponData inData)
     {
@@ -27,15 +38,15 @@ public class RangedWeapon : Weapon
     public override void Attack()
     {
         Debug.Log("Fire");
-        GameObject _object = Instantiate(((RangedWeaponData)itemData).obj_projectile, transform.position, Quaternion.identity);
+        GameObject _object = Instantiate(((RangedWeaponData)itemData).obj_projectile, transform.position, transform.rotation);
         _object.GetComponent<Projectile>().area = GetMultipliedArea(weaponData.area);
         _object.GetComponent<Projectile>().damage = weaponData.damage * GetDamageMultiplier() * PlayerController.instance.Stat.rangedWeaponDamageMultiplier;
         
         if(PlayerController.instance.Stat.militarySynergy && weaponData.type == ItemData.Type.Military)
         {
-            if(_object.GetComponent<Projectile>().penetraction == false)
+            if(_object.GetComponent<Projectile>().penetration == false)
             {
-                _object.GetComponent<Projectile>().penetraction = true;
+                _object.GetComponent<Projectile>().penetration = true;
             }
             else
             {

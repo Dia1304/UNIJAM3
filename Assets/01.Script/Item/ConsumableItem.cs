@@ -5,6 +5,13 @@ public class ConsumableItem : Item
     public int currentUsableCount = 0;
     public int maxUsablecount = 1;
 
+    public ItemType type;
+
+    public enum ItemType
+    {
+        Chicken,
+    }
+
     public void Charge()
     {
         if (currentUsableCount < maxUsablecount)
@@ -36,6 +43,10 @@ public class ConsumableItem : Item
     }
     public virtual void UseItem()
     {
-
+        GetComponent<AudioSource>().PlayOneShot(itemData.sound);
+        if (type == ItemType.Chicken)
+        {
+            PlayerController.instance.Stat.currentHealth += PlayerController.instance.Stat.maxHealth * 0.1f;
+        }
     }
 }
