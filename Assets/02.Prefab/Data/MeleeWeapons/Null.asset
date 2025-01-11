@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Null
   m_EditorClassIdentifier: 
   itemId: 0
-  itemName: "\uBE44\uC5B4\uC788\uC74C"
+  itemName: "\uBE48\uC190"
   itemDesc: "\uC124\uBA85 \uC5C6\uC74C"
+  Mechanism: 
   classData: -1
   type: -1
   element: -1
   coolTime: 99
   sound: {fileID: 0}
+  attackSound: {fileID: 0}
   itemImage: {fileID: 0}
   damage: 0
   range: 0

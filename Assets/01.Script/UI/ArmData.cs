@@ -9,8 +9,7 @@ public class ArmData : MonoBehaviour
     public int armNum;
     public ArmManager armManager;
     public Toggle[] attackButtonToggle = new Toggle[5];
-    [SerializeField]
-    private MoveItemData moveItemData;
+    public MoveItemData moveItemData;
 
 
     private void Awake()
@@ -25,6 +24,7 @@ public class ArmData : MonoBehaviour
     public void SetButton()
     {
         attackButtonToggle[attackButton].isOn = true;
+        moveItemData.init();
     }
 
     public void SelectItem()
