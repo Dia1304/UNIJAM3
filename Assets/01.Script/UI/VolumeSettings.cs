@@ -8,6 +8,7 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider SFXSlider;
+    [SerializeField] private AudioSource SFXPlayer;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class VolumeSettings : MonoBehaviour
         float volume = SFXSlider.value;
         mixer.SetFloat("sfx", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("SFXVolume", volume);
+        SFXPlayer.Play();
     }
 
     private void LoadVolume()
