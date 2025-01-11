@@ -21,5 +21,5 @@ MonoBehaviour:
   element: 2
   coolTime: 0
   sound: {fileID: 8300000, guid: 6724e29839991ca499bc4c17cc4074f5, type: 3}
-  attackSound: {fileID: 8300000, guid: 6724e29839991ca499bc4c17cc4074f5, type: 3}
+  attackSound: {fileID: 8300000, guid: 5b9be2c53dad9b6468b366669cf7f3ad, type: 3}
   itemImage: {fileID: 4008505228363317794, guid: 63449ddd151fe204fb269787cd278fc9, type: 3}
