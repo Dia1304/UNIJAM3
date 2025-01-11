@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     {
         
     }
-
+        
     public void GetData(List<ArmData> armDatas) // armData 리스트를 받아와 기존에 있던 data를 덮어쓰는 함수
     {
         armItemList = new List<int>();

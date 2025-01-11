@@ -25,17 +25,20 @@ public class MoveItemData : MonoBehaviour
     }
     public void SelectItem()
     {
-        if (!isSelect)
+        if (armData.armManager.rewardState == 1)
         {
-            //item Image 하이라이트
-            isSelect = true;
-            armData.SelectItem();
-        }
-        else
-        {
-            // 하이라이트 풀기
-            isSelect = false;
-            armData.SelectItem();
+            if (!isSelect)
+            {
+                //item Image 하이라이트
+                isSelect = true;
+                armData.SelectItem();
+            }
+            else
+            {
+                // 하이라이트 풀기
+                isSelect = false;
+                armData.SelectItem();
+            }
         }
     }
 

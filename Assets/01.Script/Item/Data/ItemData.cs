@@ -11,6 +11,7 @@ public class ItemData : ScriptableObject
     public Element element;
     public float coolTime;
     public AudioClip sound;
+    public AudioClip attackSound;
     public Sprite itemImage;
 
 
