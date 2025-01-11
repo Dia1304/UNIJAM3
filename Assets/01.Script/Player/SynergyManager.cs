@@ -92,7 +92,7 @@ public class SynergyManager : MonoBehaviour
                 if(isFirst)
                 {
                     PlayerController.instance.Stat.bluntCoolTimeMultiplier += 0.6f;
-                    PlayerController.instance.Stat.bluntDamageMultiplier += 2.0f;
+                    PlayerController.instance.Stat.bluntDamageMultiplier += 1.0f;
                 }
                 else
                 {
@@ -102,22 +102,22 @@ public class SynergyManager : MonoBehaviour
             case 1: //class_blade
                 if(isFirst)
                 {
-                    //날붙이 공격에 당한 적은 날붙이 공격에 추가 피해를 받습니다
+                    PlayerController.instance.Stat.bladeCoolTimeMultiplier += 0.5f;
                 }
                 else
                 {
-                    PlayerController.instance.Stat.bladeCoolTimeMultiplier += 0.5f;
+                    //날붙이 공격에 당한 적은 날붙이 공격에 추가 피해를 받습니다
                 }
                 break;
             case 2: //class_gun
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.gunRangeMultiplier += 1.50f;
-                    PlayerController.instance.Stat.gunAreaMultiplier += 1.50f;
+                    PlayerController.instance.Stat.gunRangeMultiplier += 0.50f;
+                    PlayerController.instance.Stat.gunAreaMultiplier += 0.50f;
                 }
                 else
                 {
-                    PlayerController.instance.Stat.gunCoolTimeMultiplier += 1.70f;
+                    PlayerController.instance.Stat.gunCoolTimeMultiplier += 0.70f;
                 }
                 break;
             case 3: //case_magic
@@ -127,13 +127,13 @@ public class SynergyManager : MonoBehaviour
                 }
                 else
                 {
-                    PlayerController.instance.Stat.magicDamageMultiplier += 1.50f;
+                    PlayerController.instance.Stat.magicDamageMultiplier += 0.50f;
                 }
                 break;
             case 4: //class_fight
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.fightRangeMultiplier += 3.00f;
+                    PlayerController.instance.Stat.fightRangeMultiplier += 2.00f;
                 }
                 else
                 {
@@ -147,8 +147,8 @@ public class SynergyManager : MonoBehaviour
                 }
                 else
                 {
-                    PlayerController.instance.Stat.toolRangeMultiplier += 2.00f;
-                    PlayerController.instance.Stat.toolAreaMultiplier += 2.00f;
+                    PlayerController.instance.Stat.toolRangeMultiplier += 1.00f;
+                    PlayerController.instance.Stat.toolAreaMultiplier += 1.00f;
                 }
                 break;
             case 6: //class_building
@@ -389,7 +389,7 @@ public class SynergyManager : MonoBehaviour
                 if(isFirst)
                 {
                     PlayerController.instance.Stat.bluntCoolTimeMultiplier -= 0.6f;
-                    PlayerController.instance.Stat.bluntDamageMultiplier -= 2.0f;
+                    PlayerController.instance.Stat.bluntDamageMultiplier -= 1.0f;
                 }
                 else
                 {
@@ -409,12 +409,12 @@ public class SynergyManager : MonoBehaviour
             case 2: //class_gun
                 if(isFirst)
                 {
-                    PlayerController.instance.Stat.gunRangeMultiplier -= 1.50f;
-                    PlayerController.instance.Stat.gunAreaMultiplier -= 1.50f;
+                    PlayerController.instance.Stat.gunRangeMultiplier -= 0.50f;
+                    PlayerController.instance.Stat.gunAreaMultiplier -= 0.50f;
                 }
                 else
                 {
-                    PlayerController.instance.Stat.gunCoolTimeMultiplier -= 1.70f;
+                    PlayerController.instance.Stat.gunCoolTimeMultiplier -= 0.70f;
                 }
                 break;
             case 3: //case_magic
@@ -434,7 +434,7 @@ public class SynergyManager : MonoBehaviour
                 }
                 else
                 {
-                    PlayerController.instance.Stat.fightRangeMultiplier -= 3.00f;
+                    PlayerController.instance.Stat.fightRangeMultiplier -= 2.00f;
                 }
                 break;
             case 5: //class_tool
@@ -444,8 +444,8 @@ public class SynergyManager : MonoBehaviour
                 }
                 else
                 {
-                    PlayerController.instance.Stat.toolRangeMultiplier -= 2.00f;
-                    PlayerController.instance.Stat.toolAreaMultiplier -= 2.00f;
+                    PlayerController.instance.Stat.toolRangeMultiplier -= 1.00f;
+                    PlayerController.instance.Stat.toolAreaMultiplier -= 1.00f;
                 }
                 break;
             case 6: //class_building

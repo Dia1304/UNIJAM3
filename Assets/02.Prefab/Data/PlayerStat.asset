@@ -61,3 +61,4 @@ MonoBehaviour:
   madMultiplier: 0
   lightMultiplier: 0
   physicalMultiplier: 0
+  structureDurabilityMultiplier: 1

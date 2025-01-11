@@ -63,4 +63,7 @@ public class PlayerStat : ScriptableObject
     public float madMultiplier;
     public float lightMultiplier;
     public float physicalMultiplier;
+
+    [Header("Extra Multiplier")]
+    public float structureDurabilityMultiplier;
 }

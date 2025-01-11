@@ -8,21 +8,6 @@ public class Item : MonoBehaviour
     protected bool canUse;
     public float coolTime;
 
-    public int getClassData()
-    {
-        return (int)itemData.classData;
-    }
-
-    public int getTypeData()
-    {
-        return (int)itemData.type;
-    }
-
-    public int getElementData()
-    {
-        return (int)itemData.element;
-    }
-
     private void Awake()
     {
         canUse = true;
