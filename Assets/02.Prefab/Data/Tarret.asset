@@ -15,10 +15,12 @@ MonoBehaviour:
   itemId: 0
   itemName: Tarret
   itemDesc: "\uD14C\uC2A4\uD2B8\uC6A9 \uACF5\uACA9\uAD6C\uC870\uBB3C"
+  Mechanism: 
   classData: 6
   type: 6
   element: 8
   coolTime: 0.1
   sound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 6152df5c8585dce40b35b6b680eb907b, type: 3}
   itemImage: {fileID: 0}
   durability: 10

@@ -24,7 +24,8 @@ MonoBehaviour:
   coolTime: 4
   sound: {fileID: 8300000, guid: 25fd069394376e74fac3434dda52cd9e, type: 3}
   attackSound: {fileID: 8300000, guid: 66243ebd7d1dd7945bfc93575a3b5901, type: 3}
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -8321417041761202229, guid: e8a40cc03bf12b741bc214b7e49f7ed3, type: 3}
   damage: 2
   range: 0
   area: 1
+  swingAngle: 0
