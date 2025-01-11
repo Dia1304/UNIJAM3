@@ -141,8 +141,8 @@ MonoBehaviour:
   hp: 35
   speed: 2
   damage: 1
-  attackCoolTime: 1
-  attackRange: 2
+  attackCoolTime: 1.5
+  attackRange: 4
   isRange: 1
   fireball: {fileID: 19649614878619898, guid: fcc7f75629dc26f42af614bbf69fe13c, type: 3}
   sprite: {fileID: 8066184819631304127}
