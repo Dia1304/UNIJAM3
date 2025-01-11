@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class RangedWeapon : Weapon
 {
-
     public RangedWeaponData weaponData;
+    public RangedWeaponData data;
     private void Start()
     {
+        weaponData = Instantiate(data);
         itemData = weaponData;
     }
     private void Update()

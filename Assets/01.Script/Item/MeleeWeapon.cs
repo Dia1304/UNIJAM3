@@ -8,9 +8,11 @@ public class MeleeWeapon : Weapon
     Vector3 startPos;
     RaycastHit2D hit;
     public MeleeWeaponData weaponData;
+    public MeleeWeaponData data;
 
     private void Start()
     {
+        weaponData = Instantiate(data);
         itemData = weaponData;
     }
     private void Update()
@@ -96,10 +98,14 @@ public class MeleeWeapon : Weapon
 
     private void OnDrawGizmos()
     {
-        if(weaponData.area > 0)
+        try
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, weaponData.area);
+            if(weaponData.area > 0)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(transform.position, weaponData.area);
+            }
         }
+        catch { }
     }
 }

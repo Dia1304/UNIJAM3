@@ -36,5 +36,6 @@ public class ArmHolder : MonoBehaviour
             armList[i].transform.localPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
         }
         PlayerController.instance.OnAttack += newArm.GetComponent<Arm>().Use;
+        PlayerController.instance.OnAttack += newArm.GetComponent<SpecialArm>().Use;
     }
 }

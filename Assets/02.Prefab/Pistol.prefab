@@ -102,4 +102,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: cc5168b99fd2a744ebf6783ae0b76e11, type: 2}
   coolTime: 0
-  weaponData: {fileID: 11400000, guid: cc5168b99fd2a744ebf6783ae0b76e11, type: 2}
+  weaponData: {fileID: 0}
+  data: {fileID: 11400000, guid: cc5168b99fd2a744ebf6783ae0b76e11, type: 2}

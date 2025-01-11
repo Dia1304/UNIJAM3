@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 8497353971420285394, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c6f43d1b90b97445abe97ec2226508b, type: 2}
     - target: {fileID: 8838917352658801574, guid: 63960c9c300dcf4498e135e7cd30c073, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09703876
@@ -741,6 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9c41f6328cee04587319bdea1a30c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  synergyArray: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

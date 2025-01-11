@@ -40,7 +40,7 @@ public class Arm : MonoBehaviour
         SubtractSynergy(item);
     }
 
-    private void AddSynergy(GameObject item)
+    public void AddSynergy(GameObject item)
     {
         switch(item.GetComponent<Item>().itemData.classData)
         {
@@ -135,7 +135,7 @@ public class Arm : MonoBehaviour
 
 
     }
-    private void SubtractSynergy(GameObject item)
+    public void SubtractSynergy(GameObject item)
     {
         switch(item.GetComponent<Item>().itemData.classData)
         {

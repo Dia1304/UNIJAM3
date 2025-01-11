@@ -4,26 +4,14 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public int itemId;
-    public int size = 1;
-    public float coolTime;
+    public string itemName;
+    public string itemDesc;
     public Class classData;
     public Type type;
     public Element element;
+    public float coolTime;
+    public AudioClip sound;
 
-    public int getClassData()
-    {
-        return (int)classData;
-    }
-
-    public int getTypeData()
-    {
-        return (int)type;
-    }
-
-    public int getElementData()
-    {
-        return (int)element;
-    }
 
     public enum Class
     {

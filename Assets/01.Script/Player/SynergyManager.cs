@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SynergyManager : MonoBehaviour
 {
-    Synergy[] synergyArray;
+    public Synergy[] synergyArray;
 
     private void Start()
     {
@@ -168,7 +168,7 @@ public class SynergyManager : MonoBehaviour
                 }
                 else
                 {
-                    //±â°è ¹«±â °³¼ö¿¡ ºñ·ÊÇÏ´Â º¸È£¸· È¹µæ`
+                    //±â°è ¹«±â °³¼ö¿¡ ºñ·ÊÇÏ´Â º¸È£¸· È¹µæ
                 }
                 break;
             case 8: //class_food
