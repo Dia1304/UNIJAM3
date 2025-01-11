@@ -136,8 +136,8 @@ MonoBehaviour:
   speed: 20
   area: 0
   damage: 0
-  penetration: 1
-  rotationSpeed: 720
+  penetration: 0
+  rotationSpeed: 1440
   rotating: 1
 --- !u!61 &6808657293963346383
 BoxCollider2D:

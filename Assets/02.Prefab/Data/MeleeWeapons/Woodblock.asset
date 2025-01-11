@@ -22,10 +22,10 @@ MonoBehaviour:
   type: 9
   element: 2
   coolTime: 0.8
-  sound: {fileID: 8300000, guid: dd0763bcaf8f5ad48ae767cc5446e035, type: 3}
+  sound: {fileID: 8300000, guid: 65c9240a0b225b94ba0d171cf331b121, type: 3}
   attackSound: {fileID: 8300000, guid: 65c9240a0b225b94ba0d171cf331b121, type: 3}
   itemImage: {fileID: -315935475107141268, guid: 8323c7072fce71245a4c154a1acf8c83, type: 3}
-  damage: 2
+  damage: 20
   range: 3.6
   area: 1
   swingAngle: 180
