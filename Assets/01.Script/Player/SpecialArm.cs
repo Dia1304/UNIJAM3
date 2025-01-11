@@ -11,6 +11,7 @@ public class SpecialArm : MonoBehaviour
     private bool holySynergy;
     private bool fantasySynergy;
     public GameObject lightning;
+    public GameObject buddaPalm;
 
     public Arm.AttackKey attackKey;
 
@@ -265,18 +266,19 @@ public class SpecialArm : MonoBehaviour
                     buffEnabled = false;
                 }
             }
-            else if(type == ItemData.Type.Buddhism)
+        }
+        if(type == ItemData.Type.Buddhism)
+        {
+            if(PlayerController.instance.SynergyManager.synergyArray[18].firstBuffEnabled && !buffEnabled)
             {
-                if(PlayerController.instance.SynergyManager.synergyArray[18].firstBuffEnabled && !buffEnabled)
-                {
-                    //여래신장 추가
-                    buffEnabled = true;
-                }
-                else if (PlayerController.instance.SynergyManager.synergyArray[18].firstBuffEnabled == false && buffEnabled)
-                {
+                GameObject _palm = Instantiate(buddaPalm, transform);
+                EquipItem(_palm);
+                buffEnabled = true;
+            }
+            else if (PlayerController.instance.SynergyManager.synergyArray[18].firstBuffEnabled == false && buffEnabled)
+            {
 
-                    buffEnabled = false;
-                }
+                buffEnabled = false;
             }
         }
     }
