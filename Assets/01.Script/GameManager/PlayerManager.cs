@@ -29,7 +29,6 @@ public class PlayerManager : MonoBehaviour
             itemIdList.Add(rangeItemList[i].itemId);
         }
         itemIdList.Sort();
-        WeaponGeneration(5);
     }
 
     // Update is called once per frame
@@ -49,6 +48,34 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public ItemData findItem(int id)
+    {
+        for (int i = 0; i < meleeItemList.Count; i++)
+        {
+            if (meleeItemList[i].itemId == id)
+            {
+                isMelee = true;
+                itemIndex = i;
+            }
+        }
+        for (int i = 0; i < rangeItemList.Count; i++)
+        {
+            if (rangeItemList[i].itemId == id)
+            {
+                isMelee = false;
+                itemIndex = i;
+            }
+        }
+        if (isMelee)
+        {
+            return meleeItemList[itemIndex];
+
+        }
+        else
+        {
+            return rangeItemList[itemIndex];
+        }
+    }
     public GameObject WeaponGeneration(int id)
     {
         GameObject temp;

@@ -25,6 +25,7 @@ public class ArmData : MonoBehaviour
     public void SetButton()
     {
         attackButtonToggle[attackButton].isOn = true;
+        moveItemData.init();
     }
 
     public void SelectItem()

@@ -1,23 +1,51 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 public class MoveItemData : MonoBehaviour
 {
     [SerializeField]
     private GameObject itemImage;
     [SerializeField]
-    Image explainDisplay;
+    UnityEngine.UI.Image explainDisplay;
     [SerializeField]
-    private ArmData armData;
+    Text explainText;
+    [SerializeField]
+    Text weaponName;
+    [SerializeField]
+    private ArmData armData; // item id 보유
+    private PlayerManager playerManager;
 
     public bool isSelect = false;
-
+    public UnityEngine.UI.Image highlight;
+    public ItemData itemData;
     private void Awake()
     {
-        explainDisplay = GameObject.FindGameObjectWithTag("ItemDisplay").GetComponent<Image>();
+        GameObject temp = GameObject.FindGameObjectWithTag("ItemDisplay");
+        explainDisplay = temp.GetComponent<UnityEngine.UI.Image>();
+        explainText = temp.GetComponentInChildren<Text>();
+        playerManager = armData.armManager.playerManager;
+    }
+    private void Start()
+    {
+        itemData = playerManager.findItem(armData.haveItemId);
+        weaponName.text = itemData.itemName;
+    }
+
+    public void init()
+    {
+        itemData = playerManager.findItem(armData.haveItemId);
+        weaponName.text = itemData.itemName;
     }
     public void OnDisplay(int id) // 0 = itemdisplay, 1 = class, 2= type, 3 = element
     {
         explainDisplay.enabled = true;
+        if(id == 0)
+        {
+            itemData = playerManager.findItem(armData.haveItemId);
+            string explain = itemData.itemDesc + "\n" + itemData.Mechanism;
+            explainText.text = explain;
+        }
+        
     }
     public void OffDisplay()
     {
@@ -29,22 +57,23 @@ public class MoveItemData : MonoBehaviour
         {
             if (!isSelect)
             {
-                //item Image 하이라이트
+                highlight.enabled = true;
                 isSelect = true;
                 armData.SelectItem();
             }
             else
             {
-                // 하이라이트 풀기
+                highlight.enabled = false;
                 isSelect = false;
                 armData.SelectItem();
             }
+            explainDisplay.enabled = false;
         }
     }
 
     public void UndoHighlight()
     {
-        // 하이라이트 풀기
+        highlight.enabled = false;
         isSelect = false;
     }
 
