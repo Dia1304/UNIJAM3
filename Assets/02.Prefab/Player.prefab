@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6782898222209993847}
@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4021357381536768157}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Attack
+        m_MethodName: Attack1
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -136,19 +136,67 @@ MonoBehaviour:
     m_ActionId: 5f9640d4-fc01-4d33-a637-c6c960bfe70c
     m_ActionName: 'Player/Attack[/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4021357381536768157}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Attack2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8ff1b17f-0de6-4ea1-8476-e26b99dbe581
     m_ActionName: 'Player/Attack2[/Mouse/rightButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4021357381536768157}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Attack3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: dba73c42-7ebc-48f7-bba5-67989b6efc33
     m_ActionName: 'Player/Attack3[/Mouse/middleButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4021357381536768157}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Attack4
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9a7737c0-491e-49d8-b185-e4cd207276d4
     m_ActionName: 'Player/Attack4[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4021357381536768157}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Attack5
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 31e74e13-3e5a-44e9-b2cf-c07017f98c4d
     m_ActionName: 'Player/Attack5[/Keyboard/leftShift]'
   m_NeverAutoSwitchControlSchemes: 1

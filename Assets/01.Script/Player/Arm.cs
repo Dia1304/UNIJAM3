@@ -83,7 +83,7 @@ public class Arm : MonoBehaviour
             UnequipItem(currentItem);
         }
         currentItem = item;
-        item.transform.SetParent(transform);
+        item.transform.SetParent(transform,false);
         item.GetComponent<Weapon>().inInventory = true;
 
         synergyManager.AddSynergy(currentItem);
