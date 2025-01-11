@@ -8,8 +8,7 @@ public class Enemy : PoolAble
 {
     [SerializeField]
     private float hp = 1;
-    [SerializeField]
-    private float speed = 0.1f;
+    public float speed = 0.1f;
     [SerializeField]
     private int damage = 1;
     [SerializeField] private float attackCoolTime;

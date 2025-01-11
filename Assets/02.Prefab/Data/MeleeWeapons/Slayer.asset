@@ -27,5 +27,5 @@ MonoBehaviour:
   itemImage: {fileID: -8321417041761202229, guid: e8a40cc03bf12b741bc214b7e49f7ed3, type: 3}
   damage: 80
   range: 7
-  area: 1
-  swingAngle: 7
+  area: 7
+  swingAngle: 0

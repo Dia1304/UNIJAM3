@@ -25,5 +25,5 @@ MonoBehaviour:
   itemImage: {fileID: 4097633746251030564, guid: 6a6b3b3bc06901246ae72f37b1955990, type: 3}
   damage: 23
   range: 4
-  area: 2
+  area: 1
   swingAngle: 0

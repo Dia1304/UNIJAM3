@@ -26,5 +26,5 @@ MonoBehaviour:
   itemImage: {fileID: -4792743782016157385, guid: 9c483c76436220f47a496720a4bae569, type: 3}
   damage: 2.8
   range: 10
-  area: 0.01
+  area: 0
   obj_projectile: {fileID: 1840320286167128004, guid: c6666429b7917af418e9043fbbb1a2b8, type: 3}

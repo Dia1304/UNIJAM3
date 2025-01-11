@@ -898,19 +898,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: armItemList.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: armATypeList.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: weaponPrefab.Array.size
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'armItemList.Array.data[0]'
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'armItemList.Array.data[1]'
@@ -982,7 +982,7 @@ PrefabInstance:
       objectReference: {fileID: 523666298500684407, guid: 7f738944169c27d459c7d6567ac2f0db, type: 3}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: armAttackKeyList.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'weaponPrefab.Array.data[10]'
@@ -992,6 +992,14 @@ PrefabInstance:
       propertyPath: 'weaponPrefab.Array.data[11]'
       value: 
       objectReference: {fileID: 9010986477449342498, guid: b3ca940826fe8e84ba3892479eb176d8, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[12]'
+      value: 
+      objectReference: {fileID: 2025389064267078715, guid: 98ff6762f269721449db8a31b29f425e, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[13]'
+      value: 
+      objectReference: {fileID: 9010986477449342498, guid: 4235f650055e0254ab0c99d8bececae0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

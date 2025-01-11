@@ -23,7 +23,6 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(enemies.Count);
         enemies.RemoveAll(item => item == null || item.Equals(null) || ReferenceEquals(item, null));
 
         if (remainRangeCount == 0 && remainMeleeCount == 0 && enemies.Count == 0)
@@ -61,6 +60,7 @@ public class EnemySpawner : MonoBehaviour
                     break;
             }
             var enemyGo = ObjectPoolManager.instance.GetGo(index.ToString());
+            enemyGo.GetComponent<Enemy>().speed += Random.Range(-0.2f, 0.2f);
 
             enemyGo.transform.position = PlayerController.instance.transform.position + new Vector3(Random.Range(-20,20), Random.Range(-10, 10), 0);
             enemies.Add(enemyGo);
