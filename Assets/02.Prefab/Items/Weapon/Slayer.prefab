@@ -51,6 +51,7 @@ MonoBehaviour:
   inInventory: 0
   weaponData: {fileID: 0}
   data: {fileID: 11400000, guid: 35522e54d81c7e449a5e75d583d8db5d, type: 2}
+  swingSpeed: 500
 --- !u!82 &1380584052482211832
 AudioSource:
   m_ObjectHideFlags: 0

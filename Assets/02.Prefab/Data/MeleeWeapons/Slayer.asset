@@ -26,6 +26,6 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 66243ebd7d1dd7945bfc93575a3b5901, type: 3}
   itemImage: {fileID: -8321417041761202229, guid: e8a40cc03bf12b741bc214b7e49f7ed3, type: 3}
   damage: 80
-  range: 7
+  range: 2
   area: 7
-  swingAngle: 0
+  swingAngle: 180

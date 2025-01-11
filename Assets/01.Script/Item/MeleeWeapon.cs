@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.U2D;
 using static UnityEngine.GraphicsBuffer;
 
 public class MeleeWeapon : Weapon
@@ -13,6 +15,9 @@ public class MeleeWeapon : Weapon
 
     private bool isMoving;
 
+    public float swingSpeed = 200;
+
+    private bool isSwinging = false; // 휘두르는 중인지 여부
 
     private void Start()
     {
@@ -54,7 +59,39 @@ public class MeleeWeapon : Weapon
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0, 0, angle-90);
+        if(!isSwinging)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+        }
+    }
+    public void Swing()
+    {
+        if (!isSwinging)
+        {
+            StartCoroutine(SwingRoutine());
+        }
+    }
+    private IEnumerator SwingRoutine()
+    {
+        isSwinging = true;
+
+        // 현재 각도를 가져옵니다
+        float currentAngle = transform.eulerAngles.z;
+
+        // 오른쪽으로 휘두르기
+        float targetAngle = currentAngle + weaponData.swingAngle;
+        transform.rotation = Quaternion.Euler(0, 0, currentAngle - weaponData.swingAngle / 2);
+        while (currentAngle < targetAngle)
+        {
+            float step = swingSpeed * Time.deltaTime;
+            if (currentAngle + step > targetAngle) step = targetAngle - currentAngle;
+
+            transform.RotateAround(transform.position, Vector3.forward, step);
+            currentAngle += step;
+
+            yield return null; // 다음 프레임까지 대기
+        }
+        isSwinging = false; // 휘두르기 종료
     }
     public override void Attack()
     {
@@ -80,6 +117,7 @@ public class MeleeWeapon : Weapon
         isMoving = true;
         yield return StartCoroutine(MoveToPosition(target, 20f));
 
+
         float damage = weaponData.damage;
         if(weaponData.type == ItemData.Type.Alcohol)
         {
@@ -100,14 +138,25 @@ public class MeleeWeapon : Weapon
             {
                 for(int i = 0; i < areaHit.Length; i++)
                 {
-                    if (!hasHit.Contains(areaHit[i]))
+                    Vector3 directionToTarget = areaHit[i].transform.position - transform.position;
+
+                    // 현재 바라보는 방향과 충돌체의 방향 간의 각도를 계산
+                    float angleToTarget = Vector3.Angle(transform.up, directionToTarget);
+
+                    // 만약 angleToTarget이 설정된 범위 내에 있으면
+                    if (angleToTarget <= weaponData.swingAngle / 2f)
                     {
-                        areaHit[i].GetComponent<Enemy>().Damage(damage * GetDamageMultiplier() * PlayerController.instance.Stat.meleeWeaponDamageMultiplier);
-                        hasHit.Add(areaHit[i]);
+                        // 부채꼴 범위 내에 있는 충돌체가 발견되었을 때 실행할 코드
+                        if (!hasHit.Contains(areaHit[i]))
+                        {
+                            areaHit[i].GetComponent<Enemy>().Damage(damage * GetDamageMultiplier() * PlayerController.instance.Stat.meleeWeaponDamageMultiplier);
+                            hasHit.Add(areaHit[i]);
+                        }
                     }
                 }
             }
         }
+        yield return StartCoroutine(SwingRoutine());
         Debug.Log("Slash");
 
         yield return StartCoroutine(MoveBack(10f));
