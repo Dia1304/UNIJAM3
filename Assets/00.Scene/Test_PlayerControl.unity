@@ -171,6 +171,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7299144088834962939, guid: a8e09b9e4bd30e141999e58a6f2af5a3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299144088834962939, guid: a8e09b9e4bd30e141999e58a6f2af5a3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -233,8 +241,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: weaponPrefab.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'armItemList.Array.data[0]'
-      value: 9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: 'armItemList.Array.data[1]'
@@ -244,6 +256,46 @@ PrefabInstance:
       propertyPath: 'armItemList.Array.data[2]'
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7076029345764935098, guid: 08b5ad696fc10de47a9c0852fe89523b, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5655554564620342315, guid: 2398b1d9b59e7114eb7b902c41c47e3f, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[2]'
+      value: 
+      objectReference: {fileID: 523378481724030234, guid: 90213d7683e28be4ea18719b77125a13, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[3]'
+      value: 
+      objectReference: {fileID: 508846294300984702, guid: 50f9c1f40be25d34a96cf34c34747c14, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3476811610579265373, guid: 223a3d08399ae3343868fa73432e0c6e, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[5]'
+      value: 
+      objectReference: {fileID: 6880645329789138017, guid: 7cbd00d82874d69448a6fa1197cb8d60, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1965942638946225911, guid: 502a8fd790cadb84e8e4631a8881a241, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8450426534084821965, guid: dc237288555af0549947fd093af7fc4b, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[8]'
+      value: 
+      objectReference: {fileID: 6040112056146134093, guid: fe79ecae91828b04fa1be28db9e934bc, type: 3}
+    - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
+      propertyPath: 'weaponPrefab.Array.data[9]'
+      value: 
+      objectReference: {fileID: 523666298500684407, guid: 7f738944169c27d459c7d6567ac2f0db, type: 3}
     - target: {fileID: 8844097784026987525, guid: 477a6cd1bf9c66444817255ff11a9909, type: 3}
       propertyPath: armAttackKeyList.Array.size
       value: 1

@@ -8,11 +8,12 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public List<int> armItemList = new List<int>();  // 장착중인 아이템 리스트
     public List<int> armAttackKeyList = new List<int>();  // 장착중인 아이템의 공격키 리스트
+    public List<GameObject> weaponPrefab = new List<GameObject>(); 
     public List<MeleeWeaponData> meleeItemList = new List<MeleeWeaponData>(); // index 0 = NULL
     public List<RangedWeaponData> rangeItemList = new List<RangedWeaponData>();
     public List<int> itemIdList = new List<int>();
-    public GameObject meleeItemPrefab;
     public GameObject rangedItemPrefab;
+    public GameObject meleeItemPrefab;
 
     private bool isMelee = true;
     private int itemIndex = 0;
@@ -79,35 +80,14 @@ public class PlayerManager : MonoBehaviour
     public GameObject WeaponGeneration(int id)
     {
         GameObject temp;
-        for (int i = 0; i < meleeItemList.Count; i++)
+        for (int i = 0; i < weaponPrefab.Count; i++)
         {
-            if (meleeItemList[i].itemId == id)
+            if (weaponPrefab[i].GetComponent<Weapon>().itemData.itemId == id)
             {
-                isMelee = true;
                 itemIndex = i;
             }
         }
-        for (int i = 0; i < rangeItemList.Count; i++)
-        {
-            if (rangeItemList[i].itemId == id)
-            {
-                isMelee = false;
-                itemIndex = i;
-            }
-        }
-        if (isMelee)
-        {
-            temp = Instantiate(meleeItemPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            MeleeWeapon dataTemp = temp.GetComponent<MeleeWeapon>();
-            dataTemp.Init(meleeItemList[itemIndex]);
-
-        }
-        else
-        {
-            temp = Instantiate(rangedItemPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            RangedWeapon dataTemp = temp.GetComponent<RangedWeapon>();
-            dataTemp.Init(rangeItemList[itemIndex]);
-        }
+        temp = Instantiate(weaponPrefab[itemIndex], new Vector3(0, 0, 0), Quaternion.identity);
         return temp;
     }
 }
