@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armItemList: 
   armAttackKeyList: 
+  armATypeList: 
+  weaponPrefab: []
   meleeItemList:
   - {fileID: 11400000, guid: 337049fdb3ec5834091e8622b6b7cba6, type: 2}
   - {fileID: 11400000, guid: 2b1efe4addf4f0c468591ab9997829bd, type: 2}
@@ -90,8 +92,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 426d425ba2c7c604abf4c594595c6308, type: 2}
   - {fileID: 11400000, guid: 76b0ec4ad484c7d40b4dded4c34a4a0a, type: 2}
   itemIdList: 
-  meleeItemPrefab: {fileID: 2952270295615124535, guid: 44c5c79a0066dcd459266e52f6861f55, type: 3}
   rangedItemPrefab: {fileID: 2952270295615124535, guid: a179cb9e7d9112140a637ffced2899fa, type: 3}
+  meleeItemPrefab: {fileID: 2952270295615124535, guid: 44c5c79a0066dcd459266e52f6861f55, type: 3}
+  synergyManager: {fileID: 0}
 --- !u!114 &8945240215557288339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,4 +108,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   synergyArray: []
+  synergyCnt: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  synergySprite:
+  - {fileID: -6779548869568483659, guid: 78af2a82c1ea08f4381b0aa2682d76ca, type: 3}
+  - {fileID: 2975766960263204498, guid: 643216b0b7bc9da409592e1cef81f111, type: 3}
+  - {fileID: 2424630335346609690, guid: 5e2ac1b8cc2f4384487d200240f77d8d, type: 3}
+  - {fileID: 3122488745571701713, guid: ff276a7fef1e57a47b2622bd85ba3a50, type: 3}
+  - {fileID: 4790400201203528713, guid: de4991b6777981147b0a516f4b84e20b, type: 3}
+  - {fileID: 2329219728866207718, guid: 7eca00d4e36ee554eb4088a63e097c07, type: 3}
+  - {fileID: 2539153258866993800, guid: 61094de5989cf8347b84aa93e6758da4, type: 3}
+  - {fileID: 4553929216864102361, guid: 5567f27e58f8d0d499d8245dd750c14f, type: 3}
+  - {fileID: -8220166630871368702, guid: b6e73d0940d68024e859f7b33f4a12bd, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   inBattle: 1
+  playerManager: {fileID: 0}
