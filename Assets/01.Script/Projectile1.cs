@@ -20,6 +20,7 @@ public class Projectile1 : MonoBehaviour
         if(collision.tag == "Player")
         {
             collision.GetComponent<PlayerController>().Stat.currentHealth -= damage;
+            Destroy(gameObject);
         }
     }
 }

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      butcher_icon_0: -8011737629048217751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
