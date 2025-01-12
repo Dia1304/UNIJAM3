@@ -93,21 +93,21 @@ public class MoveItemData : MonoBehaviour
         else if (id == 1)
         {
             itemData = playerManager.findItem(armData.haveItemId);
-            string explain = synergyManager.synergydiscription[(int)itemData.classData];
+            string explain = synergyManager.synergyName[(int)itemData.classData];
             explain = explain.Replace("\\n", "\n");
             explainText.text = explain;
         }
         else if (id == 2)
         {
             itemData = playerManager.findItem(armData.haveItemId);
-            string explain = synergyManager.synergydiscription[(int)itemData.type + 9];
+            string explain = synergyManager.synergyName[(int)itemData.type + 9];
             explain = explain.Replace("\\n", "\n");
             explainText.text = explain;
         }
         else if (id == 3)
         {
             itemData = playerManager.findItem(armData.haveItemId);
-            string explain = synergyManager.synergydiscription[(int)itemData.element + 19];
+            string explain = synergyManager.synergyName[(int)itemData.element + 19];
             explain = explain.Replace("\\n", "\n");
             explainText.text = explain;
         }

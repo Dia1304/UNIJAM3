@@ -57,10 +57,21 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(armstage == 2)
+        if(armItemList.Count < 4)
         {
-            AddArm(0, 0, -1);
-            armstage = 0;
+            if (armstage == 1)
+            {
+                AddArm(0, 0, -1);
+                armstage = 0;
+            }
+        }
+        else
+        {
+            if (armstage == 2)
+            {
+                AddArm(0, 0, -1);
+                armstage = 0;
+            }
         }
     }
 

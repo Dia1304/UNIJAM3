@@ -33,6 +33,7 @@ public class SynergyDisplay : MonoBehaviour
                     instantiatedObject.GetComponent<RectTransform>().localScale = Vector3.one;
                     synergyList[i] = instantiatedObject;
                     synergyList[i].GetComponentInChildren<Text>().text =  synergyManager.synergyCnt[i].ToString();
+                    synergyList[i].GetComponent<ItemDescription>().id = i;
                     if (synergyManager.synergySprite[i] != null)
                         synergyList[i].GetComponentInChildren<Image>().sprite = synergyManager.synergySprite[i];
                 }
@@ -66,6 +67,7 @@ public class SynergyDisplay : MonoBehaviour
                     instantiatedObject.GetComponent<RectTransform>().localScale = Vector3.one;
                     synergyList[i] = instantiatedObject;
                     synergyList[i].GetComponentInChildren<Text>().text = synergyManager.synergyCnt[i].ToString();
+                    synergyList[i].GetComponent<ItemDescription>().id = i;
                     if (synergyManager.synergySprite[i] != null)
                         synergyList[i].GetComponentInChildren<Image>().sprite = synergyManager.synergySprite[i];
                 }

@@ -22,7 +22,6 @@ public class EnemySpawner : MonoBehaviour
     private float timer;
     private void Awake()
     {
-        
         playerManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerManager>();
         realmeleeCount = (int)Mathf.Ceil(meleeCount * (1 + (playerManager.stage+1) * 0.2f) * (1 + playerManager.difficulty * 0.5f));
         realrangeCount = (int)Mathf.Ceil(rangeCount * (1 + (playerManager.stage+1) * 0.2f) * (1 + playerManager.difficulty * 0.5f));
@@ -76,7 +75,8 @@ public class EnemySpawner : MonoBehaviour
             }
             var enemyGo = ObjectPoolManager.instance.GetGo(index.ToString());
             enemyGo.GetComponent<Enemy>().speed += Random.Range(-0.2f, 0.2f);
-
+            Enemy enemyTemp = enemyGo.GetComponent<Enemy>();
+            enemyTemp.hp = enemyTemp.hp + enemyTemp.hp * (playerManager.stage) * 0.1f;
             enemyGo.transform.position = PlayerController.instance.transform.position + new Vector3(Random.Range(-20,20), Random.Range(-10, 10), 0);
             enemies.Add(enemyGo);
             timer = Random.Range(0f, 1f);
