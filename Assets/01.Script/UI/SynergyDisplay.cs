@@ -1,4 +1,4 @@
-using NUnit.Framework;
+ï»¿using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ public class SynergyDisplay : MonoBehaviour
                 if (synergyList[i] == null)
                 {
                     GameObject instantiatedObject = Instantiate(synergyPrefab, transform.position, Quaternion.identity);
-                    instantiatedObject.transform.SetParent(transform,false); // ºÎ¸ğ¸¦ ÇöÀç ¿ÀºêÁ§Æ®·Î ¼³Á¤
+                    instantiatedObject.transform.SetParent(transform,false); // ë¶€ëª¨ë¥¼ í˜„ì¬ ì˜¤ë¸Œì íŠ¸ë¡œ ì„¤ì •
                     instantiatedObject.GetComponent<RectTransform>().localScale = Vector3.one;
                     synergyList[i] = instantiatedObject;
                     synergyList[i].GetComponentInChildren<Text>().text =  synergyManager.synergyCnt[i].ToString();
@@ -63,7 +63,7 @@ public class SynergyDisplay : MonoBehaviour
                 if (synergyList[i] == null)
                 {
                     GameObject instantiatedObject = Instantiate(synergyPrefab, transform.position, Quaternion.identity);
-                    instantiatedObject.transform.SetParent(transform, false); // ºÎ¸ğ¸¦ ÇöÀç ¿ÀºêÁ§Æ®·Î ¼³Á¤
+                    instantiatedObject.transform.SetParent(transform, false); // ë¶€ëª¨ë¥¼ í˜„ì¬ ì˜¤ë¸Œì íŠ¸ë¡œ ì„¤ì •
                     instantiatedObject.GetComponent<RectTransform>().localScale = Vector3.one;
                     synergyList[i] = instantiatedObject;
                     synergyList[i].GetComponentInChildren<Text>().text = synergyManager.synergyCnt[i].ToString();

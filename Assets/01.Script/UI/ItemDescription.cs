@@ -1,4 +1,4 @@
-using NUnit.Framework.Interfaces;
+ï»¿using NUnit.Framework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -26,11 +26,11 @@ public class ItemDescription : MonoBehaviour
         string explain;
         if (id != 17)
         {
-            explain = "µ¿ÀÏ ½Ã³ÊÁö 3°³ÀÌ»ó ¼öÁı½Ã È¿°ú¹ßµ¿\n" + synergyManager.synergydiscription[id];
+            explain = "ë™ì¼ ì‹œë„ˆì§€ 3ê°œì´ìƒ ìˆ˜ì§‘ì‹œ íš¨ê³¼ë°œë™\n" + synergyManager.synergydiscription[id];
         }
         else
         {
-            explain = "µ¿ÀÏ ½Ã³ÊÁö 1°³ÀÌ»ó ¼öÁı½Ã È¿°ú¹ßµ¿\n" + synergyManager.synergydiscription[id];
+            explain = "ë™ì¼ ì‹œë„ˆì§€ 1ê°œì´ìƒ ìˆ˜ì§‘ì‹œ íš¨ê³¼ë°œë™\n" + synergyManager.synergydiscription[id];
         }
 
         explain = explain.Replace("\\n", "\n");

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 public class MoveItemData : MonoBehaviour
@@ -12,7 +12,7 @@ public class MoveItemData : MonoBehaviour
     [SerializeField]
     Text weaponName;
     [SerializeField]
-    private ArmData armData; // item id º¸À¯
+    private ArmData armData; // item id ë³´ìœ 
     private PlayerManager playerManager;
     private SynergyManager synergyManager;
 
