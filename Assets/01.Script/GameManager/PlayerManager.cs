@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEditor.Build;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {

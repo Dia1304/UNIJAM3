@@ -217,8 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stat: {fileID: 11400000, guid: d68be62a1e628bd449dfb6f43c31d3a6, type: 2}
+  statData: {fileID: 11400000, guid: d68be62a1e628bd449dfb6f43c31d3a6, type: 2}
   SynergyManager: {fileID: 0}
   sprite: {fileID: 387630398893951884}
+  barImage: {fileID: 0}
 --- !u!114 &2017060642662257437
 MonoBehaviour:
   m_ObjectHideFlags: 0

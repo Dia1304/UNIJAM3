@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     //Reference
     //public PlayerStat statData;
     public PlayerStat Stat;
+    public PlayerStat statData;
     public SynergyManager SynergyManager;
     [SerializeField] private SpriteRenderer sprite;
 
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
         Stat.currentHealth = Stat.maxHealth;
 
-        //Stat = Instantiate(statData);
+        Stat = Instantiate(statData);
         SynergyManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SynergyManager>();
     }
 

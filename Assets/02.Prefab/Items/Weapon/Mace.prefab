@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1977344890632531798}
@@ -51,7 +51,7 @@ MonoBehaviour:
   inInventory: 0
   weaponData: {fileID: 0}
   data: {fileID: 11400000, guid: 750fcf73e2a01a743b4bd213ce7ce7af, type: 2}
-  swingSpeed: 300
+  swingSpeed: 900
 --- !u!82 &3302685262862206565
 AudioSource:
   m_ObjectHideFlags: 0
