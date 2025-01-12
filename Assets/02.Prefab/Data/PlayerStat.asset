@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   moveSpeed: 5
-  attackSpeed: 10
+  attackSpeed: 5
   damageMultiplier: 1
   bluntDamageMultiplier: 0
   bladeDamageMultiplier: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   foodDamageMultiplier: 0
   bluntCoolTimeMultiplier: 0
   bladeCoolTimeMultiplier: 0
-  gunCoolTimeMultiplier: 1.4
+  gunCoolTimeMultiplier: 0
   magicCoolTimeMultiplier: 0
   fightCoolTimeMultiplier: 0
   toolCoolTimeMultiplier: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   foodCoolTimeMultiplier: 0
   bluntRangeMultiplier: 0
   bladeRangeMultiplier: 0
-  gunRangeMultiplier: 1.5
+  gunRangeMultiplier: 0
   magicRangeMultiplier: 0
   fightRangeMultiplier: 0
   toolRangeMultiplier: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   foodRangeMultiplier: 0
   bluntAreaMultiplier: 0
   bladeAreaMultiplier: 0
-  gunAreaMultiplier: 1.5
+  gunAreaMultiplier: 0
   magicAreaMultiplier: 0
   fightAreaMultiplier: 0
   toolAreaMultiplier: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   waterMultiplier: 0
   grassMultiplier: 0
   electricMultiplier: 0
-  metalMultiplier: 0.90000004
+  metalMultiplier: 0
   fireMultiplier: 0
   madMultiplier: 0
   lightMultiplier: 0

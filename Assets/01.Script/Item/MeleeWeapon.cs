@@ -101,13 +101,20 @@ public class MeleeWeapon : Weapon
 
         if(!isMoving)
         {
-            if(hit.collider != null)
+            //if(hit.collider != null)
+            //{
+            //    StartCoroutine(SwingWeapon(hit.transform.position));
+            //}
+            //else
             {
-                StartCoroutine(SwingWeapon(hit.transform.position));
-            }
-            else
-            {
-                StartCoroutine(SwingWeapon(PlayerController.instance.transform.position + direction * GetMultipliedRange(weaponData.range)));
+                if(GetMultipliedRange(weaponData.range) > Vector2.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), PlayerController.instance.transform.position))
+                {
+                    StartCoroutine(SwingWeapon(Camera.main.ScreenToWorldPoint(Input.mousePosition) - direction.normalized));
+                }
+                else
+                {
+                    StartCoroutine(SwingWeapon(PlayerController.instance.transform.position + direction * GetMultipliedRange(weaponData.range) - direction.normalized));
+                }
             }
         }
     }
@@ -115,6 +122,7 @@ public class MeleeWeapon : Weapon
     private IEnumerator SwingWeapon(Vector3 target)
     {
         isMoving = true;
+        target = new Vector3(target.x, target.y, 0);
         yield return StartCoroutine(MoveToPosition(target, 20f));
 
 
@@ -155,8 +163,9 @@ public class MeleeWeapon : Weapon
                     }
                 }
             }
+            yield return StartCoroutine(SwingRoutine());
         }
-        yield return StartCoroutine(SwingRoutine());
+
         Debug.Log("Slash");
 
         yield return StartCoroutine(MoveBack(10f));
