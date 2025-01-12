@@ -7,7 +7,7 @@ using System.Collections;
 public class Enemy : PoolAble
 {
     [SerializeField]
-    private float hp = 1;
+    public float hp = 1;
     public float speed = 0.1f;
     [SerializeField]
     private int damage = 1;

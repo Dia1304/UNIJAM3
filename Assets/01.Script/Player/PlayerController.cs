@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("GameOver");
             Stat.currentHealth = Stat.maxHealth;
             SceneManager.LoadScene(5);
-        }
+        }   
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Time.timeScale = 0.5f;

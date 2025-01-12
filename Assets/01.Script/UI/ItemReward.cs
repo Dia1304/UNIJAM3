@@ -6,6 +6,7 @@ using System.Linq;
 using NUnit.Framework.Interfaces;
 using Unity.VisualScripting;
 using UnityEngine.PlayerLoop;
+using System;
 
 public class ItemReward : MonoBehaviour
 {
@@ -46,6 +47,10 @@ public class ItemReward : MonoBehaviour
             if (playerManager.findItem(rewardItemId[i]).itemImage != null)
                 rewardItems[i].GetComponent<Image>().sprite = playerManager.findItem(rewardItemId[i]).itemImage;
         }
+        itemData = playerManager.findItem(rewardItemId[0]);
+        selectRewardNum = rewardItemId[0];
+        if (playerManager.findItem(selectRewardNum).itemImage != null)
+            selectedReward.GetComponent<Image>().sprite = playerManager.findItem(selectRewardNum).itemImage;
     }
 
     private void rewardItemGenerate()
@@ -81,7 +86,7 @@ public class ItemReward : MonoBehaviour
                 rewardItemId[i] = randId;
                 i++;
             }*/
-            randNum = Random.Range(1, playerManager.weaponPrefab.Count);
+            randNum = UnityEngine.Random.Range(1, playerManager.weaponPrefab.Count);
 
             rewardItemId[i] = playerManager.weaponPrefab[randNum].GetComponent<Weapon>().itemData.itemId;
             i++;
