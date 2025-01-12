@@ -35,7 +35,7 @@ public class SynergyManager : MonoBehaviour
         nowSynergy();
     }
 
-    private void InitializeSynergyList()
+    public void InitializeSynergyList()
     {
         synergyArray = new Synergy[28];
 
