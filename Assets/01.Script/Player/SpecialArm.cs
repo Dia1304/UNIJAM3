@@ -21,7 +21,6 @@ public class SpecialArm : MonoBehaviour
     }
     void Start()
     {
-        ChangeAttackKey(Arm.AttackKey.LMB);
     }
 
     void Update()
