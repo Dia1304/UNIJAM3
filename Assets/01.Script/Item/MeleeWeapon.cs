@@ -24,7 +24,7 @@ public class MeleeWeapon : Weapon
         weaponData = Instantiate(data);
         itemData = weaponData;
         GetComponent<AudioSource>().clip = itemData.attackSound;
-        if(itemData.itemImage != null)
+        if(itemData.itemImage != null && transform.childCount > 0)
         {
            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemData.itemImage;
         }
